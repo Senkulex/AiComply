@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="EU AI Act readiness for SMEs and startups — fixed-price compliance packages built on the ISO/IEC 42001 framework. Brussels, Belgium.">
+<title>AI Comply — EU AI Act Readiness for SMEs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#0B192C;--navy-mid:#1E3E62;--blue:#2563EB;--blue-light:#DBEAFE;
+  --mint:#6DBE8A;--mint-dark:#4A9E68;--mint-light:#E8F7EE;
+  --amber:#F6C567;--red:#FC8181;
+  --gray:#F4F6F9;--gray-mid:#E2E8F0;
+  --text:#0F1928;--text-muted:#4A5568;--text-light:#718096;
+  --white:#FFF;--border:#CBD5E0;
+  --shadow:0 4px 24px rgba(11,25,44,.08);--shadow-lg:0 12px 48px rgba(11,25,44,.14);
+  --r:8px;--r-lg:14px;--r-xl:20px;--t:all .25s cubic-bezier(.4,0,.2,1);
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'DM Sans',sans-serif;color:var(--text);background:var(--white);line-height:1.6;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+.section{padding:104px 0}
+h1{font-family:'DM Serif Display',serif;font-size:clamp(2.3rem,5vw,3.6rem);line-height:1.12;font-weight:400;color:var(--navy)}
+h2{font-family:'DM Serif Display',serif;font-size:clamp(1.8rem,3.4vw,2.6rem);line-height:1.2;font-weight:400;color:var(--navy)}
+h3{font-size:1.12rem;font-weight:600;color:var(--navy);line-height:1.4}
+p{color:var(--text-muted);line-height:1.75}
+.eyebrow{font-family:'DM Mono',monospace;font-size:.76rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--mint-dark)}
+.lead{font-size:1.12rem;color:var(--text-muted);line-height:1.8}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:14px 28px;border-radius:var(--r);font-weight:600;font-size:.95rem;font-family:inherit;cursor:pointer;border:none;transition:var(--t)}
+.btn-primary{background:var(--mint);color:var(--white)}
+.btn-primary:hover{background:var(--mint-dark);transform:translateY(-1px);box-shadow:0 8px 22px rgba(109,190,138,.35)}
+.btn-ghost{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,.35)}
+.btn-ghost:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.6)}
+.btn-dark{background:var(--navy);color:var(--white)}
+.btn-dark:hover{background:var(--navy-mid);transform:translateY(-1px)}
+.btn svg{width:17px;height:17px}
+
+/* NAV */
+nav{position:fixed;inset:0 0 auto 0;z-index:1000;background:rgba(255,255,255,.94);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:66px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.1rem;color:var(--navy);flex-shrink:0}
+.logo-mark{width:32px;height:32px;background:var(--navy);border-radius:7px;display:flex;align-items:center;justify-content:center;color:var(--mint);font-family:'DM Mono',monospace;font-weight:500;font-size:.95rem}
+.nav-right{display:flex;align-items:center;gap:14px;margin-left:auto}
+.nav-links{display:flex;align-items:center;gap:4px}
+.nav-links a{padding:7px 13px;border-radius:6px;font-size:.9rem;font-weight:500;color:var(--text-muted);transition:var(--t)}
+.nav-links a:hover{color:var(--navy);background:var(--gray)}
+.lang{display:flex;align-items:center;border:1px solid var(--border);border-radius:7px;overflow:hidden}
+.lang button{padding:6px 9px;font-family:'DM Mono',monospace;font-size:.72rem;font-weight:500;letter-spacing:.04em;cursor:pointer;background:transparent;border:none;color:var(--text-light);transition:var(--t);border-left:1px solid var(--border)}
+.lang button:first-child{border-left:none}
+.lang button.on,.lang button:hover{background:var(--navy);color:var(--white)}
+.nav-cta{flex-shrink:0}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;border:none;background:none}
+.hamburger span{display:block;width:22px;height:2px;background:var(--navy);border-radius:2px}
+
+/* HERO */
+.hero{padding:148px 0 90px;background:var(--navy);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:
+  radial-gradient(ellipse 70% 55% at 72% 35%,rgba(37,99,235,.20),transparent 60%),
+  radial-gradient(ellipse 50% 50% at 18% 85%,rgba(109,190,138,.10),transparent 55%)}
+.hero-grid{position:absolute;inset:0;opacity:.045;background-image:linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px);background-size:46px 46px}
+.hero-in{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(109,190,138,.12);border:1px solid rgba(109,190,138,.28);color:var(--mint);padding:6px 14px;border-radius:100px;font-family:'DM Mono',monospace;font-size:.74rem;font-weight:500;letter-spacing:.06em;margin-bottom:24px}
+.hero h1{color:var(--white);margin-bottom:22px}
+.hero h1 em{color:var(--mint);font-style:normal}
+.hero-sub{color:rgba(255,255,255,.66);font-size:1.06rem;line-height:1.8;margin-bottom:34px;max-width:520px}
+.hero-actions{display:flex;gap:13px;flex-wrap:wrap;margin-bottom:26px}
+.trust-strip{display:flex;flex-wrap:wrap;gap:8px 18px;font-family:'DM Mono',monospace;font-size:.76rem;color:rgba(255,255,255,.45)}
+.trust-strip span{display:flex;align-items:center;gap:7px}
+.trust-strip span::before{content:'';width:5px;height:5px;background:var(--mint);border-radius:50%}
+
+/* PANEL */
+.panel{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-lg);padding:22px;backdrop-filter:blur(8px)}
+.panel-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+.panel-ttl{font-family:'DM Mono',monospace;font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.5)}
+.panel-tag{font-family:'DM Mono',monospace;font-size:.7rem;color:var(--mint);background:rgba(109,190,138,.12);padding:3px 9px;border-radius:5px}
+.sys{display:flex;align-items:center;justify-content:space-between;padding:13px 0;border-top:1px solid rgba(255,255,255,.07);gap:12px}
+.sys:first-of-type{border-top:none}
+.sys-name{font-size:.9rem;color:rgba(255,255,255,.85);font-weight:500}
+.sys-sub{font-size:.75rem;color:rgba(255,255,255,.4);margin-top:2px}
+.badge{font-family:'DM Mono',monospace;font-size:.68rem;font-weight:500;padding:4px 9px;border-radius:5px;white-space:nowrap}
+.badge.high{background:rgba(252,129,129,.15);color:var(--red)}
+.badge.lim{background:rgba(246,197,103,.15);color:var(--amber)}
+.badge.min{background:rgba(109,190,138,.15);color:var(--mint)}
+.meter-wrap{margin-top:18px;padding-top:18px;border-top:1px solid rgba(255,255,255,.07)}
+.meter-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:9px}
+.meter-row span{font-size:.8rem;color:rgba(255,255,255,.6)}
+.meter-row b{font-family:'DM Mono',monospace;font-size:.85rem;color:var(--mint)}
+.meter{height:7px;background:rgba(255,255,255,.08);border-radius:100px;overflow:hidden}
+.meter-fill{height:100%;width:0;background:linear-gradient(90deg,var(--mint-dark),var(--mint));border-radius:100px;transition:width 1.6s cubic-bezier(.4,0,.2,1) .4s}
+
+/* WHY */
+.bg-gray{background:var(--gray)}
+.sec-head{max-width:680px;margin-bottom:48px}
+.sec-head .eyebrow{display:block;margin-bottom:14px}
+.sec-head p{margin-top:14px;font-size:1.06rem}
+.cards-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--white);border:1px solid var(--gray-mid);border-radius:var(--r-lg);padding:26px;transition:var(--t)}
+.card:hover{box-shadow:var(--shadow);transform:translateY(-2px)}
+.card-tag{font-family:'DM Mono',monospace;font-size:.72rem;font-weight:500;padding:4px 10px;border-radius:6px;display:inline-block;margin-bottom:14px}
+.tag-live{background:var(--mint-light);color:var(--mint-dark)}
+.tag-buyer{background:var(--blue-light);color:var(--blue)}
+.tag-due{background:#FEF3C7;color:#B45309}
+.card h3{margin-bottom:8px}
+.card p{font-size:.92rem}
+
+/* PROCESS */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:8px}
+.step{position:relative;padding-top:26px}
+.step-n{font-family:'DM Mono',monospace;font-size:.8rem;color:var(--mint-dark);font-weight:500;position:absolute;top:0;left:0}
+.step::before{content:'';position:absolute;top:6px;left:34px;right:-9px;height:1px;background:var(--gray-mid)}
+.step:last-child::before{display:none}
+.step h3{font-size:1rem;margin-bottom:7px}
+.step p{font-size:.88rem}
+.proc-foot{margin-top:40px;display:flex;flex-wrap:wrap;align-items:center;gap:14px;padding:20px 24px;background:var(--navy);border-radius:var(--r-lg);color:var(--white)}
+.proc-foot b{font-family:'DM Mono',monospace;color:var(--mint);font-weight:500}
+.proc-foot p{color:rgba(255,255,255,.7);font-size:.95rem;margin:0;flex:1;min-width:240px}
+
+/* SERVICES */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.svc{border:1px solid var(--gray-mid);border-radius:var(--r-lg);padding:30px 26px;display:flex;flex-direction:column;transition:var(--t)}
+.svc:hover{box-shadow:var(--shadow-lg);transform:translateY(-3px)}
+.svc.feat{border-color:var(--mint);border-width:1.5px;position:relative}
+.svc-pop{position:absolute;top:-11px;left:26px;background:var(--mint);color:var(--white);font-size:.7rem;font-weight:600;font-family:'DM Mono',monospace;padding:4px 11px;border-radius:5px;letter-spacing:.04em}
+.svc-price{font-family:'DM Serif Display',serif;font-size:2rem;color:var(--navy);margin:4px 0 2px}
+.svc-price small{font-size:.85rem;font-family:'DM Sans';color:var(--text-light);font-weight:400}
+.svc-dur{font-family:'DM Mono',monospace;font-size:.74rem;color:var(--text-light);margin-bottom:18px}
+.svc h3{margin-bottom:12px}
+.svc ul{list-style:none;margin:0 0 22px;flex:1}
+.svc li{display:flex;gap:10px;font-size:.9rem;color:var(--text-muted);padding:6px 0;align-items:flex-start}
+.svc li svg{width:16px;height:16px;color:var(--mint);flex-shrink:0;margin-top:3px}
+.svc .btn{width:100%;justify-content:center}
+
+/* AUDIENCE */
+.aud-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.aud{padding:24px;border-left:2px solid var(--mint);background:var(--gray);border-radius:0 var(--r) var(--r) 0}
+.aud h3{font-size:1rem;margin-bottom:7px}
+.aud p{font-size:.9rem}
+
+/* ABOUT */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.about-pts{display:flex;flex-direction:column;gap:18px;margin-top:24px}
+.about-pt{display:flex;gap:14px}
+.about-pt svg{width:20px;height:20px;color:var(--mint-dark);flex-shrink:0;margin-top:2px}
+.about-pt h4{font-size:.98rem;font-weight:600;color:var(--navy);margin-bottom:3px}
+.about-pt p{font-size:.9rem;margin:0}
+.about-quote{background:var(--navy);color:var(--white);border-radius:var(--r-xl);padding:40px;font-family:'DM Serif Display',serif;font-size:1.5rem;line-height:1.4}
+.about-quote span{color:var(--mint)}
+.about-quote .by{display:block;font-family:'DM Mono',monospace;font-size:.78rem;color:rgba(255,255,255,.5);margin-top:20px;font-style:normal}
+
+/* CTA */
+.cta{background:var(--navy);position:relative;overflow:hidden}
+.cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 70% at 80% 50%,rgba(109,190,138,.14),transparent 60%)}
+.cta-in{position:relative;z-index:2;display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:center}
+.cta h2{color:var(--white)}
+.cta p{color:rgba(255,255,255,.66);margin:16px 0 28px;font-size:1.05rem}
+.cta-list{list-style:none;display:flex;flex-direction:column;gap:11px}
+.cta-list li{display:flex;gap:10px;color:rgba(255,255,255,.85);font-size:.92rem;align-items:center}
+.cta-list svg{width:17px;height:17px;color:var(--mint);flex-shrink:0}
+
+/* FOOTER */
+footer{background:#081320;color:rgba(255,255,255,.55);padding:48px 0 28px;font-size:.86rem}
+.foot-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.08)}
+.foot-brand{max-width:320px}
+.foot-brand .logo{color:#fff;margin-bottom:12px}
+.foot-bottom{padding-top:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-family:'DM Mono',monospace;font-size:.74rem;color:rgba(255,255,255,.4)}
+
+.fade{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}
+.fade.in{opacity:1;transform:none}
+
+@media(max-width:880px){
+  .hero-in,.about,.cta-in{grid-template-columns:1fr;gap:40px}
+  .cards-3,.steps,.svc-grid,.aud-grid{grid-template-columns:1fr}
+  .step::before{display:none}.step{padding-top:8px}
+  .nav-links,.nav-cta{display:none}.hamburger{display:flex}
+  .section{padding:72px 0}
+  .lang button{padding:6px 7px;font-size:.68rem}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}.fade{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-in">
+    <a href="#" class="logo"><span class="logo-mark">AI</span>AI&nbsp;Comply</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="#why" data-i18n="nav_why">Why now</a>
+        <a href="#how" data-i18n="nav_how">How it works</a>
+        <a href="#services" data-i18n="nav_services">Services</a>
+        <a href="#about" data-i18n="nav_about">About</a>
+      </div>
+      <div class="lang" id="lang">
+        <button data-lang="en" class="on">EN</button>
+        <button data-lang="uk">UA</button>
+        <button data-lang="nl">NL</button>
+        <button data-lang="fr">FR</button>
+      </div>
+      <a href="#start" class="btn btn-dark nav-cta" data-i18n="nav_cta">Free snapshot</a>
+    </div>
+    <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-grid"></div>
+  <div class="wrap hero-in">
+    <div>
+      <span class="hero-badge" data-i18n="hero_badge">EU AI Act · Brussels</span>
+      <h1 data-i18n-html="hero_h1">Make your AI <em>audit-ready</em> before 2027 — and investor-ready today.</h1>
+      <p class="hero-sub" data-i18n="hero_sub">Fixed-price packages that turn 100+ pages of the EU AI Act into a clear set of engineering tasks. Built for SMEs and startups that can't put a Big Four firm on retainer.</p>
+      <div class="hero-actions">
+        <a href="#start" class="btn btn-primary"><span data-i18n="hero_cta1">Get a free readiness snapshot</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a href="#how" class="btn btn-ghost" data-i18n="hero_cta2">See how it works</a>
+      </div>
+      <div class="trust-strip">
+        <span data-i18n="trust1">Built on ISO/IEC 42001</span>
+        <span data-i18n="trust2">Based in Brussels</span>
+        <span data-i18n="trust3">EN · FR · NL · UA · RU</span>
+      </div>
+    </div>
+    <div class="panel fade">
+      <div class="panel-top">
+        <span class="panel-ttl" data-i18n="panel_ttl">AI System Inventory</span>
+        <span class="panel-tag" data-i18n="panel_tag">snapshot</span>
+      </div>
+      <div class="sys">
+        <div><div class="sys-name" data-i18n="sys1_n">CV-screening model</div><div class="sys-sub" data-i18n="sys1_s">HR · automated shortlisting</div></div>
+        <span class="badge high" data-i18n="badge_high">HIGH RISK</span>
+      </div>
+      <div class="sys">
+        <div><div class="sys-name" data-i18n="sys2_n">Support chatbot</div><div class="sys-sub" data-i18n="sys2_s">Customer service · generative</div></div>
+        <span class="badge lim" data-i18n="badge_lim">LIMITED</span>
+      </div>
+      <div class="sys">
+        <div><div class="sys-name" data-i18n="sys3_n">Demand forecasting</div><div class="sys-sub" data-i18n="sys3_s">Logistics · internal</div></div>
+        <span class="badge min" data-i18n="badge_min">MINIMAL</span>
+      </div>
+      <div class="meter-wrap">
+        <div class="meter-row"><span data-i18n="meter_label">Documentation readiness</span><b>82%</b></div>
+        <div class="meter"><div class="meter-fill" id="fill"></div></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- WHY -->
+<section class="section" id="why">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <span class="eyebrow" data-i18n="why_eyebrow">The deadline moved. The reason to act didn't.</span>
+      <h2 data-i18n="why_h2">You have more time. Your buyers and investors don't wait.</h2>
+      <p data-i18n="why_p">High-risk obligations under Annex III were deferred to 2 December 2027 by the Digital Omnibus. That removes the panic — not the work. Three things are already on the clock.</p>
+    </div>
+    <div class="cards-3">
+      <div class="card fade">
+        <span class="card-tag tag-live" data-i18n="why_c1_tag">In force now</span>
+        <h3 data-i18n="why_c1_h">Prohibited &amp; transparency rules</h3>
+        <p data-i18n="why_c1_p">Banned practices apply since Feb 2025; AI-interaction disclosure is already expected. These don't move with the deadline.</p>
+      </div>
+      <div class="card fade">
+        <span class="card-tag tag-buyer" data-i18n="why_c2_tag">Required by buyers</span>
+        <h3 data-i18n="why_c2_h">Due diligence &amp; procurement</h3>
+        <p data-i18n="why_c2_p">Investors and enterprise clients ask for a technical file today. No documentation, no round, no contract — regardless of any EU date.</p>
+      </div>
+      <div class="card fade">
+        <span class="card-tag tag-due" data-i18n="why_c3_tag">Due Dec 2027</span>
+        <h3 data-i18n="why_c3_h">High-risk system file</h3>
+        <p data-i18n="why_c3_p">A full Annex IV file takes weeks, not days. Starting in 2027 means rushing it. Starting now means it's a competitive asset.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW -->
+<section class="section bg-gray" id="how">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <span class="eyebrow" data-i18n="how_eyebrow">How it works</span>
+      <h2 data-i18n="how_h2">One method. Fixed price. Built to pass an audit.</h2>
+      <p data-i18n="how_p">You don't pay for billable hours. You pay for a structure your team fills in — the same four steps every time.</p>
+    </div>
+    <div class="steps">
+      <div class="step fade"><span class="step-n">01</span><h3 data-i18n="s1_h">Inventory</h3><p data-i18n="s1_p">We list every AI system you build or use — including the third-party tools you didn't think counted.</p></div>
+      <div class="step fade"><span class="step-n">02</span><h3 data-i18n="s2_h">Classify</h3><p data-i18n="s2_p">Each system is mapped to its risk tier under Annex III, with the rationale written down for auditors.</p></div>
+      <div class="step fade"><span class="step-n">03</span><h3 data-i18n="s3_h">Document</h3><p data-i18n="s3_p">Technical file, risk register, FRIA and DPIA — drafted from ready templates, filled with your data.</p></div>
+      <div class="step fade"><span class="step-n">04</span><h3 data-i18n="s4_h">Audit-ready</h3><p data-i18n="s4_p">A concrete gap list for your developers and a self-check pack you can hand to any reviewer.</p></div>
+    </div>
+    <div class="proc-foot fade">
+      <p data-i18n-html="proc_foot">The whole package runs <b>4–6 weeks</b> at a <b>fixed price</b> — translated into Jira-ready tasks, not legal prose.</p>
+      <a href="#services" class="btn btn-primary" data-i18n="proc_btn">See packages</a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section" id="services">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <span class="eyebrow" data-i18n="svc_eyebrow">Services</span>
+      <h2 data-i18n="svc_h2">Start small. Scale only if you need to.</h2>
+    </div>
+    <div class="svc-grid">
+      <div class="svc fade">
+        <div class="svc-price" data-i18n="svc1_price">Free</div>
+        <div class="svc-dur" data-i18n="svc1_dur">2 hours · no sales call</div>
+        <h3 data-i18n="svc1_h">Readiness Snapshot</h3>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="svc1_l1">Quick inventory of your AI systems</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="svc1_l2">First-pass risk classification</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="svc1_l3">One-page map of what applies to you</span></li>
+        </ul>
+        <a href="#start" class="btn btn-dark" data-i18n="svc1_btn">Request snapshot</a>
+      </div>
+      <div class="svc feat fade">
+        <span class="svc-pop" data-i18n="svc2_pop">Most chosen</span>
+        <div class="svc-price" data-i18n-html="svc2_price">€9,500 <small>fixed</small></div>
+        <div class="svc-dur" data-i18n="svc2_dur">4–6 weeks</div>
+        <h3 data-i18n="svc2_h">Fast-Track Package</h3>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="svc2_l1">Technical file (Annex IV)</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="svc2_l2">Risk register + mitigation plan</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="svc2_l3">FRIA / DPIA templates, completed</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="svc2_l4">Investor-DD-ready document set</span></li>
+        </ul>
+        <a href="#start" class="btn btn-primary" data-i18n="svc2_btn">Start a package</a>
+      </div>
+      <div class="svc fade">
+        <div class="svc-price" data-i18n-html="svc3_price">€1,000 <small>/mo</small></div>
+        <div class="svc-dur" data-i18n="svc3_dur">Rolling · cancel anytime</div>
+        <h3 data-i18n="svc3_h">Governance Retainer</h3>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="svc3_l1">Regulatory change tracking</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="svc3_l2">Documentation kept current</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="svc3_l3">Review of each new model release</span></li>
+        </ul>
+        <a href="#start" class="btn btn-dark" data-i18n="svc3_btn">Talk retainer</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AUDIENCE -->
+<section class="section bg-gray">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <span class="eyebrow" data-i18n="aud_eyebrow">Who it's for</span>
+      <h2 data-i18n="aud_h2">Built for teams without an in-house AI lawyer.</h2>
+    </div>
+    <div class="aud-grid">
+      <div class="aud fade"><h3 data-i18n="aud1_h">SMEs using third-party AI</h3><p data-i18n="aud1_p">You run AI in HR, lending or logistics and need to know which of it is high-risk — before someone else tells you.</p></div>
+      <div class="aud fade"><h3 data-i18n="aud2_h">Startups raising a round</h3><p data-i18n="aud2_p">Your data room needs a technical file. We make compliance a due-diligence asset, not a blocker.</p></div>
+      <div class="aud fade"><h3 data-i18n="aud3_h">Cross-border &amp; Ukrainian teams</h3><p data-i18n="aud3_p">Selling AI into the EU from outside it. Same obligations apply — handled in your language, EN / UA / RU.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="wrap about">
+    <div class="fade">
+      <span class="eyebrow" data-i18n="about_eyebrow">Why us</span>
+      <h2 style="margin:14px 0 6px" data-i18n="about_h2">A boutique, not a brand tax.</h2>
+      <p data-i18n="about_p">Big Four firms start at €50k and ignore companies your size. We do the same technical work, scoped and priced for an SME.</p>
+      <div class="about-pts">
+        <div class="about-pt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z"/></svg><div><h4 data-i18n="ab1_h">Method, not improvisation</h4><p data-i18n="ab1_p">Every engagement follows the ISO/IEC 42001 framework and the Act's Annex IV structure.</p></div></div>
+        <div class="about-pt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="10" r="3"/><path d="M12 21c-4-4-7-7-7-11a7 7 0 0114 0c0 4-3 7-7 11z"/></svg><div><h4 data-i18n="ab2_h">Brussels-based</h4><p data-i18n="ab2_p">Close to the EU AI Office — guidance reaches us before it reaches a newsletter.</p></div></div>
+        <div class="about-pt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M12 3a15 15 0 010 18M12 3a15 15 0 000 18"/></svg><div><h4 data-i18n="ab3_h">Five working languages</h4><p data-i18n="ab3_p">EN, FR, NL, UA and RU — including the cross-border Ukrainian market most firms can't serve.</p></div></div>
+      </div>
+    </div>
+    <div class="about-quote fade">
+      <span data-i18n-html="about_quote">Small enough to <span>answer your call</span> — structured enough to <span>pass an audit.</span></span>
+      <span class="by" data-i18n="about_by">— how we work, in one line</span>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section cta" id="start">
+  <div class="wrap cta-in">
+    <div class="fade">
+      <h2 data-i18n="cta_h2">Start with a free readiness snapshot.</h2>
+      <p data-i18n="cta_p">No deadline pressure, no obligation. We map your AI systems and tell you plainly what — if anything — applies to you.</p>
+      <a href="mailto:hello@aicomply.example" class="btn btn-primary"><span data-i18n="cta_btn">Request your snapshot</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+    <ul class="cta-list fade">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="cta_l1">2-hour assessment, free of charge</span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="cta_l2">Reply within one working day</span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="cta_l3">Covered by an NDA on request</span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="cta_l4">You leave with a usable one-pager either way</span></li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <div class="logo"><span class="logo-mark">AI</span>AI&nbsp;Comply</div>
+        <p style="color:rgba(255,255,255,.5);font-size:.85rem" data-i18n="foot_desc">EU AI Act readiness for SMEs and startups. Brussels, Belgium.</p>
+      </div>
+      <div style="font-family:'DM Mono',monospace;font-size:.78rem;color:rgba(255,255,255,.5)">hello@aicomply.example</div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 AI Comply</span>
+      <span data-i18n="foot_note">No licence or certification is required to provide AI compliance advice in the EU.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const T={
+ en:{nav_why:"Why now",nav_how:"How it works",nav_services:"Services",nav_about:"About",nav_cta:"Free snapshot",
+  hero_badge:"EU AI Act · Brussels",hero_h1:"Make your AI <em>audit-ready</em> before 2027 — and investor-ready today.",
+  hero_sub:"Fixed-price packages that turn 100+ pages of the EU AI Act into a clear set of engineering tasks. Built for SMEs and startups that can't put a Big Four firm on retainer.",
+  hero_cta1:"Get a free readiness snapshot",hero_cta2:"See how it works",trust1:"Built on ISO/IEC 42001",trust2:"Based in Brussels",trust3:"EN · FR · NL · UA · RU",
+  panel_ttl:"AI System Inventory",panel_tag:"snapshot",sys1_n:"CV-screening model",sys1_s:"HR · automated shortlisting",sys2_n:"Support chatbot",sys2_s:"Customer service · generative",sys3_n:"Demand forecasting",sys3_s:"Logistics · internal",badge_high:"HIGH RISK",badge_lim:"LIMITED",badge_min:"MINIMAL",meter_label:"Documentation readiness",
+  why_eyebrow:"The deadline moved. The reason to act didn't.",why_h2:"You have more time. Your buyers and investors don't wait.",why_p:"High-risk obligations under Annex III were deferred to 2 December 2027 by the Digital Omnibus. That removes the panic — not the work. Three things are already on the clock.",
+  why_c1_tag:"In force now",why_c1_h:"Prohibited & transparency rules",why_c1_p:"Banned practices apply since Feb 2025; AI-interaction disclosure is already expected. These don't move with the deadline.",
+  why_c2_tag:"Required by buyers",why_c2_h:"Due diligence & procurement",why_c2_p:"Investors and enterprise clients ask for a technical file today. No documentation, no round, no contract — regardless of any EU date.",
+  why_c3_tag:"Due Dec 2027",why_c3_h:"High-risk system file",why_c3_p:"A full Annex IV file takes weeks, not days. Starting in 2027 means rushing it. Starting now means it's a competitive asset.",
+  how_eyebrow:"How it works",how_h2:"One method. Fixed price. Built to pass an audit.",how_p:"You don't pay for billable hours. You pay for a structure your team fills in — the same four steps every time.",
+  s1_h:"Inventory",s1_p:"We list every AI system you build or use — including the third-party tools you didn't think counted.",
+  s2_h:"Classify",s2_p:"Each system is mapped to its risk tier under Annex III, with the rationale written down for auditors.",
+  s3_h:"Document",s3_p:"Technical file, risk register, FRIA and DPIA — drafted from ready templates, filled with your data.",
+  s4_h:"Audit-ready",s4_p:"A concrete gap list for your developers and a self-check pack you can hand to any reviewer.",
+  proc_foot:"The whole package runs <b>4–6 weeks</b> at a <b>fixed price</b> — translated into Jira-ready tasks, not legal prose.",proc_btn:"See packages",
+  svc_eyebrow:"Services",svc_h2:"Start small. Scale only if you need to.",
+  svc1_price:"Free",svc1_dur:"2 hours · no sales call",svc1_h:"Readiness Snapshot",svc1_l1:"Quick inventory of your AI systems",svc1_l2:"First-pass risk classification",svc1_l3:"One-page map of what applies to you",svc1_btn:"Request snapshot",
+  svc2_pop:"Most chosen",svc2_price:"€9,500 <small>fixed</small>",svc2_dur:"4–6 weeks",svc2_h:"Fast-Track Package",svc2_l1:"Technical file (Annex IV)",svc2_l2:"Risk register + mitigation plan",svc2_l3:"FRIA / DPIA templates, completed",svc2_l4:"Investor-DD-ready document set",svc2_btn:"Start a package",
+  svc3_price:"€1,000 <small>/mo</small>",svc3_dur:"Rolling · cancel anytime",svc3_h:"Governance Retainer",svc3_l1:"Regulatory change tracking",svc3_l2:"Documentation kept current",svc3_l3:"Review of each new model release",svc3_btn:"Talk retainer",
+  aud_eyebrow:"Who it's for",aud_h2:"Built for teams without an in-house AI lawyer.",aud1_h:"SMEs using third-party AI",aud1_p:"You run AI in HR, lending or logistics and need to know which of it is high-risk — before someone else tells you.",aud2_h:"Startups raising a round",aud2_p:"Your data room needs a technical file. We make compliance a due-diligence asset, not a blocker.",aud3_h:"Cross-border & Ukrainian teams",aud3_p:"Selling AI into the EU from outside it. Same obligations apply — handled in your language, EN / UA / RU.",
+  about_eyebrow:"Why us",about_h2:"A boutique, not a brand tax.",about_p:"Big Four firms start at €50k and ignore companies your size. We do the same technical work, scoped and priced for an SME.",
+  ab1_h:"Method, not improvisation",ab1_p:"Every engagement follows the ISO/IEC 42001 framework and the Act's Annex IV structure.",ab2_h:"Brussels-based",ab2_p:"Close to the EU AI Office — guidance reaches us before it reaches a newsletter.",ab3_h:"Five working languages",ab3_p:"EN, FR, NL, UA and RU — including the cross-border Ukrainian market most firms can't serve.",
+  about_quote:"Small enough to <span>answer your call</span> — structured enough to <span>pass an audit.</span>",about_by:"— how we work, in one line",
+  cta_h2:"Start with a free readiness snapshot.",cta_p:"No deadline pressure, no obligation. We map your AI systems and tell you plainly what — if anything — applies to you.",cta_btn:"Request your snapshot",cta_l1:"2-hour assessment, free of charge",cta_l2:"Reply within one working day",cta_l3:"Covered by an NDA on request",cta_l4:"You leave with a usable one-pager either way",
+  foot_desc:"EU AI Act readiness for SMEs and startups. Brussels, Belgium.",foot_note:"No licence or certification is required to provide AI compliance advice in the EU."},
+
+ uk:{nav_why:"Чому зараз",nav_how:"Як це працює",nav_services:"Послуги",nav_about:"Про нас",nav_cta:"Безкоштовний аналіз",
+  hero_badge:"EU AI Act · Брюссель",hero_h1:"Зробіть свій ШІ <em>готовим до аудиту</em> до 2027 — а до інвесторів уже сьогодні.",
+  hero_sub:"Пакети з фіксованою ціною, що перетворюють 100+ сторінок EU AI Act на чіткий список інженерних задач. Для МСП і стартапів, яким не по кишені великі консалтингові фірми.",
+  hero_cta1:"Отримати безкоштовний експрес-аналіз",hero_cta2:"Як це працює",trust1:"На основі ISO/IEC 42001",trust2:"Базуємось у Брюсселі",trust3:"EN · FR · NL · UA · RU",
+  panel_ttl:"Реєстр ШІ-систем",panel_tag:"аналіз",sys1_n:"Модель скринінгу резюме",sys1_s:"HR · автоматичний відбір",sys2_n:"Чат-бот підтримки",sys2_s:"Клієнтський сервіс · генеративний",sys3_n:"Прогноз попиту",sys3_s:"Логістика · внутрішній",badge_high:"ВИСОКИЙ РИЗИК",badge_lim:"ОБМЕЖЕНИЙ",badge_min:"МІНІМАЛЬНИЙ",meter_label:"Готовність документації",
+  why_eyebrow:"Дедлайн зсунувся. Причина діяти — ні.",why_h2:"У вас більше часу. Ваші клієнти та інвестори не чекають.",why_p:"Зобов'язання для систем високого ризику (Annex III) перенесено на 2 грудня 2027 року рішенням Digital Omnibus. Це знімає паніку — але не роботу. Три речі вже на годиннику.",
+  why_c1_tag:"Чинне зараз",why_c1_h:"Заборони та прозорість",why_c1_p:"Заборонені практики діють з лютого 2025; розкриття взаємодії з ШІ вже очікується. Ці правила від дедлайну не залежать.",
+  why_c2_tag:"Вимога покупців",why_c2_h:"Due diligence та закупівлі",why_c2_p:"Інвестори та корпоративні клієнти вимагають технічний файл уже сьогодні. Немає документації — немає раунду й контракту, незалежно від дат ЄС.",
+  why_c3_tag:"Термін — груд. 2027",why_c3_h:"Файл систем високого ризику",why_c3_p:"Повний файл за Annex IV — це тижні, а не дні. Почати у 2027 — означає робити поспіхом. Почати зараз — зробити з цього конкурентну перевагу.",
+  how_eyebrow:"Як це працює",how_h2:"Один метод. Фіксована ціна. Готово до аудиту.",how_p:"Ви платите не за години, а за структуру, яку ваша команда наповнює даними — ті самі чотири кроки щоразу.",
+  s1_h:"Інвентаризація",s1_p:"Складаємо перелік усіх ШІ-систем, які ви створюєте чи використовуєте — зокрема сторонні інструменти, які ви не вважали такими.",
+  s2_h:"Класифікація",s2_p:"Кожну систему відносимо до рівня ризику за Annex III, із письмовим обґрунтуванням для аудиторів.",
+  s3_h:"Документація",s3_p:"Технічний файл, реєстр ризиків, FRIA та DPIA — за готовими шаблонами, наповненими вашими даними.",
+  s4_h:"Готовність до аудиту",s4_p:"Конкретний список прогалин для розробників і набір для самоперевірки, який можна дати будь-якому перевіряючому.",
+  proc_foot:"Увесь пакет — <b>4–6 тижнів</b> за <b>фіксованою ціною</b> — у вигляді готових Jira-задач, а не юридичного тексту.",proc_btn:"Дивитись пакети",
+  svc_eyebrow:"Послуги",svc_h2:"Почніть з малого. Масштабуйте лише за потреби.",
+  svc1_price:"Безкоштовно",svc1_dur:"2 години · без продажів",svc1_h:"Експрес-аналіз готовності",svc1_l1:"Швидка інвентаризація ваших ШІ-систем",svc1_l2:"Попередня класифікація ризиків",svc1_l3:"Карта на одну сторінку: що стосується вас",svc1_btn:"Замовити аналіз",
+  svc2_pop:"Найпопулярніший",svc2_price:"€9 500 <small>фіксовано</small>",svc2_dur:"4–6 тижнів",svc2_h:"Пакет Fast-Track",svc2_l1:"Технічний файл (Annex IV)",svc2_l2:"Реєстр ризиків + план зниження",svc2_l3:"Шаблони FRIA / DPIA, заповнені",svc2_l4:"Комплект для інвест-due diligence",svc2_btn:"Замовити пакет",
+  svc3_price:"€1 000 <small>/міс</small>",svc3_dur:"Помісячно · скасування будь-коли",svc3_h:"Абонемент Governance",svc3_l1:"Відстеження змін регуляторики",svc3_l2:"Документація актуальна",svc3_l3:"Перевірка кожного нового релізу моделі",svc3_btn:"Обговорити абонемент",
+  aud_eyebrow:"Для кого це",aud_h2:"Для команд без власного ШІ-юриста.",aud1_h:"МСП, що користуються стороннім ШІ",aud1_p:"Ви використовуєте ШІ в HR, кредитуванні чи логістиці й хочете знати, що з цього — високий ризик, перш ніж вам скажуть інші.",aud2_h:"Стартапи в раунді залучення",aud2_p:"Вашому data room потрібен технічний файл. Ми робимо комплаєнс активом для due diligence, а не перешкодою.",aud3_h:"Транскордонні та українські команди",aud3_p:"Продаєте ШІ в ЄС, перебуваючи поза ним. Зобов'язання ті самі — працюємо вашою мовою: EN / UA / RU.",
+  about_eyebrow:"Чому ми",about_h2:"Бутик, а не націнка за бренд.",about_p:"Великі фірми починають від €50k і ігнорують компанії вашого розміру. Ми робимо ту саму технічну роботу — за обсягом і ціною для МСП.",
+  ab1_h:"Метод, а не імпровізація",ab1_p:"Кожен проєкт — за фреймворком ISO/IEC 42001 та структурою Annex IV закону.",ab2_h:"Базуємось у Брюсселі",ab2_p:"Поруч із EU AI Office — настанови доходять до нас раніше, ніж до розсилок.",ab3_h:"П'ять робочих мов",ab3_p:"EN, FR, NL, UA та RU — зокрема транскордонний український ринок, який більшість фірм не обслуговує.",
+  about_quote:"Достатньо малі, щоб <span>відповісти на ваш дзвінок</span> — достатньо структуровані, щоб <span>пройти аудит.</span>",about_by:"— наш принцип в одному рядку",
+  cta_h2:"Почніть із безкоштовного експрес-аналізу.",cta_p:"Без тиску дедлайну та зобов'язань. Ми складаємо карту ваших ШІ-систем і прямо кажемо, що саме вас стосується — якщо взагалі стосується.",cta_btn:"Замовити аналіз",cta_l1:"2-годинна оцінка, безкоштовно",cta_l2:"Відповідь протягом одного робочого дня",cta_l3:"За запитом — під NDA",cta_l4:"У будь-якому разі ви отримаєте корисний документ на сторінку",
+  foot_desc:"Готовність до EU AI Act для МСП і стартапів. Брюссель, Бельгія.",foot_note:"Для надання консультацій з AI-комплаєнсу в ЄС ліцензія чи сертифікат не потрібні."},
+
+ nl:{nav_why:"Waarom nu",nav_how:"Hoe het werkt",nav_services:"Diensten",nav_about:"Over ons",nav_cta:"Gratis analyse",
+  hero_badge:"EU AI Act · Brussel",hero_h1:"Maak uw AI <em>audit-klaar</em> vóór 2027 — en investeerder-klaar vandaag.",
+  hero_sub:"Pakketten met vaste prijs die 100+ pagina's van de EU AI Act vertalen naar een heldere set engineeringtaken. Voor kmo's en start-ups die zich geen Big Four kunnen veroorloven.",
+  hero_cta1:"Vraag een gratis analyse aan",hero_cta2:"Hoe het werkt",trust1:"Gebaseerd op ISO/IEC 42001",trust2:"Gevestigd in Brussel",trust3:"EN · FR · NL · UA · RU",
+  panel_ttl:"AI-systeeminventaris",panel_tag:"analyse",sys1_n:"CV-screeningmodel",sys1_s:"HR · geautomatiseerde selectie",sys2_n:"Support-chatbot",sys2_s:"Klantenservice · generatief",sys3_n:"Vraagvoorspelling",sys3_s:"Logistiek · intern",badge_high:"HOOG RISICO",badge_lim:"BEPERKT",badge_min:"MINIMAAL",meter_label:"Documentatie-gereedheid",
+  why_eyebrow:"De deadline schoof op. De reden om te handelen niet.",why_h2:"U heeft meer tijd. Uw klanten en investeerders niet.",why_p:"Verplichtingen voor hoog-risico systemen (Annex III) zijn door de Digital Omnibus uitgesteld tot 2 december 2027. Dat haalt de paniek weg — niet het werk. Drie zaken lopen al.",
+  why_c1_tag:"Nu van kracht",why_c1_h:"Verboden & transparantie",why_c1_p:"Verboden praktijken gelden sinds feb. 2025; AI-interactie moet al kenbaar gemaakt worden. Dit schuift niet mee met de deadline.",
+  why_c2_tag:"Vereist door kopers",why_c2_h:"Due diligence & inkoop",why_c2_p:"Investeerders en grote klanten vragen vandaag al om een technisch dossier. Geen documentatie, geen ronde, geen contract — los van enige EU-datum.",
+  why_c3_tag:"Tegen dec. 2027",why_c3_h:"Dossier hoog-risico systeem",why_c3_p:"Een volledig Annex IV-dossier kost weken, geen dagen. In 2027 starten betekent haasten. Nu starten maakt er een concurrentievoordeel van.",
+  how_eyebrow:"Hoe het werkt",how_h2:"Eén methode. Vaste prijs. Gemaakt om een audit te doorstaan.",how_p:"U betaalt niet voor uren, maar voor een structuur die uw team invult — telkens dezelfde vier stappen.",
+  s1_h:"Inventaris",s1_p:"We lijsten elk AI-systeem op dat u bouwt of gebruikt — ook de externe tools die u niet meetelde.",
+  s2_h:"Classificatie",s2_p:"Elk systeem wordt ingedeeld in zijn risiconiveau volgens Annex III, met de motivering vastgelegd voor auditors.",
+  s3_h:"Documentatie",s3_p:"Technisch dossier, risicoregister, FRIA en DPIA — opgesteld uit kant-en-klare sjablonen, gevuld met uw data.",
+  s4_h:"Audit-klaar",s4_p:"Een concrete gap-lijst voor uw ontwikkelaars en een zelfcontrolepakket voor elke beoordelaar.",
+  proc_foot:"Het hele pakket duurt <b>4–6 weken</b> tegen een <b>vaste prijs</b> — vertaald naar Jira-klare taken, geen juridische tekst.",proc_btn:"Bekijk pakketten",
+  svc_eyebrow:"Diensten",svc_h2:"Begin klein. Schaal alleen als het nodig is.",
+  svc1_price:"Gratis",svc1_dur:"2 uur · geen verkooppraatje",svc1_h:"Gereedheidsanalyse",svc1_l1:"Snelle inventaris van uw AI-systemen",svc1_l2:"Eerste risicoclassificatie",svc1_l3:"Eén-pagina-overzicht van wat op u van toepassing is",svc1_btn:"Analyse aanvragen",
+  svc2_pop:"Meest gekozen",svc2_price:"€9.500 <small>vast</small>",svc2_dur:"4–6 weken",svc2_h:"Fast-Track-pakket",svc2_l1:"Technisch dossier (Annex IV)",svc2_l2:"Risicoregister + mitigatieplan",svc2_l3:"FRIA/DPIA-sjablonen, ingevuld",svc2_l4:"Documentenset klaar voor due diligence",svc2_btn:"Pakket starten",
+  svc3_price:"€1.000 <small>/mnd</small>",svc3_dur:"Maandelijks · altijd opzegbaar",svc3_h:"Governance-abonnement",svc3_l1:"Volgen van regelgevingswijzigingen",svc3_l2:"Documentatie up-to-date",svc3_l3:"Beoordeling van elke nieuwe modelrelease",svc3_btn:"Bespreek abonnement",
+  aud_eyebrow:"Voor wie",aud_h2:"Voor teams zonder eigen AI-jurist.",aud1_h:"Kmo's die externe AI gebruiken",aud1_p:"U gebruikt AI in HR, kredietverlening of logistiek en wilt weten wat hoog-risico is — vóór iemand anders het u zegt.",aud2_h:"Start-ups die ophalen",aud2_p:"Uw dataroom heeft een technisch dossier nodig. Wij maken compliance een due-diligence-troef, geen blokkade.",aud3_h:"Grensoverschrijdende & Oekraïense teams",aud3_p:"U verkoopt AI naar de EU van buitenaf. Dezelfde verplichtingen gelden — in uw taal: EN / UA / RU.",
+  about_eyebrow:"Waarom wij",about_h2:"Een boutique, geen merktoeslag.",about_p:"Big Four begint bij €50k en negeert bedrijven van uw omvang. Wij doen hetzelfde technische werk, geschikt en geprijsd voor een kmo.",
+  ab1_h:"Methode, geen improvisatie",ab1_p:"Elk traject volgt het ISO/IEC 42001-raamwerk en de Annex IV-structuur van de wet.",ab2_h:"Gevestigd in Brussel",ab2_p:"Dicht bij het EU AI Office — richtlijnen bereiken ons vóór de nieuwsbrieven.",ab3_h:"Vijf werktalen",ab3_p:"EN, FR, NL, UA en RU — inclusief de Oekraïense markt die de meeste firma's niet bedienen.",
+  about_quote:"Klein genoeg om <span>uw oproep te beantwoorden</span> — gestructureerd genoeg om <span>een audit te doorstaan.</span>",about_by:"— hoe wij werken, in één zin",
+  cta_h2:"Begin met een gratis gereedheidsanalyse.",cta_p:"Geen deadlinedruk, geen verplichting. We brengen uw AI-systemen in kaart en zeggen u helder wat — indien iets — op u van toepassing is.",cta_btn:"Analyse aanvragen",cta_l1:"Beoordeling van 2 uur, gratis",cta_l2:"Antwoord binnen één werkdag",cta_l3:"Op verzoek onder NDA",cta_l4:"U gaat hoe dan ook weg met een bruikbare one-pager",
+  foot_desc:"EU AI Act-gereedheid voor kmo's en start-ups. Brussel, België.",foot_note:"Voor AI-compliance-advies in de EU is geen vergunning of certificering vereist."},
+
+ fr:{nav_why:"Pourquoi maintenant",nav_how:"Comment ça marche",nav_services:"Services",nav_about:"À propos",nav_cta:"Analyse gratuite",
+  hero_badge:"EU AI Act · Bruxelles",hero_h1:"Rendez votre IA <em>prête pour l'audit</em> avant 2027 — et prête pour les investisseurs dès aujourd'hui.",
+  hero_sub:"Des forfaits à prix fixe qui transforment les 100+ pages de l'EU AI Act en une liste claire de tâches d'ingénierie. Pour les PME et start-ups qui ne peuvent pas s'offrir un grand cabinet.",
+  hero_cta1:"Obtenir une analyse gratuite",hero_cta2:"Voir comment ça marche",trust1:"Basé sur ISO/IEC 42001",trust2:"Basé à Bruxelles",trust3:"EN · FR · NL · UA · RU",
+  panel_ttl:"Inventaire des systèmes IA",panel_tag:"aperçu",sys1_n:"Modèle de tri de CV",sys1_s:"RH · présélection automatisée",sys2_n:"Chatbot de support",sys2_s:"Service client · génératif",sys3_n:"Prévision de la demande",sys3_s:"Logistique · interne",badge_high:"RISQUE ÉLEVÉ",badge_lim:"LIMITÉ",badge_min:"MINIMAL",meter_label:"État de la documentation",
+  why_eyebrow:"L'échéance a bougé. La raison d'agir, non.",why_h2:"Vous avez plus de temps. Vos clients et investisseurs, non.",why_p:"Les obligations pour les systèmes à haut risque (Annexe III) ont été reportées au 2 décembre 2027 par le Digital Omnibus. Cela retire la panique — pas le travail. Trois choses sont déjà en cours.",
+  why_c1_tag:"En vigueur",why_c1_h:"Interdictions & transparence",why_c1_p:"Les pratiques interdites s'appliquent depuis février 2025 ; la divulgation des interactions IA est déjà attendue. Cela ne bouge pas avec l'échéance.",
+  why_c2_tag:"Exigé par les acheteurs",why_c2_h:"Due diligence & achats",why_c2_p:"Investisseurs et grands clients exigent un dossier technique dès aujourd'hui. Pas de documentation, pas de levée, pas de contrat — quelle que soit l'échéance UE.",
+  why_c3_tag:"Échéance déc. 2027",why_c3_h:"Dossier système à haut risque",why_c3_p:"Un dossier Annexe IV complet prend des semaines, pas des jours. Commencer en 2027, c'est se précipiter. Commencer maintenant, c'est en faire un atout.",
+  how_eyebrow:"Comment ça marche",how_h2:"Une méthode. Prix fixe. Conçu pour passer l'audit.",how_p:"Vous ne payez pas des heures, mais une structure que votre équipe remplit — les quatre mêmes étapes à chaque fois.",
+  s1_h:"Inventaire",s1_p:"Nous listons chaque système IA que vous développez ou utilisez — y compris les outils tiers que vous n'aviez pas comptés.",
+  s2_h:"Classification",s2_p:"Chaque système est classé selon son niveau de risque (Annexe III), avec la justification écrite pour les auditeurs.",
+  s3_h:"Documentation",s3_p:"Dossier technique, registre des risques, FRIA et DPIA — rédigés à partir de modèles prêts, remplis avec vos données.",
+  s4_h:"Prêt pour l'audit",s4_p:"Une liste précise des écarts pour vos développeurs et un kit d'auto-évaluation à remettre à tout évaluateur.",
+  proc_foot:"Le forfait complet dure <b>4–6 semaines</b> à <b>prix fixe</b> — traduit en tâches prêtes pour Jira, pas en prose juridique.",proc_btn:"Voir les forfaits",
+  svc_eyebrow:"Services",svc_h2:"Commencez petit. Évoluez seulement si nécessaire.",
+  svc1_price:"Gratuit",svc1_dur:"2 heures · sans démarchage",svc1_h:"Analyse de préparation",svc1_l1:"Inventaire rapide de vos systèmes IA",svc1_l2:"Première classification des risques",svc1_l3:"Carte d'une page de ce qui vous concerne",svc1_btn:"Demander l'analyse",
+  svc2_pop:"Le plus choisi",svc2_price:"9 500 € <small>fixe</small>",svc2_dur:"4–6 semaines",svc2_h:"Forfait Fast-Track",svc2_l1:"Dossier technique (Annexe IV)",svc2_l2:"Registre des risques + plan d'atténuation",svc2_l3:"Modèles FRIA / DPIA, complétés",svc2_l4:"Dossier prêt pour la due diligence",svc2_btn:"Démarrer un forfait",
+  svc3_price:"1 000 € <small>/mois</small>",svc3_dur:"Mensuel · résiliable à tout moment",svc3_h:"Forfait gouvernance",svc3_l1:"Suivi des évolutions réglementaires",svc3_l2:"Documentation tenue à jour",svc3_l3:"Revue de chaque nouvelle version de modèle",svc3_btn:"Discuter du forfait",
+  aud_eyebrow:"Pour qui",aud_h2:"Pour les équipes sans juriste IA en interne.",aud1_h:"PME utilisant de l'IA tierce",aud1_p:"Vous utilisez l'IA en RH, crédit ou logistique et devez savoir ce qui est à haut risque — avant qu'on vous le dise.",aud2_h:"Start-ups en levée de fonds",aud2_p:"Votre data room a besoin d'un dossier technique. Nous faisons de la conformité un atout de due diligence, pas un obstacle.",aud3_h:"Équipes transfrontalières & ukrainiennes",aud3_p:"Vous vendez de l'IA dans l'UE depuis l'extérieur. Les mêmes obligations s'appliquent — dans votre langue : EN / UA / RU.",
+  about_eyebrow:"Pourquoi nous",about_h2:"Un cabinet boutique, pas une taxe de marque.",about_p:"Les grands cabinets démarrent à 50 k€ et ignorent les entreprises de votre taille. Nous faisons le même travail technique, dimensionné et tarifé pour une PME.",
+  ab1_h:"Méthode, pas improvisation",ab1_p:"Chaque mission suit le cadre ISO/IEC 42001 et la structure de l'Annexe IV de la loi.",ab2_h:"Basé à Bruxelles",ab2_p:"Proche de l'EU AI Office — les orientations nous parviennent avant les newsletters.",ab3_h:"Cinq langues de travail",ab3_p:"EN, FR, NL, UA et RU — y compris le marché ukrainien transfrontalier que peu de cabinets servent.",
+  about_quote:"Assez petits pour <span>répondre à votre appel</span> — assez structurés pour <span>passer un audit.</span>",about_by:"— notre façon de travailler, en une ligne",
+  cta_h2:"Commencez par une analyse de préparation gratuite.",cta_p:"Aucune pression d'échéance, aucune obligation. Nous cartographions vos systèmes IA et vous disons clairement ce qui — le cas échéant — vous concerne.",cta_btn:"Demander votre analyse",cta_l1:"Évaluation de 2 heures, gratuite",cta_l2:"Réponse sous un jour ouvré",cta_l3:"Sous NDA sur demande",cta_l4:"Vous repartez dans tous les cas avec une fiche utile",
+  foot_desc:"Préparation à l'EU AI Act pour PME et start-ups. Bruxelles, Belgique.",foot_note:"Aucune licence ni certification n'est requise pour conseiller en conformité IA dans l'UE."}
+};
+
+function setLang(l){
+  const t=T[l]; if(!t)return;
+  document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.getAttribute('data-i18n');if(t[k]!=null)el.textContent=t[k]});
+  document.querySelectorAll('[data-i18n-html]').forEach(el=>{const k=el.getAttribute('data-i18n-html');if(t[k]!=null)el.innerHTML=t[k]});
+  document.documentElement.lang=l;
+  document.querySelectorAll('#lang button').forEach(b=>b.classList.toggle('on',b.getAttribute('data-lang')===l));
+}
+document.querySelectorAll('#lang button').forEach(b=>b.addEventListener('click',()=>setLang(b.getAttribute('data-lang'))));
+
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+window.addEventListener('load',()=>{setTimeout(()=>{const f=document.getElementById('fill');if(f)f.style.width='82%'},300)});
+document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})}}));
+</script>
+</body>
+</html>
