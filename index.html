@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="EU AI Act readiness for SMEs and startups — fixed-price compliance packages built on the ISO/IEC 42001 framework. Brussels, Belgium.">
+<meta name="description" content="EU AI Act readiness for SMEs and startups — fixed-price compliance packages built on the ISO/IEC 42001 framework. Flanders, Belgium.">
 <title>AI Comply — EU AI Act Readiness for SMEs</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -162,6 +162,35 @@ nav{position:fixed;inset:0 0 auto 0;z-index:1000;background:rgba(255,255,255,.94
 .cta-list li{display:flex;gap:10px;color:rgba(255,255,255,.85);font-size:.92rem;align-items:center}
 .cta-list svg{width:17px;height:17px;color:var(--mint);flex-shrink:0}
 
+/* AI RISK CHECK QUIZ */
+.qz-card{background:var(--white);border-radius:var(--r-lg);padding:30px;box-shadow:var(--shadow-lg);color:var(--text)}
+.qz-card p{color:var(--text)}
+.qz-card .qz-progress{color:var(--mint-dark)}
+.qz-card .qz-sub{color:var(--text-muted)}
+.qz-step{display:none}
+.qz-step.active{display:block}
+.qz-progress{font-family:'DM Mono',monospace;font-size:.72rem;letter-spacing:.06em;color:var(--mint-dark);margin-bottom:10px}
+.qz-h{font-size:1.18rem;font-weight:600;color:var(--navy);line-height:1.35;margin-bottom:6px}
+.qz-sub{color:var(--text-muted);font-size:.92rem;margin-bottom:6px}
+.qz-opts{display:grid;gap:9px;margin-top:16px}
+.qz-opt{background:var(--gray);border:1.5px solid var(--gray-mid);border-radius:var(--r);padding:13px 16px;text-align:left;font-family:inherit;font-size:.94rem;font-weight:500;color:var(--text);cursor:pointer;transition:var(--t)}
+.qz-opt:hover{border-color:var(--mint);background:var(--mint-light)}
+.qz-back{background:none;border:none;color:var(--text-light);font-size:.82rem;font-family:inherit;cursor:pointer;padding:0;margin-bottom:14px;display:inline-flex;align-items:center;gap:5px}
+.qz-back:hover{color:var(--navy)}
+.qz-fields{display:grid;gap:10px;margin-top:16px}
+.qz-inp{padding:13px 14px;border:1.5px solid var(--gray-mid);border-radius:var(--r);font-family:inherit;font-size:.94rem;color:var(--text);background:var(--white)}
+.qz-inp:focus{outline:none;border-color:var(--mint)}
+.qz-inp.err{border-color:var(--red)}
+.qz-err{color:#C0392B;font-size:.82rem;margin-top:8px;display:none}
+.qz-err.show{display:block}
+.qz-result-icon{width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.3rem;font-weight:700;margin-bottom:16px}
+.qz-result.green .qz-result-icon{background:var(--mint-light);color:var(--mint-dark)}
+.qz-result.amber .qz-result-icon{background:#FEF3C7;color:#B45309}
+.qz-result.red .qz-result-icon{background:rgba(192,57,43,.12);color:#C0392B}
+.qz-result p{margin-bottom:18px}
+.qz-result .btn{width:100%;justify-content:center}
+@media(max-width:880px){.qz-card{padding:24px}}
+
 /* FOOTER */
 footer{background:#081320;color:rgba(255,255,255,.55);padding:48px 0 28px;font-size:.86rem}
 .foot-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.08)}
@@ -244,7 +273,7 @@ footer{background:#081320;color:rgba(255,255,255,.55);padding:48px 0 28px;font-s
         <span class="badge min" data-i18n="badge_min">MINIMAL</span>
       </div>
       <div class="meter-wrap">
-        <div class="meter-row"><span data-i18n="meter_label">Documentation readiness</span><b>82%</b></div>
+        <div class="meter-row"><span data-i18n="meter_label">Documentation readiness</span><b>58%</b></div>
         <div class="meter"><div class="meter-fill" id="fill"></div></div>
       </div>
     </div>
@@ -388,15 +417,86 @@ footer{background:#081320;color:rgba(255,255,255,.55);padding:48px 0 28px;font-s
     <div class="fade">
       <h2 data-i18n="cta_h2">Start with a free readiness snapshot.</h2>
       <p data-i18n="cta_p">No deadline pressure, no obligation. We map your AI systems and tell you plainly what — if anything — applies to you.</p>
-      <a href="mailto:hello@aicomply.example" class="btn btn-primary"><span data-i18n="cta_btn">Request your snapshot</span>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <ul class="cta-list">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="cta_l1">2-hour assessment, free of charge</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="cta_l2">Reply within one working day</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="cta_l3">Covered by an NDA on request</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="cta_l4">You leave with a usable one-pager either way</span></li>
+      </ul>
     </div>
-    <ul class="cta-list fade">
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="cta_l1">2-hour assessment, free of charge</span></li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="cta_l2">Reply within one working day</span></li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="cta_l3">Covered by an NDA on request</span></li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="cta_l4">You leave with a usable one-pager either way</span></li>
-    </ul>
+
+    <div class="qz-card fade" id="qzCard">
+      <!-- step 1 -->
+      <div class="qz-step active" data-qstep="1">
+        <p class="qz-progress" id="qzProg1"></p>
+        <h3 class="qz-h" id="qzQ1h"></h3>
+        <div class="qz-opts" id="qzOpts1"></div>
+      </div>
+      <!-- step 2 -->
+      <div class="qz-step" data-qstep="2">
+        <button class="qz-back" onclick="qzBack()">← <span id="qzBackTxt2"></span></button>
+        <p class="qz-progress" id="qzProg2"></p>
+        <h3 class="qz-h" id="qzQ2h"></h3>
+        <div class="qz-opts" id="qzOpts2"></div>
+      </div>
+      <!-- step 3 -->
+      <div class="qz-step" data-qstep="3">
+        <button class="qz-back" onclick="qzBack()">← <span id="qzBackTxt3"></span></button>
+        <p class="qz-progress" id="qzProg3"></p>
+        <h3 class="qz-h" id="qzQ3h"></h3>
+        <div class="qz-opts" id="qzOpts3"></div>
+      </div>
+      <!-- step 4 -->
+      <div class="qz-step" data-qstep="4">
+        <button class="qz-back" onclick="qzBack()">← <span id="qzBackTxt4"></span></button>
+        <p class="qz-progress" id="qzProg4"></p>
+        <h3 class="qz-h" id="qzQ4h"></h3>
+        <p class="qz-sub" id="qzQ4sub"></p>
+        <div class="qz-opts" id="qzOpts4"></div>
+      </div>
+      <!-- contact -->
+      <div class="qz-step" data-qstep="contact">
+        <button class="qz-back" onclick="qzBack()">← <span id="qzBackTxtC"></span></button>
+        <p class="qz-progress" id="qzContactLbl"></p>
+        <h3 class="qz-h" id="qzContactH"></h3>
+        <p class="qz-sub" id="qzContactSub"></p>
+        <div class="qz-fields">
+          <input class="qz-inp" id="qzName" type="text" required>
+          <input class="qz-inp" id="qzEmail" type="email" required>
+        </div>
+        <div class="qz-err" id="qzErr"></div>
+        <form id="qzForm">
+          <input type="hidden" name="tools">
+          <input type="hidden" name="data_input">
+          <input type="hidden" name="policy">
+          <input type="hidden" name="region">
+          <input type="hidden" name="risk_level">
+          <input type="hidden" name="name">
+          <input type="hidden" name="email">
+          <input type="hidden" name="language">
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:14px" id="qzSubmitBtn"></button>
+        </form>
+      </div>
+      <!-- results -->
+      <div class="qz-step qz-result green" data-qstep="green">
+        <div class="qz-result-icon">✓</div>
+        <h3 class="qz-h" id="qzGreenH"></h3>
+        <p id="qzGreenP"></p>
+        <a href="#services" class="btn btn-dark" id="qzGreenCta"></a>
+      </div>
+      <div class="qz-step qz-result amber" data-qstep="amber">
+        <div class="qz-result-icon">!</div>
+        <h3 class="qz-h" id="qzAmberH"></h3>
+        <p id="qzAmberP"></p>
+        <a href="#services" class="btn btn-dark" id="qzAmberCta"></a>
+      </div>
+      <div class="qz-step qz-result red" data-qstep="red">
+        <div class="qz-result-icon">⚠</div>
+        <h3 class="qz-h" id="qzRedH"></h3>
+        <p id="qzRedP"></p>
+        <a href="#services" class="btn btn-primary" id="qzRedCta"></a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -405,9 +505,13 @@ footer{background:#081320;color:rgba(255,255,255,.55);padding:48px 0 28px;font-s
     <div class="foot-top">
       <div class="foot-brand">
         <div class="logo"><span class="logo-mark">AI</span>AI&nbsp;Comply</div>
-        <p style="color:rgba(255,255,255,.5);font-size:.85rem" data-i18n="foot_desc">EU AI Act readiness for SMEs and startups. Brussels, Belgium.</p>
+        <p style="color:rgba(255,255,255,.5);font-size:.85rem" data-i18n="foot_desc">EU AI Act readiness for SMEs and startups. Flanders, Belgium.</p>
       </div>
-      <div style="font-family:'DM Mono',monospace;font-size:.78rem;color:rgba(255,255,255,.5)">hello@aicomply.example</div>
+      <div style="display:flex;flex-direction:column;gap:8px;font-family:'DM Mono',monospace;font-size:.78rem;color:rgba(255,255,255,.5)">
+        <span>senatorkul@gmail.com</span>
+        <a href="https://github.com/Senkulex" target="_blank" style="color:rgba(255,255,255,.5);text-decoration:none">GitHub: SenKulex</a>
+        <span data-i18n="foot_addr">Flanders, Belgium</span>
+      </div>
     </div>
     <div class="foot-bottom">
       <span>© 2026 AI Comply</span>
@@ -418,124 +522,371 @@ footer{background:#081320;color:rgba(255,255,255,.55);padding:48px 0 28px;font-s
 
 <script>
 const T={
- en:{nav_why:"Why now",nav_how:"How it works",nav_services:"Services",nav_about:"About",nav_cta:"Free snapshot",
-  hero_badge:"EU AI Act · Brussels",hero_h1:"Make your AI <em>audit-ready</em> before 2027 — and investor-ready today.",
-  hero_sub:"Fixed-price packages that turn 100+ pages of the EU AI Act into a clear set of engineering tasks. Built for SMEs and startups that can't put a Big Four firm on retainer.",
-  hero_cta1:"Get a free readiness snapshot",hero_cta2:"See how it works",trust1:"Built on ISO/IEC 42001",trust2:"Based in Brussels",trust3:"EN · FR · NL · UA · RU",
-  panel_ttl:"AI System Inventory",panel_tag:"snapshot",sys1_n:"CV-screening model",sys1_s:"HR · automated shortlisting",sys2_n:"Support chatbot",sys2_s:"Customer service · generative",sys3_n:"Demand forecasting",sys3_s:"Logistics · internal",badge_high:"HIGH RISK",badge_lim:"LIMITED",badge_min:"MINIMAL",meter_label:"Documentation readiness",
-  why_eyebrow:"The deadline moved. The reason to act didn't.",why_h2:"You have more time. Your buyers and investors don't wait.",why_p:"High-risk obligations under Annex III were deferred to 2 December 2027 by the Digital Omnibus. That removes the panic — not the work. Three things are already on the clock.",
-  why_c1_tag:"In force now",why_c1_h:"Prohibited & transparency rules",why_c1_p:"Banned practices apply since Feb 2025; AI-interaction disclosure is already expected. These don't move with the deadline.",
-  why_c2_tag:"Required by buyers",why_c2_h:"Due diligence & procurement",why_c2_p:"Investors and enterprise clients ask for a technical file today. No documentation, no round, no contract — regardless of any EU date.",
-  why_c3_tag:"Due Dec 2027",why_c3_h:"High-risk system file",why_c3_p:"A full Annex IV file takes weeks, not days. Starting in 2027 means rushing it. Starting now means it's a competitive asset.",
-  how_eyebrow:"How it works",how_h2:"One method. Fixed price. Built to pass an audit.",how_p:"You don't pay for billable hours. You pay for a structure your team fills in — the same four steps every time.",
-  s1_h:"Inventory",s1_p:"We list every AI system you build or use — including the third-party tools you didn't think counted.",
-  s2_h:"Classify",s2_p:"Each system is mapped to its risk tier under Annex III, with the rationale written down for auditors.",
-  s3_h:"Document",s3_p:"Technical file, risk register, FRIA and DPIA — drafted from ready templates, filled with your data.",
-  s4_h:"Audit-ready",s4_p:"A concrete gap list for your developers and a self-check pack you can hand to any reviewer.",
-  proc_foot:"The whole package runs <b>4–6 weeks</b> at a <b>fixed price</b> — translated into Jira-ready tasks, not legal prose.",proc_btn:"See packages",
-  svc_eyebrow:"Services",svc_h2:"Start small. Scale only if you need to.",
-  svc1_price:"Free",svc1_dur:"2 hours · no sales call",svc1_h:"Readiness Snapshot",svc1_l1:"Quick inventory of your AI systems",svc1_l2:"First-pass risk classification",svc1_l3:"One-page map of what applies to you",svc1_btn:"Request snapshot",
-  svc2_pop:"Most chosen",svc2_price:"€9,500 <small>fixed</small>",svc2_dur:"4–6 weeks",svc2_h:"Fast-Track Package",svc2_l1:"Technical file (Annex IV)",svc2_l2:"Risk register + mitigation plan",svc2_l3:"FRIA / DPIA templates, completed",svc2_l4:"Investor-DD-ready document set",svc2_btn:"Start a package",
-  svc3_price:"€1,000 <small>/mo</small>",svc3_dur:"Rolling · cancel anytime",svc3_h:"Governance Retainer",svc3_l1:"Regulatory change tracking",svc3_l2:"Documentation kept current",svc3_l3:"Review of each new model release",svc3_btn:"Talk retainer",
-  aud_eyebrow:"Who it's for",aud_h2:"Built for teams without an in-house AI lawyer.",aud1_h:"SMEs using third-party AI",aud1_p:"You run AI in HR, lending or logistics and need to know which of it is high-risk — before someone else tells you.",aud2_h:"Startups raising a round",aud2_p:"Your data room needs a technical file. We make compliance a due-diligence asset, not a blocker.",aud3_h:"Cross-border & Ukrainian teams",aud3_p:"Selling AI into the EU from outside it. Same obligations apply — handled in your language, EN / UA / RU.",
-  about_eyebrow:"Why us",about_h2:"A boutique, not a brand tax.",about_p:"Big Four firms start at €50k and ignore companies your size. We do the same technical work, scoped and priced for an SME.",
-  ab1_h:"Method, not improvisation",ab1_p:"Every engagement follows the ISO/IEC 42001 framework and the Act's Annex IV structure.",ab2_h:"Brussels-based",ab2_p:"Close to the EU AI Office — guidance reaches us before it reaches a newsletter.",ab3_h:"Five working languages",ab3_p:"EN, FR, NL, UA and RU — including the cross-border Ukrainian market most firms can't serve.",
-  about_quote:"Small enough to <span>answer your call</span> — structured enough to <span>pass an audit.</span>",about_by:"— how we work, in one line",
-  cta_h2:"Start with a free readiness snapshot.",cta_p:"No deadline pressure, no obligation. We map your AI systems and tell you plainly what — if anything — applies to you.",cta_btn:"Request your snapshot",cta_l1:"2-hour assessment, free of charge",cta_l2:"Reply within one working day",cta_l3:"Covered by an NDA on request",cta_l4:"You leave with a usable one-pager either way",
-  foot_desc:"EU AI Act readiness for SMEs and startups. Brussels, Belgium.",foot_note:"No licence or certification is required to provide AI compliance advice in the EU."},
+ en:{nav_why:"Why it matters",nav_how:"How it works",nav_services:"Services",nav_about:"About",nav_cta:"Free check",
+  hero_badge:"AI · Data protection · EU & Ukraine",hero_h1:"Use AI <em>without breaking the law</em> — or leaking your clients' data.",
+  hero_sub:"For small businesses and sole traders. Practical rules, ready-made policies and a short check so AI works for you — without exposing your data or your clients.",
+  hero_cta1:"Get a free AI risk check",hero_cta2:"See how it works",trust1:"GDPR-aligned",trust2:"EU & Ukraine",trust3:"EN · UA · NL · FR",
+  panel_ttl:"Your AI tools · data exposure",panel_tag:"check",sys1_n:"ChatGPT (free tier)",sys1_s:"Client data pasted in",sys2_n:"AI email assistant",sys2_s:"Drafts with real names",sys3_n:"AI translator",sys3_s:"Public texts only",badge_high:"AT RISK",badge_lim:"WATCH",badge_min:"SAFE",meter_label:"Data protection coverage",
+  why_eyebrow:"Why it matters — even for a one-person business",why_h2:"Three ways everyday AI use can cost you.",why_p:"You don't need to build AI to be at risk. Using it the wrong way is enough.",
+  why_c1_tag:"Data leak",why_c1_h:"Your data leaves the building",why_c1_p:"Free AI tools can store or train on what you paste. A client's details in a prompt can become a real data breach.",
+  why_c2_tag:"Illegal",why_c2_h:"It can break the law",why_c2_p:"GDPR — and Ukraine's incoming data law — require a legal basis, a record and a vendor agreement to process personal data. AI tools are no exception.",
+  why_c3_tag:"Wrong output",why_c3_h:"It can simply be wrong",why_c3_p:"AI invents and misreads facts with full confidence. Act on a wrong answer and the liability is yours, not the tool's.",
+  how_eyebrow:"How it works",how_h2:"From risky habits to a safe routine — in four steps.",how_p:"No jargon, no legal lectures. We look at how you actually use AI and make it safe to keep using.",
+  s1_h:"Map",s1_p:"Which AI tools you use and exactly what data goes into each one.",
+  s2_h:"Check",s2_p:"Where that leaks data, breaks GDPR, or risks a costly wrong decision.",
+  s3_h:"Fix",s3_p:"Settings to change, tools to swap, and a clear rule on what you can and can't paste.",
+  s4_h:"Document",s4_p:"A short AI-use policy and a data record you can show a client, partner or regulator.",
+  proc_foot:"Most jobs are done in <b>days</b>, not weeks — and priced so a one-person business can say yes.",proc_btn:"See prices",
+  svc_eyebrow:"Services & prices",svc_h2:"Start with a check. Add only what you need.",
+  svc1_price:"€200",svc1_dur:"one-off · 60–90 min",svc1_h:"Express AI Audit",svc1_l1:"We map every AI tool you use",svc1_l2:"One-page data-risk map",svc1_l3:"Concrete fixes, ranked by urgency",svc1_btn:"Book an audit",
+  svc2_pop:"Most chosen",svc2_price:"€550 <small>one-off</small>",svc2_dur:"audit + documents",svc2_h:"Safe AI Kit",svc2_l1:"Everything in the audit",svc2_l2:"Ready AI-use policy for your business",svc2_l3:"Staff sheet: what you can & can't paste",svc2_l4:"Vendor / DPA checklist + data record",svc2_btn:"Get the kit",
+  svc3_price:"€49 <small>/mo</small>",svc3_dur:"rolling · cancel anytime",svc3_h:"AI Safe subscription",svc3_l1:"Policy kept up to date",svc3_l2:"We vet new tools before you adopt them",svc3_l3:"A channel for your quick questions",svc3_btn:"Subscribe",
+  aud_eyebrow:"Who it's for",aud_h2:"Made for businesses without a legal department.",aud1_h:"Sole traders & freelancers",aud1_p:"You use AI every day to write, translate and research. Let's make sure it isn't quietly costing you.",aud2_h:"Small teams with client data",aud2_p:"Agencies, clinics, e-shops, accounting and law practices — anyone whose prompts contain other people's data.",aud3_h:"Ukrainian & cross-border",aud3_p:"Ukraine's own data rules apply now; GDPR applies the moment you serve EU clients. We cover both, in your language.",
+  about_eyebrow:"Why us",about_h2:"Plain help, not a law firm.",about_p:"Lawyers charge by the hour and speak in clauses. We give you practical rules and ready documents — at a price a small business actually pays.",
+  ab1_h:"Practical, not theoretical",ab1_p:"Built around GDPR, EU AI Act transparency rules and Ukraine's data law — turned into things you can actually do.",ab2_h:"EU & Ukraine",ab2_p:"One provider for both markets — the right legal basis applied to each, not a copy-paste of EU rules onto Ukraine.",ab3_h:"Four working languages",ab3_p:"EN, UA, NL and FR — including teams most consultants can't serve in their own language.",
+  about_quote:"Small enough to <span>speak plainly</span> — careful enough to <span>keep you legal.</span>",about_by:"— how we work, in one line",
+  cta_h2:"Start with a free AI risk check.",cta_p:"Tell us which AI tools you use. We'll point out the real risks — and what's safe to keep doing — in plain language, free.",cta_btn:"Request your free check",cta_l1:"Quick questionnaire, no sales call",cta_l2:"Reply within one working day",cta_l3:"Covered by an NDA on request",cta_l4:"You leave with a usable one-pager either way",
+  foot_desc:"Safe, legal AI for small businesses and sole traders. EU & Ukraine.",foot_addr:"Flanders, Belgium",foot_note:"We provide practical data-protection and AI-use guidance. We are not a law firm."},
 
- uk:{nav_why:"Чому зараз",nav_how:"Як це працює",nav_services:"Послуги",nav_about:"Про нас",nav_cta:"Безкоштовний аналіз",
-  hero_badge:"EU AI Act · Брюссель",hero_h1:"Зробіть свій ШІ <em>готовим до аудиту</em> до 2027 — а до інвесторів уже сьогодні.",
-  hero_sub:"Пакети з фіксованою ціною, що перетворюють 100+ сторінок EU AI Act на чіткий список інженерних задач. Для МСП і стартапів, яким не по кишені великі консалтингові фірми.",
-  hero_cta1:"Отримати безкоштовний експрес-аналіз",hero_cta2:"Як це працює",trust1:"На основі ISO/IEC 42001",trust2:"Базуємось у Брюсселі",trust3:"EN · FR · NL · UA · RU",
-  panel_ttl:"Реєстр ШІ-систем",panel_tag:"аналіз",sys1_n:"Модель скринінгу резюме",sys1_s:"HR · автоматичний відбір",sys2_n:"Чат-бот підтримки",sys2_s:"Клієнтський сервіс · генеративний",sys3_n:"Прогноз попиту",sys3_s:"Логістика · внутрішній",badge_high:"ВИСОКИЙ РИЗИК",badge_lim:"ОБМЕЖЕНИЙ",badge_min:"МІНІМАЛЬНИЙ",meter_label:"Готовність документації",
-  why_eyebrow:"Дедлайн зсунувся. Причина діяти — ні.",why_h2:"У вас більше часу. Ваші клієнти та інвестори не чекають.",why_p:"Зобов'язання для систем високого ризику (Annex III) перенесено на 2 грудня 2027 року рішенням Digital Omnibus. Це знімає паніку — але не роботу. Три речі вже на годиннику.",
-  why_c1_tag:"Чинне зараз",why_c1_h:"Заборони та прозорість",why_c1_p:"Заборонені практики діють з лютого 2025; розкриття взаємодії з ШІ вже очікується. Ці правила від дедлайну не залежать.",
-  why_c2_tag:"Вимога покупців",why_c2_h:"Due diligence та закупівлі",why_c2_p:"Інвестори та корпоративні клієнти вимагають технічний файл уже сьогодні. Немає документації — немає раунду й контракту, незалежно від дат ЄС.",
-  why_c3_tag:"Термін — груд. 2027",why_c3_h:"Файл систем високого ризику",why_c3_p:"Повний файл за Annex IV — це тижні, а не дні. Почати у 2027 — означає робити поспіхом. Почати зараз — зробити з цього конкурентну перевагу.",
-  how_eyebrow:"Як це працює",how_h2:"Один метод. Фіксована ціна. Готово до аудиту.",how_p:"Ви платите не за години, а за структуру, яку ваша команда наповнює даними — ті самі чотири кроки щоразу.",
-  s1_h:"Інвентаризація",s1_p:"Складаємо перелік усіх ШІ-систем, які ви створюєте чи використовуєте — зокрема сторонні інструменти, які ви не вважали такими.",
-  s2_h:"Класифікація",s2_p:"Кожну систему відносимо до рівня ризику за Annex III, із письмовим обґрунтуванням для аудиторів.",
-  s3_h:"Документація",s3_p:"Технічний файл, реєстр ризиків, FRIA та DPIA — за готовими шаблонами, наповненими вашими даними.",
-  s4_h:"Готовність до аудиту",s4_p:"Конкретний список прогалин для розробників і набір для самоперевірки, який можна дати будь-якому перевіряючому.",
-  proc_foot:"Увесь пакет — <b>4–6 тижнів</b> за <b>фіксованою ціною</b> — у вигляді готових Jira-задач, а не юридичного тексту.",proc_btn:"Дивитись пакети",
-  svc_eyebrow:"Послуги",svc_h2:"Почніть з малого. Масштабуйте лише за потреби.",
-  svc1_price:"Безкоштовно",svc1_dur:"2 години · без продажів",svc1_h:"Експрес-аналіз готовності",svc1_l1:"Швидка інвентаризація ваших ШІ-систем",svc1_l2:"Попередня класифікація ризиків",svc1_l3:"Карта на одну сторінку: що стосується вас",svc1_btn:"Замовити аналіз",
-  svc2_pop:"Найпопулярніший",svc2_price:"€9 500 <small>фіксовано</small>",svc2_dur:"4–6 тижнів",svc2_h:"Пакет Fast-Track",svc2_l1:"Технічний файл (Annex IV)",svc2_l2:"Реєстр ризиків + план зниження",svc2_l3:"Шаблони FRIA / DPIA, заповнені",svc2_l4:"Комплект для інвест-due diligence",svc2_btn:"Замовити пакет",
-  svc3_price:"€1 000 <small>/міс</small>",svc3_dur:"Помісячно · скасування будь-коли",svc3_h:"Абонемент Governance",svc3_l1:"Відстеження змін регуляторики",svc3_l2:"Документація актуальна",svc3_l3:"Перевірка кожного нового релізу моделі",svc3_btn:"Обговорити абонемент",
-  aud_eyebrow:"Для кого це",aud_h2:"Для команд без власного ШІ-юриста.",aud1_h:"МСП, що користуються стороннім ШІ",aud1_p:"Ви використовуєте ШІ в HR, кредитуванні чи логістиці й хочете знати, що з цього — високий ризик, перш ніж вам скажуть інші.",aud2_h:"Стартапи в раунді залучення",aud2_p:"Вашому data room потрібен технічний файл. Ми робимо комплаєнс активом для due diligence, а не перешкодою.",aud3_h:"Транскордонні та українські команди",aud3_p:"Продаєте ШІ в ЄС, перебуваючи поза ним. Зобов'язання ті самі — працюємо вашою мовою: EN / UA / RU.",
-  about_eyebrow:"Чому ми",about_h2:"Бутик, а не націнка за бренд.",about_p:"Великі фірми починають від €50k і ігнорують компанії вашого розміру. Ми робимо ту саму технічну роботу — за обсягом і ціною для МСП.",
-  ab1_h:"Метод, а не імпровізація",ab1_p:"Кожен проєкт — за фреймворком ISO/IEC 42001 та структурою Annex IV закону.",ab2_h:"Базуємось у Брюсселі",ab2_p:"Поруч із EU AI Office — настанови доходять до нас раніше, ніж до розсилок.",ab3_h:"П'ять робочих мов",ab3_p:"EN, FR, NL, UA та RU — зокрема транскордонний український ринок, який більшість фірм не обслуговує.",
-  about_quote:"Достатньо малі, щоб <span>відповісти на ваш дзвінок</span> — достатньо структуровані, щоб <span>пройти аудит.</span>",about_by:"— наш принцип в одному рядку",
-  cta_h2:"Почніть із безкоштовного експрес-аналізу.",cta_p:"Без тиску дедлайну та зобов'язань. Ми складаємо карту ваших ШІ-систем і прямо кажемо, що саме вас стосується — якщо взагалі стосується.",cta_btn:"Замовити аналіз",cta_l1:"2-годинна оцінка, безкоштовно",cta_l2:"Відповідь протягом одного робочого дня",cta_l3:"За запитом — під NDA",cta_l4:"У будь-якому разі ви отримаєте корисний документ на сторінку",
-  foot_desc:"Готовність до EU AI Act для МСП і стартапів. Брюссель, Бельгія.",foot_note:"Для надання консультацій з AI-комплаєнсу в ЄС ліцензія чи сертифікат не потрібні."},
+ uk:{nav_why:"Чому це важливо",nav_how:"Як це працює",nav_services:"Послуги",nav_about:"Про нас",nav_cta:"Безкоштовна перевірка",
+  hero_badge:"ШІ · Захист даних · ЄС та Україна",hero_h1:"Використовуйте ШІ, <em>не порушуючи закон</em> — і не зливаючи дані клієнтів.",
+  hero_sub:"Для малого бізнесу та ФОП. Практичні правила, готові політики й коротка перевірка, щоб ШІ працював на вас — не наражаючи ваші дані та ваших клієнтів.",
+  hero_cta1:"Безкоштовна перевірка ризиків ШІ",hero_cta2:"Як це працює",trust1:"Відповідає GDPR",trust2:"ЄС та Україна",trust3:"EN · UA · NL · FR",
+  panel_ttl:"Ваші ШІ-інструменти · ризик даних",panel_tag:"перевірка",sys1_n:"ChatGPT (безкоштовний)",sys1_s:"Вставляються дані клієнтів",sys2_n:"ШІ-помічник пошти",sys2_s:"Чернетки з реальними іменами",sys3_n:"ШІ-перекладач",sys3_s:"Лише публічні тексти",badge_high:"ПІД РИЗИКОМ",badge_lim:"УВАГА",badge_min:"БЕЗПЕЧНО",meter_label:"Покриття захисту даних",
+  why_eyebrow:"Чому це важливо — навіть для бізнесу з однієї людини",why_h2:"Три способи, якими щоденний ШІ може вам нашкодити.",why_p:"Не обов'язково створювати ШІ, щоб бути під ризиком. Достатньо використовувати його неправильно.",
+  why_c1_tag:"Витік даних",why_c1_h:"Ваші дані залишають межі бізнесу",why_c1_p:"Безкоштовні ШІ-інструменти можуть зберігати чи навчатися на тому, що ви вставляєте. Дані клієнта в запиті можуть стати справжнім витоком.",
+  why_c2_tag:"Незаконно",why_c2_h:"Це може порушити закон",why_c2_p:"GDPR — і майбутній закон України про дані — вимагають правової підстави, запису обробки та угоди з постачальником. ШІ-інструменти не виняток.",
+  why_c3_tag:"Хибний результат",why_c3_h:"Це може бути просто хибним",why_c3_p:"ШІ впевнено вигадує й перекручує факти. Дієте за хибною відповіддю — відповідальність ваша, а не інструмента.",
+  how_eyebrow:"Як це працює",how_h2:"Від ризикованих звичок до безпечної рутини — за чотири кроки.",how_p:"Без жаргону й лекцій з права. Дивимось, як ви реально користуєтесь ШІ, і робимо це безпечним.",
+  s1_h:"Карта",s1_p:"Які ШІ-інструменти ви використовуєте і які саме дані потрапляють у кожен.",
+  s2_h:"Перевірка",s2_p:"Де це зливає дані, порушує GDPR чи загрожує дорогою помилкою.",
+  s3_h:"Виправлення",s3_p:"Які налаштування змінити, які інструменти замінити, і чітке правило: що можна й чого не можна вставляти.",
+  s4_h:"Документи",s4_p:"Коротка політика використання ШІ та запис обробки даних, які можна показати клієнту, партнеру чи регулятору.",
+  proc_foot:"Більшість робіт — за <b>кілька днів</b>, не тижнів — і за ціною, яку потягне навіть бізнес з однієї людини.",proc_btn:"Дивитись ціни",
+  svc_eyebrow:"Послуги та ціни",svc_h2:"Почніть з перевірки. Додавайте лише потрібне.",
+  svc1_price:"3 600 грн",svc1_dur:"разово · 60–90 хв",svc1_h:"Експрес-аудит ШІ",svc1_l1:"Складаємо карту всіх ваших ШІ-інструментів",svc1_l2:"Карта ризиків даних на одну сторінку",svc1_l3:"Конкретні виправлення за пріоритетом",svc1_btn:"Замовити аудит",
+  svc2_pop:"Найпопулярніший",svc2_price:"11 000 грн <small>разово</small>",svc2_dur:"аудит + документи",svc2_h:"Safe AI Kit",svc2_l1:"Усе з аудиту",svc2_l2:"Готова політика використання ШІ",svc2_l3:"Памятка для команди: що можна й не можна вставляти",svc2_l4:"Чек-лист вендора / DPA + запис даних",svc2_btn:"Замовити Kit",
+  svc3_price:"950 грн <small>/міс</small>",svc3_dur:"помісячно · скасування будь-коли",svc3_h:"Підписка AI Safe",svc3_l1:"Політика залишається актуальною",svc3_l2:"Перевіряємо нові інструменти до впровадження",svc3_l3:"Канал для ваших швидких питань",svc3_btn:"Підписатися",
+  aud_eyebrow:"Для кого це",aud_h2:"Для бізнесу без юридичного відділу.",aud1_h:"ФОП та фрілансери",aud1_p:"Ви щодня користуєтесь ШІ — пишете, перекладаєте, шукаєте. Зробімо так, щоб це тихо не коштувало вам.",aud2_h:"Малі команди з даними клієнтів",aud2_p:"Агенції, клініки, інтернет-магазини, бухгалтери та юристи — усі, чиї запити містять чужі дані.",aud3_h:"Україна та транскордонні",aud3_p:"Українські правила щодо даних діють уже зараз; GDPR — щойно з'являються клієнти з ЄС. Покриваємо обидва, вашою мовою.",
+  about_eyebrow:"Чому ми",about_h2:"Проста допомога, а не юрфірма.",about_p:"Юристи рахують години й говорять статтями. Ми даємо практичні правила й готові документи — за ціною, яку реально платить малий бізнес.",
+  ab1_h:"Практично, не теоретично",ab1_p:"На основі GDPR, правил прозорості EU AI Act і закону України про дані — перетворених на конкретні дії.",ab2_h:"ЄС та Україна",ab2_p:"Один виконавець для обох ринків — для кожного своя правова основа, а не копія правил ЄС на Україну.",ab3_h:"Чотири робочі мови",ab3_p:"EN, UA, NL та FR — зокрема команди, яких більшість консультантів не обслуговує їхньою мовою.",
+  about_quote:"Достатньо прості, щоб <span>говорити зрозуміло</span> — достатньо уважні, щоб <span>тримати вас у законі.</span>",about_by:"— наш принцип в одному рядку",
+  cta_h2:"Почніть з безкоштовної перевірки ризиків ШІ.",cta_p:"Розкажіть, якими ШІ-інструментами користуєтесь. Ми вкажемо на реальні ризики — і що безпечно лишити — зрозумілою мовою, безкоштовно.",cta_btn:"Замовити безкоштовну перевірку",cta_l1:"Швидкий опитник, без продажів",cta_l2:"Відповідь протягом одного робочого дня",cta_l3:"За запитом — під NDA",cta_l4:"У будь-якому разі ви отримаєте корисний документ на сторінку",
+  foot_desc:"Безпечний і законний ШІ для малого бізнесу та ФОП. ЄС та Україна.",foot_addr:"Фландрія, Бельгія",foot_note:"Ми надаємо практичні поради щодо захисту даних і використання ШІ. Ми не юридична фірма."},
 
- nl:{nav_why:"Waarom nu",nav_how:"Hoe het werkt",nav_services:"Diensten",nav_about:"Over ons",nav_cta:"Gratis analyse",
-  hero_badge:"EU AI Act · Brussel",hero_h1:"Maak uw AI <em>audit-klaar</em> vóór 2027 — en investeerder-klaar vandaag.",
-  hero_sub:"Pakketten met vaste prijs die 100+ pagina's van de EU AI Act vertalen naar een heldere set engineeringtaken. Voor kmo's en start-ups die zich geen Big Four kunnen veroorloven.",
-  hero_cta1:"Vraag een gratis analyse aan",hero_cta2:"Hoe het werkt",trust1:"Gebaseerd op ISO/IEC 42001",trust2:"Gevestigd in Brussel",trust3:"EN · FR · NL · UA · RU",
-  panel_ttl:"AI-systeeminventaris",panel_tag:"analyse",sys1_n:"CV-screeningmodel",sys1_s:"HR · geautomatiseerde selectie",sys2_n:"Support-chatbot",sys2_s:"Klantenservice · generatief",sys3_n:"Vraagvoorspelling",sys3_s:"Logistiek · intern",badge_high:"HOOG RISICO",badge_lim:"BEPERKT",badge_min:"MINIMAAL",meter_label:"Documentatie-gereedheid",
-  why_eyebrow:"De deadline schoof op. De reden om te handelen niet.",why_h2:"U heeft meer tijd. Uw klanten en investeerders niet.",why_p:"Verplichtingen voor hoog-risico systemen (Annex III) zijn door de Digital Omnibus uitgesteld tot 2 december 2027. Dat haalt de paniek weg — niet het werk. Drie zaken lopen al.",
-  why_c1_tag:"Nu van kracht",why_c1_h:"Verboden & transparantie",why_c1_p:"Verboden praktijken gelden sinds feb. 2025; AI-interactie moet al kenbaar gemaakt worden. Dit schuift niet mee met de deadline.",
-  why_c2_tag:"Vereist door kopers",why_c2_h:"Due diligence & inkoop",why_c2_p:"Investeerders en grote klanten vragen vandaag al om een technisch dossier. Geen documentatie, geen ronde, geen contract — los van enige EU-datum.",
-  why_c3_tag:"Tegen dec. 2027",why_c3_h:"Dossier hoog-risico systeem",why_c3_p:"Een volledig Annex IV-dossier kost weken, geen dagen. In 2027 starten betekent haasten. Nu starten maakt er een concurrentievoordeel van.",
-  how_eyebrow:"Hoe het werkt",how_h2:"Eén methode. Vaste prijs. Gemaakt om een audit te doorstaan.",how_p:"U betaalt niet voor uren, maar voor een structuur die uw team invult — telkens dezelfde vier stappen.",
-  s1_h:"Inventaris",s1_p:"We lijsten elk AI-systeem op dat u bouwt of gebruikt — ook de externe tools die u niet meetelde.",
-  s2_h:"Classificatie",s2_p:"Elk systeem wordt ingedeeld in zijn risiconiveau volgens Annex III, met de motivering vastgelegd voor auditors.",
-  s3_h:"Documentatie",s3_p:"Technisch dossier, risicoregister, FRIA en DPIA — opgesteld uit kant-en-klare sjablonen, gevuld met uw data.",
-  s4_h:"Audit-klaar",s4_p:"Een concrete gap-lijst voor uw ontwikkelaars en een zelfcontrolepakket voor elke beoordelaar.",
-  proc_foot:"Het hele pakket duurt <b>4–6 weken</b> tegen een <b>vaste prijs</b> — vertaald naar Jira-klare taken, geen juridische tekst.",proc_btn:"Bekijk pakketten",
-  svc_eyebrow:"Diensten",svc_h2:"Begin klein. Schaal alleen als het nodig is.",
-  svc1_price:"Gratis",svc1_dur:"2 uur · geen verkooppraatje",svc1_h:"Gereedheidsanalyse",svc1_l1:"Snelle inventaris van uw AI-systemen",svc1_l2:"Eerste risicoclassificatie",svc1_l3:"Eén-pagina-overzicht van wat op u van toepassing is",svc1_btn:"Analyse aanvragen",
-  svc2_pop:"Meest gekozen",svc2_price:"€9.500 <small>vast</small>",svc2_dur:"4–6 weken",svc2_h:"Fast-Track-pakket",svc2_l1:"Technisch dossier (Annex IV)",svc2_l2:"Risicoregister + mitigatieplan",svc2_l3:"FRIA/DPIA-sjablonen, ingevuld",svc2_l4:"Documentenset klaar voor due diligence",svc2_btn:"Pakket starten",
-  svc3_price:"€1.000 <small>/mnd</small>",svc3_dur:"Maandelijks · altijd opzegbaar",svc3_h:"Governance-abonnement",svc3_l1:"Volgen van regelgevingswijzigingen",svc3_l2:"Documentatie up-to-date",svc3_l3:"Beoordeling van elke nieuwe modelrelease",svc3_btn:"Bespreek abonnement",
-  aud_eyebrow:"Voor wie",aud_h2:"Voor teams zonder eigen AI-jurist.",aud1_h:"Kmo's die externe AI gebruiken",aud1_p:"U gebruikt AI in HR, kredietverlening of logistiek en wilt weten wat hoog-risico is — vóór iemand anders het u zegt.",aud2_h:"Start-ups die ophalen",aud2_p:"Uw dataroom heeft een technisch dossier nodig. Wij maken compliance een due-diligence-troef, geen blokkade.",aud3_h:"Grensoverschrijdende & Oekraïense teams",aud3_p:"U verkoopt AI naar de EU van buitenaf. Dezelfde verplichtingen gelden — in uw taal: EN / UA / RU.",
-  about_eyebrow:"Waarom wij",about_h2:"Een boutique, geen merktoeslag.",about_p:"Big Four begint bij €50k en negeert bedrijven van uw omvang. Wij doen hetzelfde technische werk, geschikt en geprijsd voor een kmo.",
-  ab1_h:"Methode, geen improvisatie",ab1_p:"Elk traject volgt het ISO/IEC 42001-raamwerk en de Annex IV-structuur van de wet.",ab2_h:"Gevestigd in Brussel",ab2_p:"Dicht bij het EU AI Office — richtlijnen bereiken ons vóór de nieuwsbrieven.",ab3_h:"Vijf werktalen",ab3_p:"EN, FR, NL, UA en RU — inclusief de Oekraïense markt die de meeste firma's niet bedienen.",
-  about_quote:"Klein genoeg om <span>uw oproep te beantwoorden</span> — gestructureerd genoeg om <span>een audit te doorstaan.</span>",about_by:"— hoe wij werken, in één zin",
-  cta_h2:"Begin met een gratis gereedheidsanalyse.",cta_p:"Geen deadlinedruk, geen verplichting. We brengen uw AI-systemen in kaart en zeggen u helder wat — indien iets — op u van toepassing is.",cta_btn:"Analyse aanvragen",cta_l1:"Beoordeling van 2 uur, gratis",cta_l2:"Antwoord binnen één werkdag",cta_l3:"Op verzoek onder NDA",cta_l4:"U gaat hoe dan ook weg met een bruikbare one-pager",
-  foot_desc:"EU AI Act-gereedheid voor kmo's en start-ups. Brussel, België.",foot_note:"Voor AI-compliance-advies in de EU is geen vergunning of certificering vereist."},
+ nl:{nav_why:"Waarom het telt",nav_how:"Hoe het werkt",nav_services:"Diensten",nav_about:"Over ons",nav_cta:"Gratis check",
+  hero_badge:"AI · Gegevensbescherming · EU & Oekraïne",hero_h1:"Gebruik AI <em>zonder de wet te overtreden</em> — of klantgegevens te lekken.",
+  hero_sub:"Voor kleine bedrijven en zzp'ers. Praktische regels, kant-en-klare beleidsdocumenten en een korte check zodat AI vóór u werkt — zonder uw data of klanten bloot te stellen.",
+  hero_cta1:"Gratis AI-risicocheck",hero_cta2:"Hoe het werkt",trust1:"GDPR-conform",trust2:"EU & Oekraïne",trust3:"EN · UA · NL · FR",
+  panel_ttl:"Uw AI-tools · datablootstelling",panel_tag:"check",sys1_n:"ChatGPT (gratis)",sys1_s:"Klantgegevens geplakt",sys2_n:"AI-e-mailassistent",sys2_s:"Concepten met echte namen",sys3_n:"AI-vertaler",sys3_s:"Alleen publieke teksten",badge_high:"RISICO",badge_lim:"LET OP",badge_min:"VEILIG",meter_label:"Gegevensbescherming",
+  why_eyebrow:"Waarom het telt — ook voor een eenmanszaak",why_h2:"Drie manieren waarop dagelijks AI-gebruik u kan kosten.",why_p:"U hoeft geen AI te bouwen om risico te lopen. Het verkeerd gebruiken volstaat.",
+  why_c1_tag:"Datalek",why_c1_h:"Uw data verlaat het pand",why_c1_p:"Gratis AI-tools kunnen opslaan of trainen op wat u plakt. Klantgegevens in een prompt kunnen een echt datalek worden.",
+  why_c2_tag:"Onwettig",why_c2_h:"Het kan de wet overtreden",why_c2_p:"De GDPR — en de aankomende Oekraïense datawet — vereisen een rechtsgrond, een register en een verwerkersovereenkomst. AI-tools zijn geen uitzondering.",
+  why_c3_tag:"Foute output",why_c3_h:"Het kan gewoon fout zijn",why_c3_p:"AI verzint en verdraait feiten met volle overtuiging. Handelt u op een fout antwoord, dan ligt de aansprakelijkheid bij u, niet bij de tool.",
+  how_eyebrow:"Hoe het werkt",how_h2:"Van risicovolle gewoonten naar een veilige routine — in vier stappen.",how_p:"Geen jargon, geen juridische lessen. We kijken hoe u AI echt gebruikt en maken het veilig.",
+  s1_h:"Breng in kaart",s1_p:"Welke AI-tools u gebruikt en welke data in elk daarvan gaat.",
+  s2_h:"Controleer",s2_p:"Waar dat data lekt, de GDPR schendt of een dure fout riskeert.",
+  s3_h:"Herstel",s3_p:"Instellingen aanpassen, tools vervangen en een heldere regel over wat u wel en niet mag plakken.",
+  s4_h:"Documenteer",s4_p:"Een kort AI-gebruiksbeleid en een dataregister dat u aan klant, partner of toezichthouder kunt tonen.",
+  proc_foot:"De meeste opdrachten zijn in <b>dagen</b> klaar, niet weken — en geprijsd zodat een eenmanszaak ja kan zeggen.",proc_btn:"Bekijk prijzen",
+  svc_eyebrow:"Diensten & prijzen",svc_h2:"Begin met een check. Voeg alleen toe wat u nodig heeft.",
+  svc1_price:"€200",svc1_dur:"eenmalig · 60–90 min",svc1_h:"Express AI-audit",svc1_l1:"We brengen al uw AI-tools in kaart",svc1_l2:"Eén-pagina datarisicokaart",svc1_l3:"Concrete fixes, op urgentie",svc1_btn:"Audit boeken",
+  svc2_pop:"Meest gekozen",svc2_price:"€550 <small>eenmalig</small>",svc2_dur:"audit + documenten",svc2_h:"Safe AI Kit",svc2_l1:"Alles uit de audit",svc2_l2:"Kant-en-klaar AI-gebruiksbeleid",svc2_l3:"Personeelsblad: wat wel en niet plakken",svc2_l4:"Vendor/DPA-checklist + dataregister",svc2_btn:"Kit bestellen",
+  svc3_price:"€49 <small>/mnd</small>",svc3_dur:"maandelijks · altijd opzegbaar",svc3_h:"AI Safe-abonnement",svc3_l1:"Beleid up-to-date",svc3_l2:"We toetsen nieuwe tools vooraf",svc3_l3:"Een kanaal voor uw snelle vragen",svc3_btn:"Abonneren",
+  aud_eyebrow:"Voor wie",aud_h2:"Voor bedrijven zonder juridische afdeling.",aud1_h:"Zzp'ers & freelancers",aud1_p:"U gebruikt AI dagelijks om te schrijven, vertalen en zoeken. Zorg dat het u niet stiekem geld kost.",aud2_h:"Kleine teams met klantdata",aud2_p:"Bureaus, klinieken, webshops, boekhouders en advocaten — iedereen wiens prompts data van anderen bevatten.",aud3_h:"Oekraïens & grensoverschrijdend",aud3_p:"De Oekraïense dataregels gelden nu al; de GDPR zodra u EU-klanten bedient. Wij dekken beide, in uw taal.",
+  about_eyebrow:"Waarom wij",about_h2:"Gewone hulp, geen advocatenkantoor.",about_p:"Advocaten rekenen per uur en spreken in clausules. Wij geven praktische regels en kant-en-klare documenten — tegen een prijs die een klein bedrijf echt betaalt.",
+  ab1_h:"Praktisch, niet theoretisch",ab1_p:"Gebouwd op GDPR, AI Act-transparantie en de Oekraïense datawet — vertaald naar concrete acties.",ab2_h:"EU & Oekraïne",ab2_p:"Eén aanbieder voor beide markten — voor elk de juiste rechtsgrond, geen kopie van EU-regels op Oekraïne.",ab3_h:"Vier werktalen",ab3_p:"EN, UA, NL en FR — inclusief teams die de meeste consultants niet in hun taal bedienen.",
+  about_quote:"Klein genoeg om <span>klare taal te spreken</span> — zorgvuldig genoeg om <span>u legaal te houden.</span>",about_by:"— hoe wij werken, in één zin",
+  cta_h2:"Begin met een gratis AI-risicocheck.",cta_p:"Vertel ons welke AI-tools u gebruikt. Wij wijzen de echte risico's aan — en wat veilig is — in klare taal, gratis.",cta_btn:"Vraag uw gratis check aan",cta_l1:"Korte vragenlijst, geen verkooppraatje",cta_l2:"Antwoord binnen één werkdag",cta_l3:"Op verzoek onder NDA",cta_l4:"U gaat hoe dan ook weg met een bruikbare one-pager",
+  foot_desc:"Veilige, wettige AI voor kleine bedrijven en zzp'ers. EU & Oekraïne.",foot_addr:"Vlaanderen, België",foot_note:"Wij bieden praktische gegevensbescherming- en AI-gebruiksbegeleiding. Wij zijn geen advocatenkantoor."},
 
- fr:{nav_why:"Pourquoi maintenant",nav_how:"Comment ça marche",nav_services:"Services",nav_about:"À propos",nav_cta:"Analyse gratuite",
-  hero_badge:"EU AI Act · Bruxelles",hero_h1:"Rendez votre IA <em>prête pour l'audit</em> avant 2027 — et prête pour les investisseurs dès aujourd'hui.",
-  hero_sub:"Des forfaits à prix fixe qui transforment les 100+ pages de l'EU AI Act en une liste claire de tâches d'ingénierie. Pour les PME et start-ups qui ne peuvent pas s'offrir un grand cabinet.",
-  hero_cta1:"Obtenir une analyse gratuite",hero_cta2:"Voir comment ça marche",trust1:"Basé sur ISO/IEC 42001",trust2:"Basé à Bruxelles",trust3:"EN · FR · NL · UA · RU",
-  panel_ttl:"Inventaire des systèmes IA",panel_tag:"aperçu",sys1_n:"Modèle de tri de CV",sys1_s:"RH · présélection automatisée",sys2_n:"Chatbot de support",sys2_s:"Service client · génératif",sys3_n:"Prévision de la demande",sys3_s:"Logistique · interne",badge_high:"RISQUE ÉLEVÉ",badge_lim:"LIMITÉ",badge_min:"MINIMAL",meter_label:"État de la documentation",
-  why_eyebrow:"L'échéance a bougé. La raison d'agir, non.",why_h2:"Vous avez plus de temps. Vos clients et investisseurs, non.",why_p:"Les obligations pour les systèmes à haut risque (Annexe III) ont été reportées au 2 décembre 2027 par le Digital Omnibus. Cela retire la panique — pas le travail. Trois choses sont déjà en cours.",
-  why_c1_tag:"En vigueur",why_c1_h:"Interdictions & transparence",why_c1_p:"Les pratiques interdites s'appliquent depuis février 2025 ; la divulgation des interactions IA est déjà attendue. Cela ne bouge pas avec l'échéance.",
-  why_c2_tag:"Exigé par les acheteurs",why_c2_h:"Due diligence & achats",why_c2_p:"Investisseurs et grands clients exigent un dossier technique dès aujourd'hui. Pas de documentation, pas de levée, pas de contrat — quelle que soit l'échéance UE.",
-  why_c3_tag:"Échéance déc. 2027",why_c3_h:"Dossier système à haut risque",why_c3_p:"Un dossier Annexe IV complet prend des semaines, pas des jours. Commencer en 2027, c'est se précipiter. Commencer maintenant, c'est en faire un atout.",
-  how_eyebrow:"Comment ça marche",how_h2:"Une méthode. Prix fixe. Conçu pour passer l'audit.",how_p:"Vous ne payez pas des heures, mais une structure que votre équipe remplit — les quatre mêmes étapes à chaque fois.",
-  s1_h:"Inventaire",s1_p:"Nous listons chaque système IA que vous développez ou utilisez — y compris les outils tiers que vous n'aviez pas comptés.",
-  s2_h:"Classification",s2_p:"Chaque système est classé selon son niveau de risque (Annexe III), avec la justification écrite pour les auditeurs.",
-  s3_h:"Documentation",s3_p:"Dossier technique, registre des risques, FRIA et DPIA — rédigés à partir de modèles prêts, remplis avec vos données.",
-  s4_h:"Prêt pour l'audit",s4_p:"Une liste précise des écarts pour vos développeurs et un kit d'auto-évaluation à remettre à tout évaluateur.",
-  proc_foot:"Le forfait complet dure <b>4–6 semaines</b> à <b>prix fixe</b> — traduit en tâches prêtes pour Jira, pas en prose juridique.",proc_btn:"Voir les forfaits",
-  svc_eyebrow:"Services",svc_h2:"Commencez petit. Évoluez seulement si nécessaire.",
-  svc1_price:"Gratuit",svc1_dur:"2 heures · sans démarchage",svc1_h:"Analyse de préparation",svc1_l1:"Inventaire rapide de vos systèmes IA",svc1_l2:"Première classification des risques",svc1_l3:"Carte d'une page de ce qui vous concerne",svc1_btn:"Demander l'analyse",
-  svc2_pop:"Le plus choisi",svc2_price:"9 500 € <small>fixe</small>",svc2_dur:"4–6 semaines",svc2_h:"Forfait Fast-Track",svc2_l1:"Dossier technique (Annexe IV)",svc2_l2:"Registre des risques + plan d'atténuation",svc2_l3:"Modèles FRIA / DPIA, complétés",svc2_l4:"Dossier prêt pour la due diligence",svc2_btn:"Démarrer un forfait",
-  svc3_price:"1 000 € <small>/mois</small>",svc3_dur:"Mensuel · résiliable à tout moment",svc3_h:"Forfait gouvernance",svc3_l1:"Suivi des évolutions réglementaires",svc3_l2:"Documentation tenue à jour",svc3_l3:"Revue de chaque nouvelle version de modèle",svc3_btn:"Discuter du forfait",
-  aud_eyebrow:"Pour qui",aud_h2:"Pour les équipes sans juriste IA en interne.",aud1_h:"PME utilisant de l'IA tierce",aud1_p:"Vous utilisez l'IA en RH, crédit ou logistique et devez savoir ce qui est à haut risque — avant qu'on vous le dise.",aud2_h:"Start-ups en levée de fonds",aud2_p:"Votre data room a besoin d'un dossier technique. Nous faisons de la conformité un atout de due diligence, pas un obstacle.",aud3_h:"Équipes transfrontalières & ukrainiennes",aud3_p:"Vous vendez de l'IA dans l'UE depuis l'extérieur. Les mêmes obligations s'appliquent — dans votre langue : EN / UA / RU.",
-  about_eyebrow:"Pourquoi nous",about_h2:"Un cabinet boutique, pas une taxe de marque.",about_p:"Les grands cabinets démarrent à 50 k€ et ignorent les entreprises de votre taille. Nous faisons le même travail technique, dimensionné et tarifé pour une PME.",
-  ab1_h:"Méthode, pas improvisation",ab1_p:"Chaque mission suit le cadre ISO/IEC 42001 et la structure de l'Annexe IV de la loi.",ab2_h:"Basé à Bruxelles",ab2_p:"Proche de l'EU AI Office — les orientations nous parviennent avant les newsletters.",ab3_h:"Cinq langues de travail",ab3_p:"EN, FR, NL, UA et RU — y compris le marché ukrainien transfrontalier que peu de cabinets servent.",
-  about_quote:"Assez petits pour <span>répondre à votre appel</span> — assez structurés pour <span>passer un audit.</span>",about_by:"— notre façon de travailler, en une ligne",
-  cta_h2:"Commencez par une analyse de préparation gratuite.",cta_p:"Aucune pression d'échéance, aucune obligation. Nous cartographions vos systèmes IA et vous disons clairement ce qui — le cas échéant — vous concerne.",cta_btn:"Demander votre analyse",cta_l1:"Évaluation de 2 heures, gratuite",cta_l2:"Réponse sous un jour ouvré",cta_l3:"Sous NDA sur demande",cta_l4:"Vous repartez dans tous les cas avec une fiche utile",
-  foot_desc:"Préparation à l'EU AI Act pour PME et start-ups. Bruxelles, Belgique.",foot_note:"Aucune licence ni certification n'est requise pour conseiller en conformité IA dans l'UE."}
+ fr:{nav_why:"Pourquoi c'est important",nav_how:"Comment ça marche",nav_services:"Services",nav_about:"À propos",nav_cta:"Check gratuit",
+  hero_badge:"IA · Protection des données · UE & Ukraine",hero_h1:"Utilisez l'IA <em>sans enfreindre la loi</em> — ni divulguer les données de vos clients.",
+  hero_sub:"Pour les petites entreprises et indépendants. Des règles pratiques, des politiques prêtes à l'emploi et un check rapide pour que l'IA travaille pour vous — sans exposer vos données ni vos clients.",
+  hero_cta1:"Obtenir un check IA gratuit",hero_cta2:"Voir comment ça marche",trust1:"Conforme au RGPD",trust2:"UE & Ukraine",trust3:"EN · UA · NL · FR",
+  panel_ttl:"Vos outils IA · exposition des données",panel_tag:"check",sys1_n:"ChatGPT (gratuit)",sys1_s:"Données clients collées",sys2_n:"Assistant e-mail IA",sys2_s:"Brouillons avec noms réels",sys3_n:"Traducteur IA",sys3_s:"Textes publics uniquement",badge_high:"À RISQUE",badge_lim:"À SURVEILLER",badge_min:"SÛR",meter_label:"Couverture protection des données",
+  why_eyebrow:"Pourquoi c'est important — même pour un solo",why_h2:"Trois façons dont l'usage quotidien de l'IA peut vous coûter.",why_p:"Pas besoin de créer de l'IA pour être à risque. L'utiliser mal suffit.",
+  why_c1_tag:"Fuite de données",why_c1_h:"Vos données s'échappent",why_c1_p:"Les outils IA gratuits peuvent stocker ou s'entraîner sur ce que vous collez. Les données d'un client dans un prompt peuvent devenir une vraie fuite.",
+  why_c2_tag:"Illégal",why_c2_h:"Cela peut enfreindre la loi",why_c2_p:"Le RGPD — et la future loi ukrainienne — exigent une base légale, un registre et un contrat de sous-traitance pour traiter des données personnelles. L'IA ne fait pas exception.",
+  why_c3_tag:"Résultat erroné",why_c3_h:"Cela peut être tout simplement faux",why_c3_p:"L'IA invente et déforme les faits avec aplomb. Agissez sur une mauvaise réponse et la responsabilité est la vôtre, pas celle de l'outil.",
+  how_eyebrow:"Comment ça marche",how_h2:"Des habitudes risquées à une routine sûre — en quatre étapes.",how_p:"Sans jargon ni cours de droit. On regarde comment vous utilisez l'IA et on la rend sûre.",
+  s1_h:"Cartographier",s1_p:"Quels outils IA vous utilisez et quelles données entrent dans chacun.",
+  s2_h:"Vérifier",s2_p:"Où cela fuit des données, viole le RGPD ou risque une erreur coûteuse.",
+  s3_h:"Corriger",s3_p:"Réglages à changer, outils à remplacer, et une règle claire sur ce qu'on peut coller ou non.",
+  s4_h:"Documenter",s4_p:"Une courte politique d'usage de l'IA et un registre de données à montrer à un client, partenaire ou régulateur.",
+  proc_foot:"La plupart des missions en <b>quelques jours</b>, pas des semaines — à un prix qu'un solo peut s'offrir.",proc_btn:"Voir les prix",
+  svc_eyebrow:"Services & prix",svc_h2:"Commencez par un check. Ajoutez seulement le nécessaire.",
+  svc1_price:"200 €",svc1_dur:"ponctuel · 60–90 min",svc1_h:"Audit IA express",svc1_l1:"Cartographie de tous vos outils IA",svc1_l2:"Carte des risques sur une page",svc1_l3:"Corrections concrètes, par urgence",svc1_btn:"Réserver un audit",
+  svc2_pop:"Le plus choisi",svc2_price:"550 € <small>ponctuel</small>",svc2_dur:"audit + documents",svc2_h:"Safe AI Kit",svc2_l1:"Tout l'audit",svc2_l2:"Politique d'usage IA prête",svc2_l3:"Fiche équipe : à coller ou non",svc2_l4:"Checklist fournisseur/DPA + registre",svc2_btn:"Obtenir le kit",
+  svc3_price:"49 € <small>/mois</small>",svc3_dur:"mensuel · résiliable",svc3_h:"Abonnement AI Safe",svc3_l1:"Politique tenue à jour",svc3_l2:"Nous évaluons les nouveaux outils",svc3_l3:"Un canal pour vos questions rapides",svc3_btn:"S'abonner",
+  aud_eyebrow:"Pour qui",aud_h2:"Pour les entreprises sans service juridique.",aud1_h:"Indépendants & freelances",aud1_p:"Vous utilisez l'IA chaque jour pour rédiger, traduire, chercher. Faisons en sorte qu'elle ne vous coûte pas en silence.",aud2_h:"Petites équipes avec données clients",aud2_p:"Agences, cliniques, e-shops, comptables et juristes — quiconque dont les prompts contiennent les données d'autrui.",aud3_h:"Ukraine & transfrontalier",aud3_p:"Les règles ukrainiennes s'appliquent déjà ; le RGPD dès que vous servez des clients UE. On couvre les deux, dans votre langue.",
+  about_eyebrow:"Pourquoi nous",about_h2:"De l'aide simple, pas un cabinet d'avocats.",about_p:"Les avocats facturent à l'heure et parlent en clauses. Nous donnons des règles pratiques et des documents prêts — à un prix qu'une petite entreprise paie vraiment.",
+  ab1_h:"Pratique, pas théorique",ab1_p:"Fondé sur le RGPD, la transparence de l'AI Act et la loi ukrainienne — transformé en actions concrètes.",ab2_h:"UE & Ukraine",ab2_p:"Un seul prestataire pour les deux marchés — la bonne base légale pour chacun, pas un copier-coller des règles UE sur l'Ukraine.",ab3_h:"Quatre langues de travail",ab3_p:"EN, UA, NL et FR — y compris les équipes que peu de consultants servent dans leur langue.",
+  about_quote:"Assez simples pour <span>parler clairement</span> — assez rigoureux pour <span>vous garder en règle.</span>",about_by:"— notre façon de travailler, en une ligne",
+  cta_h2:"Commencez par un check IA gratuit.",cta_p:"Dites-nous quels outils IA vous utilisez. Nous pointerons les vrais risques — et ce qui est sûr — en langage clair, gratuitement.",cta_btn:"Demander votre check gratuit",cta_l1:"Court questionnaire, sans démarchage",cta_l2:"Réponse sous un jour ouvré",cta_l3:"Sous NDA sur demande",cta_l4:"Vous repartez dans tous les cas avec une fiche utile",
+  foot_desc:"IA sûre et légale pour petites entreprises et indépendants. UE & Ukraine.",foot_addr:"Flandre, Belgique",foot_note:"Nous fournissons des conseils pratiques en protection des données et usage de l'IA. Nous ne sommes pas un cabinet d'avocats."}
 };
+
+// ═══ FORMSPREE ENDPOINT ═══
+const FORM_ENDPOINT='https://formspree.io/f/xgobdvgr';
+// ═══ GOOGLE APPS SCRIPT (авто-ответ) — вставьте URL после деплоя скрипта ═══
+const SCRIPT_URL='https://script.google.com/macros/s/AKfycbxN32gh0BpbQc07r10EDQffLg04-VQ1RthkPcOXqZFPvXfp1BSuvBh2u0pIP5WwvckC/exec';
+
+// AI RISK CHECK QUIZ — translations & engine
+const QZ={
+ en:{
+  progress:"Question {n} of 4", back:"Back", submit:"Get my result",
+  q1_h:"Which AI tools does your business use?",
+  q1opts:[
+   {v:"free",score:2,label:"Free ChatGPT / Gemini / Copilot (personal account)"},
+   {v:"business",score:1,label:"Paid / business plan of the same tools"},
+   {v:"embedded",score:1,label:"AI features inside other tools (CRM, email, design)"},
+   {v:"none",score:0,label:"We don't use AI yet"}],
+  q2_h:"Do you ever type client data — names, emails, contracts — into these tools?",
+  q2opts:[
+   {v:"often",score:2,label:"Often"},
+   {v:"sometimes",score:1,label:"Sometimes"},
+   {v:"rare",score:0,label:"Rarely or never"},
+   {v:"unsure",score:1,label:"Not sure"}],
+  q3_h:"Do you have a written rule for what staff can paste into AI?",
+  q3opts:[
+   {v:"yes",score:0,label:"Yes, we do"},
+   {v:"no",score:2,label:"No"},
+   {v:"solo",score:1,label:"It's just me / never thought about it"}],
+  q4_h:"Where is your business based?",
+  q4_sub:"This doesn't change your result — it just helps us point you to the right legal basis (GDPR or Ukraine's data law).",
+  q4opts:[{v:"eu",label:"EU"},{v:"ua",label:"Ukraine"},{v:"other",label:"Other"}],
+  contact_lbl:"Almost done", contact_h:"Where should we send your result?", contact_sub:"We'll reply within one working day.",
+  ph_name:"Your name", ph_email:"Your email", err_fields:"Please fill in both fields", err_email:"Enter a valid email",
+  res_green_h:"Good baseline.",
+  res_green_p:"Your basics look solid. To keep it that way as you add new tools, the AI Safe subscription (from {{PRICE}}) keeps your policy current and checks new tools before you adopt them.",
+  cta_sub:"See the AI Safe subscription",
+  res_amber_h:"A few gaps to close.",
+  res_amber_p:"Nothing alarming, but a couple of things are worth fixing. An Express AI Audit ({{PRICE}}) maps exactly where data could leak and what to change first.",
+  cta_audit:"See the Express AI Audit",
+  res_red_h:"There's a real risk right now.",
+  res_red_p:"The way AI is being used today could already expose client data or break GDPR. The Safe AI Kit ({{PRICE}}) gives you the policy, staff rules and vendor checklist in one go — the fastest way to close this.",
+  cta_kit:"See the Safe AI Kit",
+  price_audit:"€200", price_kit:"€550", price_sub:"€49/mo"
+ },
+ uk:{
+  progress:"Питання {n} з 4", back:"Назад", submit:"Отримати результат",
+  q1_h:"Якими ШІ-інструментами користується ваш бізнес?",
+  q1opts:[
+   {v:"free",score:2,label:"Безкоштовний ChatGPT / Gemini / Copilot (особистий акаунт)"},
+   {v:"business",score:1,label:"Платна / бізнес-версія тих самих інструментів"},
+   {v:"embedded",score:1,label:"ШІ-функції всередині інших сервісів (CRM, пошта, дизайн)"},
+   {v:"none",score:0,label:"Ми ще не використовуємо ШІ"}],
+  q2_h:"Чи вводите ви дані клієнтів — імена, email, договори — в ці інструменти?",
+  q2opts:[
+   {v:"often",score:2,label:"Часто"},
+   {v:"sometimes",score:1,label:"Іноді"},
+   {v:"rare",score:0,label:"Рідко або ніколи"},
+   {v:"unsure",score:1,label:"Не впевнений(а)"}],
+  q3_h:"Чи є у вас письмове правило, що персонал може вставляти в ШІ?",
+  q3opts:[
+   {v:"yes",score:0,label:"Так, є"},
+   {v:"no",score:2,label:"Ні"},
+   {v:"solo",score:1,label:"Я працюю один(одна) / не думав(ла) про це"}],
+  q4_h:"Де базується ваш бізнес?",
+  q4_sub:"Це не змінює результат — лише допомагає вказати правильну правову основу (GDPR або закон України про дані).",
+  q4opts:[{v:"eu",label:"ЄС"},{v:"ua",label:"Україна"},{v:"other",label:"Інше"}],
+  contact_lbl:"Майже готово", contact_h:"Куди надіслати результат?", contact_sub:"Відповімо протягом одного робочого дня.",
+  ph_name:"Ваше ім'я", ph_email:"Ваш email", err_fields:"Заповніть обидва поля", err_email:"Введіть коректний email",
+  res_green_h:"Хороша база.",
+  res_green_p:"Базові речі в порядку. Щоб так залишалось і з новими інструментами, підписка AI Safe (від {{PRICE}}) підтримує політику актуальною і перевіряє нові інструменти до впровадження.",
+  cta_sub:"Дивитись підписку AI Safe",
+  res_amber_h:"Є кілька прогалин.",
+  res_amber_p:"Нічого критичного, але варто кілька речей виправити. Експрес-аудит ШІ ({{PRICE}}) покаже, де саме можуть витекти дані і що змінити першим.",
+  cta_audit:"Дивитись Експрес-аудит",
+  res_red_h:"Є реальний ризик прямо зараз.",
+  res_red_p:"Те, як зараз використовується ШІ, вже може розкривати дані клієнтів або порушувати GDPR. Safe AI Kit ({{PRICE}}) дає політику, інструкцію для персоналу і чек-лист вендора одним пакетом — найшвидший спосіб це закрити.",
+  cta_kit:"Дивитись Safe AI Kit",
+  price_audit:"3 600 грн", price_kit:"11 000 грн", price_sub:"950 грн/міс"
+ },
+ nl:{
+  progress:"Vraag {n} van 4", back:"Terug", submit:"Mijn resultaat ontvangen",
+  q1_h:"Welke AI-tools gebruikt uw bedrijf?",
+  q1opts:[
+   {v:"free",score:2,label:"Gratis ChatGPT / Gemini / Copilot (persoonlijk account)"},
+   {v:"business",score:1,label:"Betaalde / zakelijke versie van dezelfde tools"},
+   {v:"embedded",score:1,label:"AI-functies binnen andere tools (CRM, e-mail, design)"},
+   {v:"none",score:0,label:"We gebruiken nog geen AI"}],
+  q2_h:"Voert u ooit klantgegevens — namen, e-mails, contracten — in deze tools in?",
+  q2opts:[
+   {v:"often",score:2,label:"Vaak"},
+   {v:"sometimes",score:1,label:"Soms"},
+   {v:"rare",score:0,label:"Zelden of nooit"},
+   {v:"unsure",score:1,label:"Weet ik niet"}],
+  q3_h:"Heeft u een schriftelijke regel over wat personeel in AI mag plakken?",
+  q3opts:[
+   {v:"yes",score:0,label:"Ja"},
+   {v:"no",score:2,label:"Nee"},
+   {v:"solo",score:1,label:"Het is alleen ik / hier nooit over nagedacht"}],
+  q4_h:"Waar is uw bedrijf gevestigd?",
+  q4_sub:"Dit verandert uw resultaat niet — het helpt ons alleen de juiste rechtsgrond aan te wijzen (GDPR of de Oekraïense datawet).",
+  q4opts:[{v:"eu",label:"EU"},{v:"ua",label:"Oekraïne"},{v:"other",label:"Anders"}],
+  contact_lbl:"Bijna klaar", contact_h:"Waar sturen we uw resultaat naartoe?", contact_sub:"We reageren binnen één werkdag.",
+  ph_name:"Uw naam", ph_email:"Uw e-mail", err_fields:"Vul beide velden in", err_email:"Voer een geldig e-mailadres in",
+  res_green_h:"Goede basis.",
+  res_green_p:"Uw basis ziet er solide uit. Om dat zo te houden bij nieuwe tools, houdt het AI Safe-abonnement (vanaf {{PRICE}}) uw beleid actueel en toetst nieuwe tools vooraf.",
+  cta_sub:"Bekijk het AI Safe-abonnement",
+  res_amber_h:"Enkele aandachtspunten.",
+  res_amber_p:"Niets verontrustends, maar een paar dingen zijn het verbeteren waard. Een Express AI-audit ({{PRICE}}) brengt precies in kaart waar data kan lekken en wat u eerst moet aanpassen.",
+  cta_audit:"Bekijk de Express AI-audit",
+  res_red_h:"Er is nu een reëel risico.",
+  res_red_p:"Zoals AI nu gebruikt wordt, kan dit al klantgegevens blootleggen of de GDPR overtreden. De Safe AI Kit ({{PRICE}}) geeft u in één keer het beleid, personeelsregels en de leverancierscheck — de snelste manier om dit te sluiten.",
+  cta_kit:"Bekijk de Safe AI Kit",
+  price_audit:"€200", price_kit:"€550", price_sub:"€49/mnd"
+ },
+ fr:{
+  progress:"Question {n} sur 4", back:"Retour", submit:"Obtenir mon résultat",
+  q1_h:"Quels outils IA votre entreprise utilise-t-elle ?",
+  q1opts:[
+   {v:"free",score:2,label:"ChatGPT / Gemini / Copilot gratuit (compte personnel)"},
+   {v:"business",score:1,label:"Version payante / professionnelle de ces mêmes outils"},
+   {v:"embedded",score:1,label:"Fonctions IA intégrées à d'autres outils (CRM, e-mail, design)"},
+   {v:"none",score:0,label:"Nous n'utilisons pas encore l'IA"}],
+  q2_h:"Saisissez-vous des données clients — noms, e-mails, contrats — dans ces outils ?",
+  q2opts:[
+   {v:"often",score:2,label:"Souvent"},
+   {v:"sometimes",score:1,label:"Parfois"},
+   {v:"rare",score:0,label:"Rarement ou jamais"},
+   {v:"unsure",score:1,label:"Je ne sais pas"}],
+  q3_h:"Avez-vous une règle écrite sur ce que le personnel peut coller dans l'IA ?",
+  q3opts:[
+   {v:"yes",score:0,label:"Oui"},
+   {v:"no",score:2,label:"Non"},
+   {v:"solo",score:1,label:"Je suis seul(e) / jamais réfléchi à la question"}],
+  q4_h:"Où votre entreprise est-elle basée ?",
+  q4_sub:"Cela ne change pas votre résultat — cela nous aide juste à indiquer la bonne base légale (RGPD ou loi ukrainienne sur les données).",
+  q4opts:[{v:"eu",label:"UE"},{v:"ua",label:"Ukraine"},{v:"other",label:"Autre"}],
+  contact_lbl:"Presque terminé", contact_h:"Où envoyer votre résultat ?", contact_sub:"Nous répondrons sous un jour ouvré.",
+  ph_name:"Votre nom", ph_email:"Votre e-mail", err_fields:"Veuillez remplir les deux champs", err_email:"Entrez un e-mail valide",
+  res_green_h:"Bonne base.",
+  res_green_p:"Vos fondamentaux semblent solides. Pour le rester avec de nouveaux outils, l'abonnement AI Safe (à partir de {{PRICE}}) maintient votre politique à jour et évalue les nouveaux outils avant adoption.",
+  cta_sub:"Voir l'abonnement AI Safe",
+  res_amber_h:"Quelques points à corriger.",
+  res_amber_p:"Rien d'alarmant, mais certains points méritent d'être corrigés. Un audit IA express ({{PRICE}}) identifie précisément où les données peuvent fuiter et ce qu'il faut corriger en premier.",
+  cta_audit:"Voir l'audit IA express",
+  res_red_h:"Il y a un risque réel dès maintenant.",
+  res_red_p:"La façon dont l'IA est utilisée aujourd'hui pourrait déjà exposer des données clients ou enfreindre le RGPD. Le Safe AI Kit ({{PRICE}}) fournit en une fois la politique, les règles pour le personnel et la checklist fournisseur — le moyen le plus rapide de corriger cela.",
+  cta_kit:"Voir le Safe AI Kit",
+  price_audit:"200 €", price_kit:"550 €", price_sub:"49 €/mois"
+ }
+};
+
+let qzLang='en';
+const qzScore={1:0,2:0,3:0};
+const qzAnswers={};
+let qzHistory=[];
+let qzCurrent='1';
+
+function qzSet(id,val){const el=document.getElementById(id); if(el) el.textContent=val;}
+
+function qzRenderOpts(containerId, opts, step){
+  const c=document.getElementById(containerId);
+  c.innerHTML='';
+  opts.forEach(o=>{
+    const b=document.createElement('button');
+    b.className='qz-opt';
+    b.textContent=o.label;
+    b.addEventListener('click',()=>{
+      qzAnswers['q'+step]=o.v;
+      if(typeof o.score==='number') qzScore[step]=o.score;
+      qzShow(step===4?'contact':String(step+1));
+    });
+    c.appendChild(b);
+  });
+}
+
+function qzShow(step){
+  if(qzCurrent!==step) qzHistory.push(qzCurrent);
+  qzCurrent=step;
+  document.querySelectorAll('.qz-step').forEach(el=>el.classList.remove('active'));
+  const el=document.querySelector('[data-qstep="'+step+'"]');
+  if(el){el.classList.add('active'); el.scrollIntoView({behavior:'smooth',block:'center'});}
+}
+function qzBack(){
+  if(qzHistory.length){ qzCurrent=qzHistory.pop();
+    document.querySelectorAll('.qz-step').forEach(el=>el.classList.remove('active'));
+    const el=document.querySelector('[data-qstep="'+qzCurrent+'"]');
+    if(el) el.classList.add('active');
+  }
+}
+
+function renderQuiz(l){
+  qzLang=l;
+  const q=QZ[l];
+  qzSet('qzProg1', q.progress.replace('{n}','1'));
+  qzSet('qzProg2', q.progress.replace('{n}','2'));
+  qzSet('qzProg3', q.progress.replace('{n}','3'));
+  qzSet('qzProg4', q.progress.replace('{n}','4'));
+  qzSet('qzQ1h', q.q1_h); qzSet('qzQ2h', q.q2_h); qzSet('qzQ3h', q.q3_h);
+  qzSet('qzQ4h', q.q4_h); qzSet('qzQ4sub', q.q4_sub);
+  ['qzBackTxt2','qzBackTxt3','qzBackTxt4','qzBackTxtC'].forEach(id=>qzSet(id,q.back));
+  qzRenderOpts('qzOpts1', q.q1opts, 1);
+  qzRenderOpts('qzOpts2', q.q2opts, 2);
+  qzRenderOpts('qzOpts3', q.q3opts, 3);
+  qzRenderOpts('qzOpts4', q.q4opts, 4);
+  qzSet('qzContactLbl', q.contact_lbl);
+  qzSet('qzContactH', q.contact_h);
+  qzSet('qzContactSub', q.contact_sub);
+  const nameEl=document.getElementById('qzName'), emailEl=document.getElementById('qzEmail');
+  if(nameEl) nameEl.placeholder=q.ph_name;
+  if(emailEl) emailEl.placeholder=q.ph_email;
+  qzSet('qzSubmitBtn', q.submit);
+  qzSet('qzGreenH', q.res_green_h);
+  qzSet('qzAmberH', q.res_amber_h);
+  qzSet('qzRedH', q.res_red_h);
+  qzSet('qzGreenCta', q.cta_sub);
+  qzSet('qzAmberCta', q.cta_audit);
+  qzSet('qzRedCta', q.cta_kit);
+  const gp=document.getElementById('qzGreenP'); if(gp) gp.textContent=q.res_green_p.replace('{{PRICE}}',q.price_sub);
+  const ap=document.getElementById('qzAmberP'); if(ap) ap.textContent=q.res_amber_p.replace('{{PRICE}}',q.price_audit);
+  const rp=document.getElementById('qzRedP'); if(rp) rp.textContent=q.res_red_p.replace('{{PRICE}}',q.price_kit);
+}
+
+const qzForm=document.getElementById('qzForm');
+if(qzForm){
+  qzForm.addEventListener('submit', e=>{
+    e.preventDefault();
+    const nameEl=document.getElementById('qzName'), emailEl=document.getElementById('qzEmail'), errEl=document.getElementById('qzErr');
+    const nameVal=nameEl.value.trim(), emailVal=emailEl.value.trim();
+    const emailRe=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    nameEl.classList.remove('err'); emailEl.classList.remove('err'); if(errEl) errEl.classList.remove('show');
+    let bad=false, emailBad=false;
+    if(!nameVal){nameEl.classList.add('err'); bad=true;}
+    if(!emailVal){emailEl.classList.add('err'); bad=true;}
+    else if(!emailRe.test(emailVal)){emailEl.classList.add('err'); bad=true; emailBad=true;}
+    if(bad){
+      if(errEl){errEl.textContent = emailBad ? QZ[qzLang].err_email : QZ[qzLang].err_fields; errEl.classList.add('show');}
+      return;
+    }
+    const total=qzScore[1]+qzScore[2]+qzScore[3];
+    const risk = total<=1 ? 'green' : (total<=3 ? 'amber' : 'red');
+    const payload={tools:qzAnswers.q1||'',data_input:qzAnswers.q2||'',policy:qzAnswers.q3||'',region:qzAnswers.q4||'',risk_level:risk,name:nameVal,email:emailVal,language:qzLang};
+    fetch(FORM_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(payload)});
+    if(SCRIPT_URL.indexOf('script.google.com')>-1){fetch(SCRIPT_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain'},body:JSON.stringify(payload)});}
+    qzShow(risk);
+  });
+}
 
 function setLang(l){
   const t=T[l]; if(!t)return;
   document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.getAttribute('data-i18n');if(t[k]!=null)el.textContent=t[k]});
   document.querySelectorAll('[data-i18n-html]').forEach(el=>{const k=el.getAttribute('data-i18n-html');if(t[k]!=null)el.innerHTML=t[k]});
   document.documentElement.lang=l;
+  renderQuiz(l);
   document.querySelectorAll('#lang button').forEach(b=>b.classList.toggle('on',b.getAttribute('data-lang')===l));
 }
 document.querySelectorAll('#lang button').forEach(b=>b.addEventListener('click',()=>setLang(b.getAttribute('data-lang'))));
 
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
 document.querySelectorAll('.fade').forEach(el=>io.observe(el));
-window.addEventListener('load',()=>{setTimeout(()=>{const f=document.getElementById('fill');if(f)f.style.width='82%'},300)});
+window.addEventListener('load',()=>{setTimeout(()=>{const f=document.getElementById('fill');if(f)f.style.width='58%'},300)});
 document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})}}));
+setLang('en');
 </script>
 </body>
 </html>
