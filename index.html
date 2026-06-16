@@ -3,211 +3,227 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="EU AI Act readiness for SMEs and startups — fixed-price compliance packages built on the ISO/IEC 42001 framework. Flanders, Belgium.">
-<title>AI Comply — EU AI Act Readiness for SMEs</title>
+<meta name="description" content="Safe, legal AI for small businesses — practical rules, ready policies, data protection. EU & Ukraine.">
+<title>AI Comply — Safe AI for Small Business</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --navy:#0B192C;--navy-mid:#1E3E62;--blue:#2563EB;--blue-light:#DBEAFE;
-  --mint:#6DBE8A;--mint-dark:#4A9E68;--mint-light:#E8F7EE;
-  --amber:#F6C567;--red:#FC8181;
-  --gray:#F4F6F9;--gray-mid:#E2E8F0;
-  --text:#0F1928;--text-muted:#4A5568;--text-light:#718096;
-  --white:#FFF;--border:#CBD5E0;
-  --shadow:0 4px 24px rgba(11,25,44,.08);--shadow-lg:0 12px 48px rgba(11,25,44,.14);
-  --r:8px;--r-lg:14px;--r-xl:20px;--t:all .25s cubic-bezier(.4,0,.2,1);
+  --dark:#0B0B1A;--dark2:#12122A;--dark3:#1A1A35;
+  --green:#22D67A;--green-glow:rgba(34,214,122,.25);--green-dim:#1a9e5c;
+  --cyan:#00B4FF;--cyan-glow:rgba(0,180,255,.2);
+  --purple:#8B5CF6;--purple-glow:rgba(139,92,246,.2);
+  --red-soft:#FF6B6B;--amber-soft:#FBBF24;
+  --text:#E8ECF4;--text-mid:#94A3B8;--text-dim:#64748B;
+  --text-dark:#0F1928;--text-dark-mid:#4A5568;
+  --white:#FFF;--light:#F8FAFC;--light2:#F1F5F9;--border:rgba(255,255,255,.08);
+  --glass:rgba(255,255,255,.04);--glass2:rgba(255,255,255,.06);
+  --glass-border:rgba(255,255,255,.1);
+  --r:10px;--r-lg:16px;--r-xl:24px;
+  --t:all .3s cubic-bezier(.4,0,.2,1);
+  --shadow:0 8px 32px rgba(0,0,0,.3);--shadow-glow:0 0 40px var(--green-glow);
 }
 html{scroll-behavior:smooth;font-size:16px}
-body{font-family:'DM Sans',sans-serif;color:var(--text);background:var(--white);line-height:1.6;overflow-x:hidden}
+body{font-family:'Inter',sans-serif;color:var(--text);background:var(--dark);line-height:1.65;overflow-x:hidden}
 a{text-decoration:none;color:inherit}
-.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
-.section{padding:104px 0}
-h1{font-family:'DM Serif Display',serif;font-size:clamp(2.3rem,5vw,3.6rem);line-height:1.12;font-weight:400;color:var(--navy)}
-h2{font-family:'DM Serif Display',serif;font-size:clamp(1.8rem,3.4vw,2.6rem);line-height:1.2;font-weight:400;color:var(--navy)}
-h3{font-size:1.12rem;font-weight:600;color:var(--navy);line-height:1.4}
-p{color:var(--text-muted);line-height:1.75}
-.eyebrow{font-family:'DM Mono',monospace;font-size:.76rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--mint-dark)}
-.lead{font-size:1.12rem;color:var(--text-muted);line-height:1.8}
-.btn{display:inline-flex;align-items:center;gap:9px;padding:14px 28px;border-radius:var(--r);font-weight:600;font-size:.95rem;font-family:inherit;cursor:pointer;border:none;transition:var(--t)}
-.btn-primary{background:var(--mint);color:var(--white)}
-.btn-primary:hover{background:var(--mint-dark);transform:translateY(-1px);box-shadow:0 8px 22px rgba(109,190,138,.35)}
-.btn-ghost{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,.35)}
-.btn-ghost:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.6)}
-.btn-dark{background:var(--navy);color:var(--white)}
-.btn-dark:hover{background:var(--navy-mid);transform:translateY(-1px)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+
+h1,h2{font-family:'Space Grotesk',sans-serif;font-weight:700;letter-spacing:-.02em;line-height:1.1}
+h1{font-size:clamp(2.6rem,5.5vw,4rem)}
+h2{font-size:clamp(2rem,3.6vw,2.8rem)}
+h3{font-family:'Space Grotesk',sans-serif;font-size:1.15rem;font-weight:600;line-height:1.35}
+.grad-text{background:linear-gradient(135deg,var(--green),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.eyebrow{font-family:'DM Mono',monospace;font-size:.72rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--green)}
+p{color:var(--text-mid);line-height:1.8}
+
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 30px;border-radius:50px;font-weight:600;font-size:.92rem;font-family:inherit;cursor:pointer;border:none;transition:var(--t);position:relative;overflow:hidden}
+.btn-glow{background:var(--green);color:var(--dark);box-shadow:0 0 0 rgba(34,214,122,0)}
+.btn-glow:hover{box-shadow:0 0 30px var(--green-glow);transform:translateY(-2px)}
+.btn-outline{background:transparent;color:var(--text);border:1.5px solid var(--glass-border)}
+.btn-outline:hover{border-color:var(--green);color:var(--green)}
+.btn-dark{background:var(--dark2);color:var(--text);border:1px solid var(--glass-border)}
+.btn-dark:hover{border-color:var(--green);box-shadow:0 0 20px var(--green-glow)}
 .btn svg{width:17px;height:17px}
+.section{padding:120px 0;position:relative}
+
+/* ORB BACKGROUNDS */
+.orb{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none;opacity:.5}
+.orb-green{background:var(--green);width:400px;height:400px}
+.orb-cyan{background:var(--cyan);width:300px;height:300px}
+.orb-purple{background:var(--purple);width:350px;height:350px}
+
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-30px)}}
+@keyframes pulse{0%,100%{opacity:.4}50%{opacity:.7}}
 
 /* NAV */
-nav{position:fixed;inset:0 0 auto 0;z-index:1000;background:rgba(255,255,255,.94);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
-.nav-in{display:flex;align-items:center;justify-content:space-between;height:66px;gap:16px}
-.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.1rem;color:var(--navy);flex-shrink:0}
-.logo-mark{width:32px;height:32px;background:var(--navy);border-radius:7px;display:flex;align-items:center;justify-content:center;color:var(--mint);font-family:'DM Mono',monospace;font-weight:500;font-size:.95rem}
+nav{position:fixed;inset:0 0 auto 0;z-index:1000;background:rgba(11,11,26,.85);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.15rem;color:var(--white)}
+.logo-mark{width:34px;height:34px;background:linear-gradient(135deg,var(--green),var(--cyan));border-radius:9px;display:flex;align-items:center;justify-content:center;color:var(--dark);font-family:'DM Mono',monospace;font-weight:700;font-size:.9rem}
 .nav-right{display:flex;align-items:center;gap:14px;margin-left:auto}
-.nav-links{display:flex;align-items:center;gap:4px}
-.nav-links a{padding:7px 13px;border-radius:6px;font-size:.9rem;font-weight:500;color:var(--text-muted);transition:var(--t)}
-.nav-links a:hover{color:var(--navy);background:var(--gray)}
-.lang{display:flex;align-items:center;border:1px solid var(--border);border-radius:7px;overflow:hidden}
-.lang button{padding:6px 9px;font-family:'DM Mono',monospace;font-size:.72rem;font-weight:500;letter-spacing:.04em;cursor:pointer;background:transparent;border:none;color:var(--text-light);transition:var(--t);border-left:1px solid var(--border)}
+.nav-links{display:flex;align-items:center;gap:2px}
+.nav-links a{padding:8px 14px;border-radius:8px;font-size:.88rem;font-weight:500;color:var(--text-mid);transition:var(--t)}
+.nav-links a:hover{color:var(--white);background:var(--glass2)}
+.lang{display:flex;align-items:center;border:1px solid var(--glass-border);border-radius:8px;overflow:hidden}
+.lang button{padding:6px 10px;font-family:'DM Mono',monospace;font-size:.72rem;font-weight:500;cursor:pointer;background:transparent;border:none;color:var(--text-dim);transition:var(--t);border-left:1px solid var(--glass-border)}
 .lang button:first-child{border-left:none}
-.lang button.on,.lang button:hover{background:var(--navy);color:var(--white)}
+.lang button.on,.lang button:hover{background:var(--green);color:var(--dark)}
 .nav-cta{flex-shrink:0}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;border:none;background:none}
-.hamburger span{display:block;width:22px;height:2px;background:var(--navy);border-radius:2px}
+.hamburger span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px}
 
 /* HERO */
-.hero{padding:148px 0 90px;background:var(--navy);position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;inset:0;background:
-  radial-gradient(ellipse 70% 55% at 72% 35%,rgba(37,99,235,.20),transparent 60%),
-  radial-gradient(ellipse 50% 50% at 18% 85%,rgba(109,190,138,.10),transparent 55%)}
-.hero-grid{position:absolute;inset:0;opacity:.045;background-image:linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px);background-size:46px 46px}
-.hero-in{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(109,190,138,.12);border:1px solid rgba(109,190,138,.28);color:var(--mint);padding:6px 14px;border-radius:100px;font-family:'DM Mono',monospace;font-size:.74rem;font-weight:500;letter-spacing:.06em;margin-bottom:24px}
+.hero{padding:160px 0 100px;position:relative;overflow:hidden;background:var(--dark)}
+.hero-orb1{top:-150px;right:-100px;animation:pulse 6s ease infinite}
+.hero-orb2{bottom:-100px;left:-150px;animation:pulse 8s ease infinite 2s}
+.hero-in{position:relative;z-index:2;display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--glass2);border:1px solid var(--glass-border);color:var(--green);padding:7px 16px;border-radius:50px;font-family:'DM Mono',monospace;font-size:.74rem;font-weight:500;letter-spacing:.06em;margin-bottom:24px;backdrop-filter:blur(10px)}
+.hero-badge::before{content:'';width:6px;height:6px;background:var(--green);border-radius:50%;animation:pulse 2s ease infinite}
 .hero h1{color:var(--white);margin-bottom:22px}
-.hero h1 em{color:var(--mint);font-style:normal}
-.hero-sub{color:rgba(255,255,255,.66);font-size:1.06rem;line-height:1.8;margin-bottom:34px;max-width:520px}
-.hero-actions{display:flex;gap:13px;flex-wrap:wrap;margin-bottom:26px}
-.trust-strip{display:flex;flex-wrap:wrap;gap:8px 18px;font-family:'DM Mono',monospace;font-size:.76rem;color:rgba(255,255,255,.45)}
-.trust-strip span{display:flex;align-items:center;gap:7px}
-.trust-strip span::before{content:'';width:5px;height:5px;background:var(--mint);border-radius:50%}
+.hero-sub{color:var(--text-mid);font-size:1.08rem;line-height:1.85;margin-bottom:36px;max-width:520px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:28px}
+.trust-strip{display:flex;flex-wrap:wrap;gap:8px 20px;font-family:'DM Mono',monospace;font-size:.74rem;color:var(--text-dim)}
+.trust-strip span{display:flex;align-items:center;gap:8px}
+.trust-strip span::before{content:'';width:5px;height:5px;background:var(--green);border-radius:50%}
 
-/* PANEL */
-.panel{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-lg);padding:22px;backdrop-filter:blur(8px)}
+/* PANEL (glassmorphic) */
+.panel{background:var(--glass);border:1px solid var(--glass-border);border-radius:var(--r-xl);padding:24px;backdrop-filter:blur(16px);box-shadow:0 8px 32px rgba(0,0,0,.2);position:relative}
+.panel::before{content:'';position:absolute;inset:-1px;border-radius:var(--r-xl);background:linear-gradient(135deg,rgba(34,214,122,.2),transparent 50%,rgba(0,180,255,.1));z-index:-1;opacity:.6}
 .panel-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
-.panel-ttl{font-family:'DM Mono',monospace;font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.5)}
-.panel-tag{font-family:'DM Mono',monospace;font-size:.7rem;color:var(--mint);background:rgba(109,190,138,.12);padding:3px 9px;border-radius:5px}
-.sys{display:flex;align-items:center;justify-content:space-between;padding:13px 0;border-top:1px solid rgba(255,255,255,.07);gap:12px}
+.panel-ttl{font-family:'DM Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text-dim)}
+.panel-tag{font-family:'DM Mono',monospace;font-size:.68rem;color:var(--green);background:rgba(34,214,122,.1);padding:4px 10px;border-radius:6px;border:1px solid rgba(34,214,122,.2)}
+.sys{display:flex;align-items:center;justify-content:space-between;padding:14px 0;border-top:1px solid var(--border);gap:12px}
 .sys:first-of-type{border-top:none}
-.sys-name{font-size:.9rem;color:rgba(255,255,255,.85);font-weight:500}
-.sys-sub{font-size:.75rem;color:rgba(255,255,255,.4);margin-top:2px}
-.badge{font-family:'DM Mono',monospace;font-size:.68rem;font-weight:500;padding:4px 9px;border-radius:5px;white-space:nowrap}
-.badge.high{background:rgba(252,129,129,.15);color:var(--red)}
-.badge.lim{background:rgba(246,197,103,.15);color:var(--amber)}
-.badge.min{background:rgba(109,190,138,.15);color:var(--mint)}
-.meter-wrap{margin-top:18px;padding-top:18px;border-top:1px solid rgba(255,255,255,.07)}
+.sys-name{font-size:.9rem;color:var(--text);font-weight:500}
+.sys-sub{font-size:.73rem;color:var(--text-dim);margin-top:2px}
+.badge{font-family:'DM Mono',monospace;font-size:.66rem;font-weight:600;padding:5px 10px;border-radius:6px;white-space:nowrap}
+.badge.high{background:rgba(255,107,107,.12);color:var(--red-soft);border:1px solid rgba(255,107,107,.2)}
+.badge.lim{background:rgba(251,191,36,.1);color:var(--amber-soft);border:1px solid rgba(251,191,36,.2)}
+.badge.min{background:rgba(34,214,122,.1);color:var(--green);border:1px solid rgba(34,214,122,.2)}
+.meter-wrap{margin-top:18px;padding-top:18px;border-top:1px solid var(--border)}
 .meter-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:9px}
-.meter-row span{font-size:.8rem;color:rgba(255,255,255,.6)}
-.meter-row b{font-family:'DM Mono',monospace;font-size:.85rem;color:var(--mint)}
-.meter{height:7px;background:rgba(255,255,255,.08);border-radius:100px;overflow:hidden}
-.meter-fill{height:100%;width:0;background:linear-gradient(90deg,var(--mint-dark),var(--mint));border-radius:100px;transition:width 1.6s cubic-bezier(.4,0,.2,1) .4s}
+.meter-row span{font-size:.8rem;color:var(--text-dim)}
+.meter-row b{font-family:'DM Mono',monospace;font-size:.85rem;color:var(--green)}
+.meter{height:6px;background:var(--glass2);border-radius:100px;overflow:hidden}
+.meter-fill{height:100%;width:0;background:linear-gradient(90deg,var(--green),var(--cyan));border-radius:100px;transition:width 1.6s cubic-bezier(.4,0,.2,1) .4s}
 
-/* WHY */
-.bg-gray{background:var(--gray)}
-.sec-head{max-width:680px;margin-bottom:48px}
+/* LIGHT SECTIONS */
+.sec-light{background:var(--light);color:var(--text-dark)}
+.sec-light p{color:var(--text-dark-mid)}
+.sec-light h2,.sec-light h3{color:var(--text-dark)}
+.sec-dark{background:var(--dark2)}
+.sec-head{max-width:680px;margin-bottom:52px}
 .sec-head .eyebrow{display:block;margin-bottom:14px}
 .sec-head p{margin-top:14px;font-size:1.06rem}
-.cards-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.card{background:var(--white);border:1px solid var(--gray-mid);border-radius:var(--r-lg);padding:26px;transition:var(--t)}
-.card:hover{box-shadow:var(--shadow);transform:translateY(-2px)}
-.card-tag{font-family:'DM Mono',monospace;font-size:.72rem;font-weight:500;padding:4px 10px;border-radius:6px;display:inline-block;margin-bottom:14px}
-.tag-live{background:var(--mint-light);color:var(--mint-dark)}
-.tag-buyer{background:var(--blue-light);color:var(--blue)}
-.tag-due{background:#FEF3C7;color:#B45309}
-.card h3{margin-bottom:8px}
+
+/* WHY CARDS */
+.cards-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:var(--white);border:1px solid var(--light2);border-radius:var(--r-lg);padding:28px;transition:var(--t);position:relative;overflow:hidden}
+.card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--cyan));opacity:0;transition:var(--t)}
+.card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.08)}.card:hover::before{opacity:1}
+.card-tag{font-family:'DM Mono',monospace;font-size:.7rem;font-weight:600;padding:5px 12px;border-radius:50px;display:inline-block;margin-bottom:14px}
+.tag-live{background:#ECFDF5;color:#059669}.tag-buyer{background:#EFF6FF;color:#2563EB}.tag-due{background:#FEF3C7;color:#B45309}
 .card p{font-size:.92rem}
 
-/* PROCESS */
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:8px}
-.step{position:relative;padding-top:26px}
-.step-n{font-family:'DM Mono',monospace;font-size:.8rem;color:var(--mint-dark);font-weight:500;position:absolute;top:0;left:0}
-.step::before{content:'';position:absolute;top:6px;left:34px;right:-9px;height:1px;background:var(--gray-mid)}
-.step:last-child::before{display:none}
-.step h3{font-size:1rem;margin-bottom:7px}
-.step p{font-size:.88rem}
-.proc-foot{margin-top:40px;display:flex;flex-wrap:wrap;align-items:center;gap:14px;padding:20px 24px;background:var(--navy);border-radius:var(--r-lg);color:var(--white)}
-.proc-foot b{font-family:'DM Mono',monospace;color:var(--mint);font-weight:500}
-.proc-foot p{color:rgba(255,255,255,.7);font-size:.95rem;margin:0;flex:1;min-width:240px}
+/* STEPS */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.step{position:relative;padding:24px;background:var(--glass);border:1px solid var(--glass-border);border-radius:var(--r-lg);transition:var(--t)}
+.step:hover{border-color:var(--green);box-shadow:0 0 24px var(--green-glow)}
+.step-n{font-family:'DM Mono',monospace;font-size:.9rem;color:var(--green);font-weight:700;margin-bottom:10px;display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:8px;background:rgba(34,214,122,.1);border:1px solid rgba(34,214,122,.2)}
+.step h3{color:var(--white);margin-bottom:8px}
+.step p{font-size:.88rem;color:var(--text-mid)}
+.proc-foot{margin-top:40px;display:flex;flex-wrap:wrap;align-items:center;gap:16px;padding:22px 28px;background:linear-gradient(135deg,var(--dark3),var(--dark2));border:1px solid var(--glass-border);border-radius:var(--r-lg)}
+.proc-foot b{font-family:'DM Mono',monospace;color:var(--green);font-weight:600}
+.proc-foot p{color:var(--text-mid);font-size:.95rem;margin:0;flex:1;min-width:240px}
 
 /* SERVICES */
 .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.svc{border:1px solid var(--gray-mid);border-radius:var(--r-lg);padding:30px 26px;display:flex;flex-direction:column;transition:var(--t)}
-.svc:hover{box-shadow:var(--shadow-lg);transform:translateY(-3px)}
-.svc.feat{border-color:var(--mint);border-width:1.5px;position:relative}
-.svc-pop{position:absolute;top:-11px;left:26px;background:var(--mint);color:var(--white);font-size:.7rem;font-weight:600;font-family:'DM Mono',monospace;padding:4px 11px;border-radius:5px;letter-spacing:.04em}
-.svc-price{font-family:'DM Serif Display',serif;font-size:2rem;color:var(--navy);margin:4px 0 2px}
-.svc-price small{font-size:.85rem;font-family:'DM Sans';color:var(--text-light);font-weight:400}
-.svc-dur{font-family:'DM Mono',monospace;font-size:.74rem;color:var(--text-light);margin-bottom:18px}
-.svc h3{margin-bottom:12px}
-.svc ul{list-style:none;margin:0 0 22px;flex:1}
-.svc li{display:flex;gap:10px;font-size:.9rem;color:var(--text-muted);padding:6px 0;align-items:flex-start}
-.svc li svg{width:16px;height:16px;color:var(--mint);flex-shrink:0;margin-top:3px}
+.svc{background:var(--white);border:1px solid var(--light2);border-radius:var(--r-xl);padding:32px 28px;display:flex;flex-direction:column;transition:var(--t);position:relative;overflow:hidden}
+.svc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--cyan));transform:scaleX(0);transition:var(--t);transform-origin:left}
+.svc:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(0,0,0,.1)}.svc:hover::before{transform:scaleX(1)}
+.svc.feat{border-color:transparent;background:linear-gradient(var(--white),var(--white)) padding-box,linear-gradient(135deg,var(--green),var(--cyan)) border-box;border:2px solid transparent}
+.svc.feat::before{opacity:0}
+.svc-pop{position:absolute;top:-1px;left:28px;background:linear-gradient(135deg,var(--green),var(--cyan));color:var(--dark);font-size:.68rem;font-weight:700;font-family:'DM Mono',monospace;padding:5px 14px;border-radius:0 0 8px 8px;letter-spacing:.04em}
+.svc-price{font-family:'Space Grotesk',sans-serif;font-size:2.2rem;font-weight:700;color:var(--text-dark);margin:4px 0 2px}
+.svc-price small{font-size:.85rem;font-family:'Inter';color:var(--text-dark-mid);font-weight:400}
+.svc-dur{font-family:'DM Mono',monospace;font-size:.72rem;color:var(--text-dim);margin-bottom:18px}
+.svc ul{list-style:none;margin:0 0 24px;flex:1}
+.svc li{display:flex;gap:10px;font-size:.9rem;color:var(--text-dark-mid);padding:7px 0;align-items:flex-start}
+.svc li svg{width:16px;height:16px;color:var(--green);flex-shrink:0;margin-top:3px}
 .svc .btn{width:100%;justify-content:center}
 
 /* AUDIENCE */
-.aud-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.aud{padding:24px;border-left:2px solid var(--mint);background:var(--gray);border-radius:0 var(--r) var(--r) 0}
-.aud h3{font-size:1rem;margin-bottom:7px}
-.aud p{font-size:.9rem}
+.aud-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.aud{padding:26px;background:var(--glass);border:1px solid var(--glass-border);border-radius:var(--r-lg);transition:var(--t)}
+.aud:hover{border-color:var(--green);box-shadow:0 0 24px var(--green-glow)}
+.aud h3{color:var(--white);margin-bottom:8px}
+.aud p{font-size:.9rem;color:var(--text-mid)}
 
 /* ABOUT */
 .about{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
-.about-pts{display:flex;flex-direction:column;gap:18px;margin-top:24px}
+.about-pts{display:flex;flex-direction:column;gap:20px;margin-top:26px}
 .about-pt{display:flex;gap:14px}
-.about-pt svg{width:20px;height:20px;color:var(--mint-dark);flex-shrink:0;margin-top:2px}
-.about-pt h4{font-size:.98rem;font-weight:600;color:var(--navy);margin-bottom:3px}
+.about-pt svg{width:20px;height:20px;color:var(--green);flex-shrink:0;margin-top:3px}
+.about-pt h4{font-size:.98rem;font-weight:600;margin-bottom:4px}
 .about-pt p{font-size:.9rem;margin:0}
-.about-quote{background:var(--navy);color:var(--white);border-radius:var(--r-xl);padding:40px;font-family:'DM Serif Display',serif;font-size:1.5rem;line-height:1.4}
-.about-quote span{color:var(--mint)}
-.about-quote .by{display:block;font-family:'DM Mono',monospace;font-size:.78rem;color:rgba(255,255,255,.5);margin-top:20px;font-style:normal}
+.about-quote{background:linear-gradient(135deg,var(--dark2),var(--dark3));border:1px solid var(--glass-border);border-radius:var(--r-xl);padding:40px;font-family:'Space Grotesk',sans-serif;font-size:1.5rem;font-weight:600;line-height:1.45;color:var(--white)}
+.about-quote .grad-text{font-size:inherit}
+.about-quote .by{display:block;font-family:'DM Mono',monospace;font-size:.76rem;color:var(--text-dim);margin-top:20px;font-style:normal;font-weight:400}
 
 /* CTA */
-.cta{background:var(--navy);position:relative;overflow:hidden}
-.cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 70% at 80% 50%,rgba(109,190,138,.14),transparent 60%)}
-.cta-in{position:relative;z-index:2;display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:center}
+.cta{background:var(--dark);position:relative;overflow:hidden}
+.cta .orb{opacity:.3}
+.cta-in{position:relative;z-index:2;display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:start}
 .cta h2{color:var(--white)}
-.cta p{color:rgba(255,255,255,.66);margin:16px 0 28px;font-size:1.05rem}
-.cta-list{list-style:none;display:flex;flex-direction:column;gap:11px}
-.cta-list li{display:flex;gap:10px;color:rgba(255,255,255,.85);font-size:.92rem;align-items:center}
-.cta-list svg{width:17px;height:17px;color:var(--mint);flex-shrink:0}
+.cta p{color:var(--text-mid);margin:16px 0 28px;font-size:1.05rem}
+.cta-list{list-style:none;display:flex;flex-direction:column;gap:12px}
+.cta-list li{display:flex;gap:10px;color:var(--text-mid);font-size:.92rem;align-items:center}
+.cta-list svg{width:17px;height:17px;color:var(--green);flex-shrink:0}
 
-/* AI RISK CHECK QUIZ */
-.qz-card{background:var(--white);border-radius:var(--r-lg);padding:30px;box-shadow:var(--shadow-lg);color:var(--text)}
-.qz-card p{color:var(--text)}
-.qz-card .qz-progress{color:var(--mint-dark)}
-.qz-card .qz-sub{color:var(--text-muted)}
-.qz-step{display:none}
-.qz-step.active{display:block}
-.qz-progress{font-family:'DM Mono',monospace;font-size:.72rem;letter-spacing:.06em;color:var(--mint-dark);margin-bottom:10px}
-.qz-h{font-size:1.18rem;font-weight:600;color:var(--navy);line-height:1.35;margin-bottom:6px}
-.qz-sub{color:var(--text-muted);font-size:.92rem;margin-bottom:6px}
+/* QUIZ */
+.qz-card{background:var(--glass);border:1px solid var(--glass-border);border-radius:var(--r-xl);padding:32px;backdrop-filter:blur(16px);color:var(--text);box-shadow:var(--shadow)}
+.qz-card p{color:var(--text-mid)}
+.qz-step{display:none}.qz-step.active{display:block}
+.qz-progress{font-family:'DM Mono',monospace;font-size:.72rem;letter-spacing:.06em;color:var(--green);margin-bottom:10px}
+.qz-h{font-size:1.18rem;font-weight:600;color:var(--white);line-height:1.35;margin-bottom:6px}
+.qz-sub{color:var(--text-mid);font-size:.92rem;margin-bottom:6px}
 .qz-opts{display:grid;gap:9px;margin-top:16px}
-.qz-opt{background:var(--gray);border:1.5px solid var(--gray-mid);border-radius:var(--r);padding:13px 16px;text-align:left;font-family:inherit;font-size:.94rem;font-weight:500;color:var(--text);cursor:pointer;transition:var(--t)}
-.qz-opt:hover{border-color:var(--mint);background:var(--mint-light)}
-.qz-back{background:none;border:none;color:var(--text-light);font-size:.82rem;font-family:inherit;cursor:pointer;padding:0;margin-bottom:14px;display:inline-flex;align-items:center;gap:5px}
-.qz-back:hover{color:var(--navy)}
+.qz-opt{background:var(--glass2);border:1.5px solid var(--glass-border);border-radius:var(--r);padding:14px 16px;text-align:left;font-family:inherit;font-size:.94rem;font-weight:500;color:var(--text);cursor:pointer;transition:var(--t)}
+.qz-opt:hover{border-color:var(--green);background:rgba(34,214,122,.08)}
+.qz-back{background:none;border:none;color:var(--text-dim);font-size:.82rem;font-family:inherit;cursor:pointer;padding:0;margin-bottom:14px;display:inline-flex;align-items:center;gap:5px}
+.qz-back:hover{color:var(--green)}
 .qz-fields{display:grid;gap:10px;margin-top:16px}
-.qz-inp{padding:13px 14px;border:1.5px solid var(--gray-mid);border-radius:var(--r);font-family:inherit;font-size:.94rem;color:var(--text);background:var(--white)}
-.qz-inp:focus{outline:none;border-color:var(--mint)}
-.qz-inp.err{border-color:var(--red)}
-.qz-err{color:#C0392B;font-size:.82rem;margin-top:8px;display:none}
+.qz-inp{padding:13px 14px;border:1.5px solid var(--glass-border);border-radius:var(--r);font-family:inherit;font-size:.94rem;color:var(--white);background:var(--glass2)}
+.qz-inp:focus{outline:none;border-color:var(--green)}
+.qz-inp::placeholder{color:var(--text-dim)}
+.qz-inp.err{border-color:var(--red-soft)}
+.qz-err{color:var(--red-soft);font-size:.82rem;margin-top:8px;display:none}
 .qz-err.show{display:block}
-.qz-result-icon{width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.3rem;font-weight:700;margin-bottom:16px}
-.qz-result.green .qz-result-icon{background:var(--mint-light);color:var(--mint-dark)}
-.qz-result.amber .qz-result-icon{background:#FEF3C7;color:#B45309}
-.qz-result.red .qz-result-icon{background:rgba(192,57,43,.12);color:#C0392B}
-.qz-result p{margin-bottom:18px}
+.qz-result-icon{width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.3rem;font-weight:700;margin-bottom:16px}
+.qz-result.green .qz-result-icon{background:rgba(34,214,122,.15);color:var(--green)}
+.qz-result.amber .qz-result-icon{background:rgba(251,191,36,.12);color:var(--amber-soft)}
+.qz-result.red .qz-result-icon{background:rgba(255,107,107,.12);color:var(--red-soft)}
+.qz-result p{margin-bottom:18px;color:var(--text-mid)}
 .qz-result .btn{width:100%;justify-content:center}
-@media(max-width:880px){.qz-card{padding:24px}}
 
 /* FOOTER */
-footer{background:#081320;color:rgba(255,255,255,.55);padding:48px 0 28px;font-size:.86rem}
-.foot-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.08)}
+footer{background:#060612;color:var(--text-dim);padding:52px 0 28px;font-size:.86rem}
+.foot-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px;padding-bottom:28px;border-bottom:1px solid var(--border)}
 .foot-brand{max-width:320px}
 .foot-brand .logo{color:#fff;margin-bottom:12px}
-.foot-bottom{padding-top:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-family:'DM Mono',monospace;font-size:.74rem;color:rgba(255,255,255,.4)}
+.foot-bottom{padding-top:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-family:'DM Mono',monospace;font-size:.72rem;color:var(--text-dim)}
 
-.fade{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}
+.fade{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
 .fade.in{opacity:1;transform:none}
 
 @media(max-width:880px){
   .hero-in,.about,.cta-in{grid-template-columns:1fr;gap:40px}
   .cards-3,.steps,.svc-grid,.aud-grid{grid-template-columns:1fr}
-  .step::before{display:none}.step{padding-top:8px}
   .nav-links,.nav-cta{display:none}.hamburger{display:flex}
-  .section{padding:72px 0}
-  .lang button{padding:6px 7px;font-size:.68rem}
+  .section{padding:80px 0}
+  .orb{opacity:.3!important}
 }
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}.fade{opacity:1;transform:none}}
 </style>
@@ -219,7 +235,7 @@ footer{background:#081320;color:rgba(255,255,255,.55);padding:48px 0 28px;font-s
     <a href="#" class="logo"><span class="logo-mark">AI</span>AI&nbsp;Comply</a>
     <div class="nav-right">
       <div class="nav-links">
-        <a href="#why" data-i18n="nav_why">Why now</a>
+        <a href="#why" data-i18n="nav_why">Why it matters</a>
         <a href="#how" data-i18n="nav_how">How it works</a>
         <a href="#services" data-i18n="nav_services">Services</a>
         <a href="#about" data-i18n="nav_about">About</a>
@@ -230,50 +246,41 @@ footer{background:#081320;color:rgba(255,255,255,.55);padding:48px 0 28px;font-s
         <button data-lang="nl">NL</button>
         <button data-lang="fr">FR</button>
       </div>
-      <a href="#start" class="btn btn-dark nav-cta" data-i18n="nav_cta">Free snapshot</a>
+      <a href="#start" onclick="startCheck()" class="btn btn-glow nav-cta" data-i18n="nav_cta">Free check</a>
     </div>
     <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
 
-<!-- HERO -->
 <header class="hero">
-  <div class="hero-grid"></div>
+  <div class="orb orb-green hero-orb1"></div>
+  <div class="orb orb-cyan hero-orb2"></div>
   <div class="wrap hero-in">
     <div>
-      <span class="hero-badge" data-i18n="hero_badge">EU AI Act · Brussels</span>
-      <h1 data-i18n-html="hero_h1">Make your AI <em>audit-ready</em> before 2027 — and investor-ready today.</h1>
-      <p class="hero-sub" data-i18n="hero_sub">Fixed-price packages that turn 100+ pages of the EU AI Act into a clear set of engineering tasks. Built for SMEs and startups that can't put a Big Four firm on retainer.</p>
+      <span class="hero-badge" data-i18n="hero_badge">AI · Data protection · EU & Ukraine</span>
+      <h1 data-i18n-html="hero_h1">Use AI <span class="grad-text">without breaking the law</span> — or leaking your clients' data.</h1>
+      <p class="hero-sub" data-i18n="hero_sub">For small businesses and sole traders. Practical rules, ready-made policies and a short check so AI works for you — without exposing your data or your clients.</p>
       <div class="hero-actions">
-        <a href="#start" class="btn btn-primary"><span data-i18n="hero_cta1">Get a free readiness snapshot</span>
+        <a href="#start" onclick="startCheck()" class="btn btn-glow"><span data-i18n="hero_cta1">Get a free AI risk check</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a href="#how" class="btn btn-ghost" data-i18n="hero_cta2">See how it works</a>
+        <a href="#how" class="btn btn-outline" data-i18n="hero_cta2">See how it works</a>
       </div>
       <div class="trust-strip">
-        <span data-i18n="trust1">Built on ISO/IEC 42001</span>
-        <span data-i18n="trust2">Based in Brussels</span>
-        <span data-i18n="trust3">EN · FR · NL · UA · RU</span>
+        <span data-i18n="trust1">GDPR-aligned</span>
+        <span data-i18n="trust2">EU & Ukraine</span>
+        <span data-i18n="trust3">EN · UA · NL · FR</span>
       </div>
     </div>
-    <div class="panel fade">
+    <div class="panel fade" style="animation:float 6s ease infinite">
       <div class="panel-top">
-        <span class="panel-ttl" data-i18n="panel_ttl">AI System Inventory</span>
-        <span class="panel-tag" data-i18n="panel_tag">snapshot</span>
+        <span class="panel-ttl" data-i18n="panel_ttl">Your AI tools · data exposure</span>
+        <span class="panel-tag" data-i18n="panel_tag">check</span>
       </div>
-      <div class="sys">
-        <div><div class="sys-name" data-i18n="sys1_n">CV-screening model</div><div class="sys-sub" data-i18n="sys1_s">HR · automated shortlisting</div></div>
-        <span class="badge high" data-i18n="badge_high">HIGH RISK</span>
-      </div>
-      <div class="sys">
-        <div><div class="sys-name" data-i18n="sys2_n">Support chatbot</div><div class="sys-sub" data-i18n="sys2_s">Customer service · generative</div></div>
-        <span class="badge lim" data-i18n="badge_lim">LIMITED</span>
-      </div>
-      <div class="sys">
-        <div><div class="sys-name" data-i18n="sys3_n">Demand forecasting</div><div class="sys-sub" data-i18n="sys3_s">Logistics · internal</div></div>
-        <span class="badge min" data-i18n="badge_min">MINIMAL</span>
-      </div>
+      <div class="sys"><div><div class="sys-name" data-i18n="sys1_n">ChatGPT (free tier)</div><div class="sys-sub" data-i18n="sys1_s">Client data pasted in</div></div><span class="badge high" data-i18n="badge_high">AT RISK</span></div>
+      <div class="sys"><div><div class="sys-name" data-i18n="sys2_n">AI email assistant</div><div class="sys-sub" data-i18n="sys2_s">Drafts with real names</div></div><span class="badge lim" data-i18n="badge_lim">WATCH</span></div>
+      <div class="sys"><div><div class="sys-name" data-i18n="sys3_n">AI translator</div><div class="sys-sub" data-i18n="sys3_s">Public texts only</div></div><span class="badge min" data-i18n="badge_min">SAFE</span></div>
       <div class="meter-wrap">
-        <div class="meter-row"><span data-i18n="meter_label">Documentation readiness</span><b>58%</b></div>
+        <div class="meter-row"><span data-i18n="meter_label">Data protection coverage</span><b>58%</b></div>
         <div class="meter"><div class="meter-fill" id="fill"></div></div>
       </div>
     </div>
@@ -281,131 +288,119 @@ footer{background:#081320;color:rgba(255,255,255,.55);padding:48px 0 28px;font-s
 </header>
 
 <!-- WHY -->
-<section class="section" id="why">
+<section class="section sec-light" id="why">
   <div class="wrap">
     <div class="sec-head fade">
-      <span class="eyebrow" data-i18n="why_eyebrow">The deadline moved. The reason to act didn't.</span>
-      <h2 data-i18n="why_h2">You have more time. Your buyers and investors don't wait.</h2>
-      <p data-i18n="why_p">High-risk obligations under Annex III were deferred to 2 December 2027 by the Digital Omnibus. That removes the panic — not the work. Three things are already on the clock.</p>
+      <span class="eyebrow" data-i18n="why_eyebrow">Why it matters — even for a one-person business</span>
+      <h2 data-i18n="why_h2">Three ways everyday AI use can cost you.</h2>
+      <p data-i18n="why_p">You don't need to build AI to be at risk. Using it the wrong way is enough.</p>
     </div>
     <div class="cards-3">
-      <div class="card fade">
-        <span class="card-tag tag-live" data-i18n="why_c1_tag">In force now</span>
-        <h3 data-i18n="why_c1_h">Prohibited &amp; transparency rules</h3>
-        <p data-i18n="why_c1_p">Banned practices apply since Feb 2025; AI-interaction disclosure is already expected. These don't move with the deadline.</p>
-      </div>
-      <div class="card fade">
-        <span class="card-tag tag-buyer" data-i18n="why_c2_tag">Required by buyers</span>
-        <h3 data-i18n="why_c2_h">Due diligence &amp; procurement</h3>
-        <p data-i18n="why_c2_p">Investors and enterprise clients ask for a technical file today. No documentation, no round, no contract — regardless of any EU date.</p>
-      </div>
-      <div class="card fade">
-        <span class="card-tag tag-due" data-i18n="why_c3_tag">Due Dec 2027</span>
-        <h3 data-i18n="why_c3_h">High-risk system file</h3>
-        <p data-i18n="why_c3_p">A full Annex IV file takes weeks, not days. Starting in 2027 means rushing it. Starting now means it's a competitive asset.</p>
-      </div>
+      <div class="card fade"><span class="card-tag tag-live" data-i18n="why_c1_tag">Data leak</span><h3 data-i18n="why_c1_h">Your data leaves the building</h3><p data-i18n="why_c1_p">Free AI tools can store or train on what you paste. A client's details in a prompt can become a real data breach.</p></div>
+      <div class="card fade"><span class="card-tag tag-buyer" data-i18n="why_c2_tag">Illegal</span><h3 data-i18n="why_c2_h">It can break the law</h3><p data-i18n="why_c2_p">GDPR — and Ukraine's incoming data law — require a legal basis, a record and a vendor agreement to process personal data. AI tools are no exception.</p></div>
+      <div class="card fade"><span class="card-tag tag-due" data-i18n="why_c3_tag">Wrong output</span><h3 data-i18n="why_c3_h">It can simply be wrong</h3><p data-i18n="why_c3_p">AI invents and misreads facts with full confidence. Act on a wrong answer and the liability is yours, not the tool's.</p></div>
     </div>
   </div>
 </section>
 
 <!-- HOW -->
-<section class="section bg-gray" id="how">
+<section class="section sec-dark" id="how">
   <div class="wrap">
     <div class="sec-head fade">
       <span class="eyebrow" data-i18n="how_eyebrow">How it works</span>
-      <h2 data-i18n="how_h2">One method. Fixed price. Built to pass an audit.</h2>
-      <p data-i18n="how_p">You don't pay for billable hours. You pay for a structure your team fills in — the same four steps every time.</p>
+      <h2 data-i18n="how_h2">From risky habits to a safe routine — in four steps.</h2>
+      <p data-i18n="how_p">No jargon, no legal lectures. We look at how you actually use AI and make it safe to keep using.</p>
     </div>
     <div class="steps">
-      <div class="step fade"><span class="step-n">01</span><h3 data-i18n="s1_h">Inventory</h3><p data-i18n="s1_p">We list every AI system you build or use — including the third-party tools you didn't think counted.</p></div>
-      <div class="step fade"><span class="step-n">02</span><h3 data-i18n="s2_h">Classify</h3><p data-i18n="s2_p">Each system is mapped to its risk tier under Annex III, with the rationale written down for auditors.</p></div>
-      <div class="step fade"><span class="step-n">03</span><h3 data-i18n="s3_h">Document</h3><p data-i18n="s3_p">Technical file, risk register, FRIA and DPIA — drafted from ready templates, filled with your data.</p></div>
-      <div class="step fade"><span class="step-n">04</span><h3 data-i18n="s4_h">Audit-ready</h3><p data-i18n="s4_p">A concrete gap list for your developers and a self-check pack you can hand to any reviewer.</p></div>
+      <div class="step fade"><div class="step-n">01</div><h3 data-i18n="s1_h">Map</h3><p data-i18n="s1_p">Which AI tools you use and exactly what data goes into each one.</p></div>
+      <div class="step fade"><div class="step-n">02</div><h3 data-i18n="s2_h">Check</h3><p data-i18n="s2_p">Where that leaks data, breaks GDPR, or risks a costly wrong decision.</p></div>
+      <div class="step fade"><div class="step-n">03</div><h3 data-i18n="s3_h">Fix</h3><p data-i18n="s3_p">Settings to change, tools to swap, and a clear rule on what you can and can't paste.</p></div>
+      <div class="step fade"><div class="step-n">04</div><h3 data-i18n="s4_h">Document</h3><p data-i18n="s4_p">A short AI-use policy and a data record you can show a client, partner or regulator.</p></div>
     </div>
     <div class="proc-foot fade">
-      <p data-i18n-html="proc_foot">The whole package runs <b>4–6 weeks</b> at a <b>fixed price</b> — translated into Jira-ready tasks, not legal prose.</p>
-      <a href="#services" class="btn btn-primary" data-i18n="proc_btn">See packages</a>
+      <p data-i18n-html="proc_foot">Most jobs are done in <b>days</b>, not weeks — and priced so a one-person business can say yes.</p>
+      <a href="#services" class="btn btn-glow" data-i18n="proc_btn">See prices</a>
     </div>
   </div>
 </section>
 
 <!-- SERVICES -->
-<section class="section" id="services">
+<section class="section sec-light" id="services">
   <div class="wrap">
     <div class="sec-head fade">
-      <span class="eyebrow" data-i18n="svc_eyebrow">Services</span>
-      <h2 data-i18n="svc_h2">Start small. Scale only if you need to.</h2>
+      <span class="eyebrow" data-i18n="svc_eyebrow">Services & prices</span>
+      <h2 data-i18n="svc_h2">Start with a check. Add only what you need.</h2>
     </div>
     <div class="svc-grid">
       <div class="svc fade">
-        <div class="svc-price" data-i18n="svc1_price">Free</div>
-        <div class="svc-dur" data-i18n="svc1_dur">2 hours · no sales call</div>
-        <h3 data-i18n="svc1_h">Readiness Snapshot</h3>
+        <div class="svc-price" data-i18n="svc1_price">€200</div>
+        <div class="svc-dur" data-i18n="svc1_dur">one-off · 60–90 min</div>
+        <h3 data-i18n="svc1_h">Express AI Audit</h3>
         <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="svc1_l1">Quick inventory of your AI systems</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="svc1_l2">First-pass risk classification</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="svc1_l3">One-page map of what applies to you</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="svc1_l1">We map every AI tool you use</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="svc1_l2">One-page data-risk map</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="svc1_l3">Concrete fixes, ranked by urgency</span></li>
         </ul>
-        <a href="#start" class="btn btn-dark" data-i18n="svc1_btn">Request snapshot</a>
+        <a href="#start" onclick="startOrder('audit')" class="btn btn-dark" data-i18n="svc1_btn">Book an audit</a>
       </div>
       <div class="svc feat fade">
         <span class="svc-pop" data-i18n="svc2_pop">Most chosen</span>
-        <div class="svc-price" data-i18n-html="svc2_price">€9,500 <small>fixed</small></div>
-        <div class="svc-dur" data-i18n="svc2_dur">4–6 weeks</div>
-        <h3 data-i18n="svc2_h">Fast-Track Package</h3>
+        <div class="svc-price" data-i18n-html="svc2_price">€550 <small>one-off</small></div>
+        <div class="svc-dur" data-i18n="svc2_dur">audit + documents</div>
+        <h3 data-i18n="svc2_h">Safe AI Kit</h3>
         <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="svc2_l1">Technical file (Annex IV)</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="svc2_l2">Risk register + mitigation plan</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="svc2_l3">FRIA / DPIA templates, completed</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="svc2_l4">Investor-DD-ready document set</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="svc2_l1">Everything in the audit</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="svc2_l2">Ready AI-use policy for your business</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="svc2_l3">Staff sheet: what you can & can't paste</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="svc2_l4">Vendor / DPA checklist + data record</span></li>
         </ul>
-        <a href="#start" class="btn btn-primary" data-i18n="svc2_btn">Start a package</a>
+        <a href="#start" onclick="startOrder('kit')" class="btn btn-glow" data-i18n="svc2_btn">Get the kit</a>
       </div>
       <div class="svc fade">
-        <div class="svc-price" data-i18n-html="svc3_price">€1,000 <small>/mo</small></div>
-        <div class="svc-dur" data-i18n="svc3_dur">Rolling · cancel anytime</div>
-        <h3 data-i18n="svc3_h">Governance Retainer</h3>
+        <div class="svc-price" data-i18n-html="svc3_price">€49 <small>/mo</small></div>
+        <div class="svc-dur" data-i18n="svc3_dur">rolling · cancel anytime</div>
+        <h3 data-i18n="svc3_h">AI Safe subscription</h3>
         <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="svc3_l1">Regulatory change tracking</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="svc3_l2">Documentation kept current</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="svc3_l3">Review of each new model release</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="svc3_l1">Policy kept up to date</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="svc3_l2">We vet new tools before you adopt them</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="svc3_l3">A channel for your quick questions</span></li>
         </ul>
-        <a href="#start" class="btn btn-dark" data-i18n="svc3_btn">Talk retainer</a>
+        <a href="#start" onclick="startOrder('sub')" class="btn btn-dark" data-i18n="svc3_btn">Subscribe</a>
       </div>
     </div>
   </div>
 </section>
 
 <!-- AUDIENCE -->
-<section class="section bg-gray">
+<section class="section sec-dark">
   <div class="wrap">
     <div class="sec-head fade">
       <span class="eyebrow" data-i18n="aud_eyebrow">Who it's for</span>
-      <h2 data-i18n="aud_h2">Built for teams without an in-house AI lawyer.</h2>
+      <h2 data-i18n="aud_h2">Made for businesses without a legal department.</h2>
     </div>
     <div class="aud-grid">
-      <div class="aud fade"><h3 data-i18n="aud1_h">SMEs using third-party AI</h3><p data-i18n="aud1_p">You run AI in HR, lending or logistics and need to know which of it is high-risk — before someone else tells you.</p></div>
-      <div class="aud fade"><h3 data-i18n="aud2_h">Startups raising a round</h3><p data-i18n="aud2_p">Your data room needs a technical file. We make compliance a due-diligence asset, not a blocker.</p></div>
-      <div class="aud fade"><h3 data-i18n="aud3_h">Cross-border &amp; Ukrainian teams</h3><p data-i18n="aud3_p">Selling AI into the EU from outside it. Same obligations apply — handled in your language, EN / UA / RU.</p></div>
+      <div class="aud fade"><h3 data-i18n="aud1_h">Sole traders & freelancers</h3><p data-i18n="aud1_p">You use AI every day to write, translate and research. Let's make sure it isn't quietly costing you.</p></div>
+      <div class="aud fade"><h3 data-i18n="aud2_h">Small teams with client data</h3><p data-i18n="aud2_p">Agencies, clinics, e-shops, accounting and law practices — anyone whose prompts contain other people's data.</p></div>
+      <div class="aud fade"><h3 data-i18n="aud3_h">Ukrainian & cross-border</h3><p data-i18n="aud3_p">Ukraine's own data rules apply now; GDPR applies the moment you serve EU clients. We cover both, in your language.</p></div>
     </div>
   </div>
 </section>
 
 <!-- ABOUT -->
-<section class="section" id="about">
+<section class="section sec-light" id="about">
   <div class="wrap about">
     <div class="fade">
       <span class="eyebrow" data-i18n="about_eyebrow">Why us</span>
-      <h2 style="margin:14px 0 6px" data-i18n="about_h2">A boutique, not a brand tax.</h2>
-      <p data-i18n="about_p">Big Four firms start at €50k and ignore companies your size. We do the same technical work, scoped and priced for an SME.</p>
+      <h2 style="margin:14px 0 6px;color:var(--text-dark)" data-i18n="about_h2">Plain help, not a law firm.</h2>
+      <p data-i18n="about_p">Lawyers charge by the hour and speak in clauses. We give you practical rules and ready documents — at a price a small business actually pays.</p>
       <div class="about-pts">
-        <div class="about-pt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z"/></svg><div><h4 data-i18n="ab1_h">Method, not improvisation</h4><p data-i18n="ab1_p">Every engagement follows the ISO/IEC 42001 framework and the Act's Annex IV structure.</p></div></div>
-        <div class="about-pt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="10" r="3"/><path d="M12 21c-4-4-7-7-7-11a7 7 0 0114 0c0 4-3 7-7 11z"/></svg><div><h4 data-i18n="ab2_h">Brussels-based</h4><p data-i18n="ab2_p">Close to the EU AI Office — guidance reaches us before it reaches a newsletter.</p></div></div>
-        <div class="about-pt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M12 3a15 15 0 010 18M12 3a15 15 0 000 18"/></svg><div><h4 data-i18n="ab3_h">Five working languages</h4><p data-i18n="ab3_p">EN, FR, NL, UA and RU — including the cross-border Ukrainian market most firms can't serve.</p></div></div>
+        <div class="about-pt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z"/></svg><div><h4 data-i18n="ab1_h">Practical, not theoretical</h4><p data-i18n="ab1_p">Built around GDPR, EU AI Act transparency rules and Ukraine's data law — turned into things you can actually do.</p></div></div>
+        <div class="about-pt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="10" r="3"/><path d="M12 21c-4-4-7-7-7-11a7 7 0 0114 0c0 4-3 7-7 11z"/></svg><div><h4 data-i18n="ab2_h">EU & Ukraine</h4><p data-i18n="ab2_p">One provider for both markets — the right legal basis applied to each, not a copy-paste of EU rules onto Ukraine.</p></div></div>
+        <div class="about-pt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M12 3a15 15 0 010 18M12 3a15 15 0 000 18"/></svg><div><h4 data-i18n="ab3_h">Four working languages</h4><p data-i18n="ab3_p">EN, UA, NL and FR — including teams most consultants can't serve in their own language.</p></div></div>
       </div>
     </div>
     <div class="about-quote fade">
-      <span data-i18n-html="about_quote">Small enough to <span>answer your call</span> — structured enough to <span>pass an audit.</span></span>
+      <span data-i18n-html="about_quote">Small enough to <span class="grad-text">speak plainly</span> — careful enough to <span class="grad-text">keep you legal.</span></span>
       <span class="by" data-i18n="about_by">— how we work, in one line</span>
     </div>
   </div>
@@ -413,89 +408,33 @@ footer{background:#081320;color:rgba(255,255,255,.55);padding:48px 0 28px;font-s
 
 <!-- CTA -->
 <section class="section cta" id="start">
+  <div class="orb orb-green" style="top:-100px;left:60%;animation:pulse 7s ease infinite"></div>
+  <div class="orb orb-purple" style="bottom:-80px;left:-100px;animation:pulse 9s ease infinite 3s"></div>
   <div class="wrap cta-in">
     <div class="fade">
-      <h2 data-i18n="cta_h2">Start with a free readiness snapshot.</h2>
-      <p data-i18n="cta_p">No deadline pressure, no obligation. We map your AI systems and tell you plainly what — if anything — applies to you.</p>
+      <h2 data-i18n="cta_h2">Start with a free AI risk check.</h2>
+      <p data-i18n="cta_p">Tell us which AI tools you use. We'll point out the real risks — and what's safe to keep doing — in plain language, free.</p>
       <ul class="cta-list">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="cta_l1">2-hour assessment, free of charge</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="cta_l1">Quick questionnaire, no sales call</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="cta_l2">Reply within one working day</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="cta_l3">Covered by an NDA on request</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="cta_l4">You leave with a usable one-pager either way</span></li>
       </ul>
     </div>
-
     <div class="qz-card fade" id="qzCard">
-      <!-- step 1 -->
-      <div class="qz-step active" data-qstep="1">
-        <p class="qz-progress" id="qzProg1"></p>
-        <h3 class="qz-h" id="qzQ1h"></h3>
-        <div class="qz-opts" id="qzOpts1"></div>
+      <div class="qz-order-banner" id="qzOrderBanner" style="display:none;margin-bottom:18px;padding:12px 16px;background:linear-gradient(135deg,rgba(34,214,122,.12),rgba(0,180,255,.08));border:1px solid rgba(34,214,122,.25);border-radius:10px">
+        <div style="font-family:'DM Mono',monospace;font-size:.68rem;letter-spacing:.08em;color:var(--green);margin-bottom:4px" id="qzOrderLabel"></div>
+        <div style="font-weight:600;font-size:1.05rem;color:var(--white)" id="qzOrderService"></div>
       </div>
-      <!-- step 2 -->
-      <div class="qz-step" data-qstep="2">
-        <button class="qz-back" onclick="qzBack()">← <span id="qzBackTxt2"></span></button>
-        <p class="qz-progress" id="qzProg2"></p>
-        <h3 class="qz-h" id="qzQ2h"></h3>
-        <div class="qz-opts" id="qzOpts2"></div>
-      </div>
-      <!-- step 3 -->
-      <div class="qz-step" data-qstep="3">
-        <button class="qz-back" onclick="qzBack()">← <span id="qzBackTxt3"></span></button>
-        <p class="qz-progress" id="qzProg3"></p>
-        <h3 class="qz-h" id="qzQ3h"></h3>
-        <div class="qz-opts" id="qzOpts3"></div>
-      </div>
-      <!-- step 4 -->
-      <div class="qz-step" data-qstep="4">
-        <button class="qz-back" onclick="qzBack()">← <span id="qzBackTxt4"></span></button>
-        <p class="qz-progress" id="qzProg4"></p>
-        <h3 class="qz-h" id="qzQ4h"></h3>
-        <p class="qz-sub" id="qzQ4sub"></p>
-        <div class="qz-opts" id="qzOpts4"></div>
-      </div>
-      <!-- contact -->
-      <div class="qz-step" data-qstep="contact">
-        <button class="qz-back" onclick="qzBack()">← <span id="qzBackTxtC"></span></button>
-        <p class="qz-progress" id="qzContactLbl"></p>
-        <h3 class="qz-h" id="qzContactH"></h3>
-        <p class="qz-sub" id="qzContactSub"></p>
-        <div class="qz-fields">
-          <input class="qz-inp" id="qzName" type="text" required>
-          <input class="qz-inp" id="qzEmail" type="email" required>
-        </div>
-        <div class="qz-err" id="qzErr"></div>
-        <form id="qzForm">
-          <input type="hidden" name="tools">
-          <input type="hidden" name="data_input">
-          <input type="hidden" name="policy">
-          <input type="hidden" name="region">
-          <input type="hidden" name="risk_level">
-          <input type="hidden" name="name">
-          <input type="hidden" name="email">
-          <input type="hidden" name="language">
-          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:14px" id="qzSubmitBtn"></button>
-        </form>
-      </div>
-      <!-- results -->
-      <div class="qz-step qz-result green" data-qstep="green">
-        <div class="qz-result-icon">✓</div>
-        <h3 class="qz-h" id="qzGreenH"></h3>
-        <p id="qzGreenP"></p>
-        <a href="#services" class="btn btn-dark" id="qzGreenCta"></a>
-      </div>
-      <div class="qz-step qz-result amber" data-qstep="amber">
-        <div class="qz-result-icon">!</div>
-        <h3 class="qz-h" id="qzAmberH"></h3>
-        <p id="qzAmberP"></p>
-        <a href="#services" class="btn btn-dark" id="qzAmberCta"></a>
-      </div>
-      <div class="qz-step qz-result red" data-qstep="red">
-        <div class="qz-result-icon">⚠</div>
-        <h3 class="qz-h" id="qzRedH"></h3>
-        <p id="qzRedP"></p>
-        <a href="#services" class="btn btn-primary" id="qzRedCta"></a>
-      </div>
+      <div class="qz-step active" data-qstep="1"><p class="qz-progress" id="qzProg1"></p><h3 class="qz-h" id="qzQ1h"></h3><div class="qz-opts" id="qzOpts1"></div></div>
+      <div class="qz-step" data-qstep="2"><button class="qz-back" onclick="qzBack()">← <span id="qzBackTxt2"></span></button><p class="qz-progress" id="qzProg2"></p><h3 class="qz-h" id="qzQ2h"></h3><div class="qz-opts" id="qzOpts2"></div></div>
+      <div class="qz-step" data-qstep="3"><button class="qz-back" onclick="qzBack()">← <span id="qzBackTxt3"></span></button><p class="qz-progress" id="qzProg3"></p><h3 class="qz-h" id="qzQ3h"></h3><div class="qz-opts" id="qzOpts3"></div></div>
+      <div class="qz-step" data-qstep="4"><button class="qz-back" onclick="qzBack()">← <span id="qzBackTxt4"></span></button><p class="qz-progress" id="qzProg4"></p><h3 class="qz-h" id="qzQ4h"></h3><p class="qz-sub" id="qzQ4sub"></p><div class="qz-opts" id="qzOpts4"></div></div>
+      <div class="qz-step" data-qstep="contact"><button class="qz-back" onclick="qzBack()">← <span id="qzBackTxtC"></span></button><p class="qz-progress" id="qzContactLbl"></p><h3 class="qz-h" id="qzContactH"></h3><p class="qz-sub" id="qzContactSub"></p><div class="qz-fields"><input class="qz-inp" id="qzName" type="text" required><input class="qz-inp" id="qzEmail" type="email" required></div><div class="qz-err" id="qzErr"></div><form id="qzForm"><input type="hidden" name="mode"><input type="hidden" name="service"><input type="hidden" name="tools"><input type="hidden" name="data_input"><input type="hidden" name="policy"><input type="hidden" name="region"><input type="hidden" name="risk_level"><input type="hidden" name="name"><input type="hidden" name="email"><input type="hidden" name="language"><button type="submit" class="btn btn-glow" style="width:100%;justify-content:center;margin-top:14px" id="qzSubmitBtn"></button></form></div>
+      <div class="qz-step qz-result green" data-qstep="green"><div class="qz-result-icon">✓</div><h3 class="qz-h" id="qzGreenH"></h3><p id="qzGreenP"></p><a href="#services" class="btn btn-dark" id="qzGreenCta"></a></div>
+      <div class="qz-step qz-result amber" data-qstep="amber"><div class="qz-result-icon">!</div><h3 class="qz-h" id="qzAmberH"></h3><p id="qzAmberP"></p><a href="#services" class="btn btn-dark" id="qzAmberCta"></a></div>
+      <div class="qz-step qz-result red" data-qstep="red"><div class="qz-result-icon">⚠</div><h3 class="qz-h" id="qzRedH"></h3><p id="qzRedP"></p><a href="#services" class="btn btn-glow" id="qzRedCta"></a></div>
+      <div class="qz-step qz-result green" data-qstep="order-done" style="text-align:center"><div class="qz-result-icon" style="margin:0 auto 16px">✓</div><h3 class="qz-h" id="qzOrderDoneH"></h3><p id="qzOrderDoneP"></p></div>
     </div>
   </div>
 </section>
@@ -505,22 +444,22 @@ footer{background:#081320;color:rgba(255,255,255,.55);padding:48px 0 28px;font-s
     <div class="foot-top">
       <div class="foot-brand">
         <div class="logo"><span class="logo-mark">AI</span>AI&nbsp;Comply</div>
-        <p style="color:rgba(255,255,255,.5);font-size:.85rem" data-i18n="foot_desc">EU AI Act readiness for SMEs and startups. Flanders, Belgium.</p>
+        <p style="color:var(--text-dim);font-size:.85rem" data-i18n="foot_desc">Safe, legal AI for small businesses and sole traders. Flanders, Belgium.</p>
       </div>
-      <div style="display:flex;flex-direction:column;gap:8px;font-family:'DM Mono',monospace;font-size:.78rem;color:rgba(255,255,255,.5)">
+      <div style="display:flex;flex-direction:column;gap:8px;font-family:'DM Mono',monospace;font-size:.78rem;color:var(--text-dim)">
         <span>senatorkul@gmail.com</span>
-        <a href="https://github.com/Senkulex" target="_blank" style="color:rgba(255,255,255,.5);text-decoration:none">GitHub: SenKulex</a>
+        <a href="https://github.com/Senkulex" target="_blank" style="color:var(--text-dim);text-decoration:none">GitHub: SenKulex</a>
         <span data-i18n="foot_addr">Flanders, Belgium</span>
       </div>
     </div>
     <div class="foot-bottom">
       <span>© 2026 AI Comply</span>
-      <span data-i18n="foot_note">No licence or certification is required to provide AI compliance advice in the EU.</span>
+      <span data-i18n="foot_note">We provide practical data-protection and AI-use guidance. We are not a law firm.</span>
     </div>
   </div>
 </footer>
-
 <script>
+
 const T={
  en:{nav_why:"Why it matters",nav_how:"How it works",nav_services:"Services",nav_about:"About",nav_cta:"Free check",
   hero_badge:"AI · Data protection · EU & Ukraine",hero_h1:"Use AI <em>without breaking the law</em> — or leaking your clients' data.",
@@ -781,6 +720,39 @@ const qzScore={1:0,2:0,3:0};
 const qzAnswers={};
 let qzHistory=[];
 let qzCurrent='1';
+let qzMode='check'; // 'check' = free risk check, 'order' = service order
+let qzService='';
+
+const SVC_NAMES={
+  en:{audit:'Express AI Audit — €200',kit:'Safe AI Kit — €550',sub:'AI Safe subscription — €49/mo',
+      order_label:'YOU ARE ORDERING',done_h:'Order received!',done_p:'Thank you, {name}. We have your answers and will get in touch within one working day to get started.'},
+  uk:{audit:'Експрес-аудит ШІ — 3 600 грн',kit:'Safe AI Kit — 11 000 грн',sub:'Підписка AI Safe — 950 грн/міс',
+      order_label:'ВИ ЗАМОВЛЯЄТЕ',done_h:'Замовлення отримано!',done_p:'Дякуємо, {name}. Ми отримали ваші відповіді й зв\u2019яжемося протягом одного робочого дня.'},
+  nl:{audit:'Express AI-audit — €200',kit:'Safe AI Kit — €550',sub:'AI Safe-abonnement — €49/mnd',
+      order_label:'U BESTELT',done_h:'Bestelling ontvangen!',done_p:'Bedankt, {name}. We hebben uw antwoorden en nemen binnen één werkdag contact met u op.'},
+  fr:{audit:'Audit IA express — 200 €',kit:'Safe AI Kit — 550 €',sub:'Abonnement AI Safe — 49 €/mois',
+      order_label:'VOUS COMMANDEZ',done_h:'Commande reçue !',done_p:'Merci, {name}. Nous avons vos réponses et vous contacterons sous un jour ouvré.'}
+};
+
+function startOrder(svc){
+  qzMode='order'; qzService=svc;
+  var s=SVC_NAMES[qzLang]||SVC_NAMES['en'];
+  var banner=document.getElementById('qzOrderBanner');
+  if(banner){banner.style.display='block';}
+  document.getElementById('qzOrderLabel').textContent=s.order_label;
+  document.getElementById('qzOrderService').textContent=s[svc]||svc;
+  qzHistory=[]; qzCurrent='1'; qzScore[1]=0;qzScore[2]=0;qzScore[3]=0;
+  document.querySelectorAll('.qz-step').forEach(el=>el.classList.remove('active'));
+  document.querySelector('[data-qstep="1"]').classList.add('active');
+}
+function startCheck(){
+  qzMode='check'; qzService='';
+  var banner=document.getElementById('qzOrderBanner');
+  if(banner){banner.style.display='none';}
+  qzHistory=[]; qzCurrent='1'; qzScore[1]=0;qzScore[2]=0;qzScore[3]=0;
+  document.querySelectorAll('.qz-step').forEach(el=>el.classList.remove('active'));
+  document.querySelector('[data-qstep="1"]').classList.add('active');
+}
 
 function qzSet(id,val){const el=document.getElementById(id); if(el) el.textContent=val;}
 
@@ -842,6 +814,14 @@ function renderQuiz(l){
   qzSet('qzGreenCta', q.cta_sub);
   qzSet('qzAmberCta', q.cta_audit);
   qzSet('qzRedCta', q.cta_kit);
+  // order-done step (populated dynamically on submit with name)
+  var s=SVC_NAMES[l]||SVC_NAMES['en'];
+  qzSet('qzOrderDoneH', s.done_h);
+  // update banner if in order mode
+  if(qzMode==='order'&&qzService){
+    document.getElementById('qzOrderLabel').textContent=s.order_label;
+    document.getElementById('qzOrderService').textContent=s[qzService]||qzService;
+  }
   const gp=document.getElementById('qzGreenP'); if(gp) gp.textContent=q.res_green_p.replace('{{PRICE}}',q.price_sub);
   const ap=document.getElementById('qzAmberP'); if(ap) ap.textContent=q.res_amber_p.replace('{{PRICE}}',q.price_audit);
   const rp=document.getElementById('qzRedP'); if(rp) rp.textContent=q.res_red_p.replace('{{PRICE}}',q.price_kit);
@@ -865,10 +845,17 @@ if(qzForm){
     }
     const total=qzScore[1]+qzScore[2]+qzScore[3];
     const risk = total<=1 ? 'green' : (total<=3 ? 'amber' : 'red');
-    const payload={tools:qzAnswers.q1||'',data_input:qzAnswers.q2||'',policy:qzAnswers.q3||'',region:qzAnswers.q4||'',risk_level:risk,name:nameVal,email:emailVal,language:qzLang};
+    const payload={mode:qzMode,service:qzService,tools:qzAnswers.q1||'',data_input:qzAnswers.q2||'',policy:qzAnswers.q3||'',region:qzAnswers.q4||'',risk_level:risk,name:nameVal,email:emailVal,language:qzLang};
     fetch(FORM_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(payload)});
     if(SCRIPT_URL.indexOf('script.google.com')>-1){fetch(SCRIPT_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain'},body:JSON.stringify(payload)});}
-    qzShow(risk);
+    if(qzMode==='order'){
+      var s=SVC_NAMES[qzLang]||SVC_NAMES['en'];
+      qzSet('qzOrderDoneH',s.done_h);
+      qzSet('qzOrderDoneP',s.done_p.replace('{name}',nameVal));
+      qzShow('order-done');
+    } else {
+      qzShow(risk);
+    }
   });
 }
 
@@ -888,5 +875,4 @@ window.addEventListener('load',()=>{setTimeout(()=>{const f=document.getElementB
 document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})}}));
 setLang('en');
 </script>
-</body>
-</html>
+</body></html>
