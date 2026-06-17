@@ -566,9 +566,7 @@ const T={
   foot_desc:"IA sûre et légale pour petites entreprises et indépendants. UE & Ukraine.",foot_addr:"Flandre, Belgique",foot_note:"Nous fournissons des conseils pratiques en protection des données et usage de l'IA. Nous ne sommes pas un cabinet d'avocats."}
 };
 
-// ═══ FORMSPREE ENDPOINT ═══
-const FORM_ENDPOINT='https://formspree.io/f/xgobdvgr';
-// ═══ GOOGLE APPS SCRIPT (авто-ответ) — вставьте URL после деплоя скрипта ═══
+// ═══ GOOGLE APPS SCRIPT (авто-ответ + запись в Sheet) ═══
 const SCRIPT_URL='https://script.google.com/macros/s/AKfycbxN32gh0BpbQc07r10EDQffLg04-VQ1RthkPcOXqZFPvXfp1BSuvBh2u0pIP5WwvckC/exec';
 
 // AI RISK CHECK QUIZ — translations & engine
@@ -846,8 +844,7 @@ if(qzForm){
     const total=qzScore[1]+qzScore[2]+qzScore[3];
     const risk = total<=1 ? 'green' : (total<=3 ? 'amber' : 'red');
     const payload={mode:qzMode,service:qzService,tools:qzAnswers.q1||'',data_input:qzAnswers.q2||'',policy:qzAnswers.q3||'',region:qzAnswers.q4||'',risk_level:risk,name:nameVal,email:emailVal,language:qzLang};
-    fetch(FORM_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(payload)});
-    if(SCRIPT_URL.indexOf('script.google.com')>-1){fetch(SCRIPT_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain'},body:JSON.stringify(payload)});}
+    fetch(SCRIPT_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain'},body:JSON.stringify(payload)});
     if(qzMode==='order'){
       var s=SVC_NAMES[qzLang]||SVC_NAMES['en'];
       qzSet('qzOrderDoneH',s.done_h);
